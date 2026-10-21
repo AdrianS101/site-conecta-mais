@@ -211,7 +211,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .wa-float a svg{width:32px;height:32px}
 .wa-float a::before{content:"";position:absolute;inset:-12px;border-radius:50%;background:rgba(37,211,102,.18);animation:ring 2.4s ease-out infinite;z-index:-1}
 @keyframes ring{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.35);opacity:0}}
-@media (max-width:560px){.wa-float .tip{display:none}}
+@media (max-width:760px){.wa-float{right:14px;bottom:14px}.wa-float .tip{display:none}.wa-float a{width:52px;height:52px}.wa-float a svg{width:26px;height:26px}.wa-float a::before{inset:-7px}}
 
 
 /* selo acima da janela, foto e ajustes do palco */
@@ -243,8 +243,6 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
   .chatcard .ph-b{min-height:0}
   .ft-logos .known li{width:calc(50% - 8px);height:72px}
   .ft-logos .known{padding:0 16px;gap:12px}
-  .g3d-tile{width:220px;height:96px}
-  .g3d-tile img{height:52px}
 }
 
 /* faixa de clientes: carrossel infinito */
@@ -495,25 +493,18 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 /* rodapé no estilo da referência */
 footer{background:radial-gradient(1000px 520px at 50% 18%,rgba(26,127,184,.35),transparent 60%),linear-gradient(180deg,#0B2550,#071B3B 55%,#041227);color:#9FB2CC;position:relative;overflow:hidden}
 .ft-cta{text-align:center;padding:120px 0 0;color:#fff}
+.ft-logo{height:72px;width:auto;margin:0 auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.45)) drop-shadow(0 0 40px rgba(34,199,201,.25))}
 .ft-cta h2{color:#fff;font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.06;letter-spacing:-.035em;max-width:18ch;margin:34px auto 0;font-weight:600;text-wrap:balance}
 .ft-cta>.wrap>p{color:#C9D6E8;font-size:1.1rem;max-width:52ch;margin:20px auto 34px}
 .ft-cta small{display:block;margin-top:14px;color:#9FB2CC;font-size:.82rem;font-weight:600}
-.g3d{perspective:700px;display:inline-block}
-.g3d-tile{position:relative;width:300px;height:128px;border-radius:30px;display:grid;place-items:center;transform-style:preserve-3d;transform:rotateX(var(--gx,10deg)) rotateY(var(--gy,-14deg));transition:transform .25s ease-out;
-  background:linear-gradient(160deg,#FFFFFF,#E6EEF8);
-  box-shadow:0 1px 0 #fff inset,0 -8px 16px rgba(14,77,146,.12) inset,0 3px 0 #C9D8EA,0 7px 0 #A9BFDA,0 11px 0 #8AA6C9,0 36px 60px -14px rgba(0,0,0,.7),0 0 90px -10px rgba(34,199,201,.5);animation:gfloat 6s ease-in-out infinite}
-  box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 -10px 18px rgba(0,0,0,.35) inset,0 2px 0 #1F4A86,0 6px 0 #0E2A55,0 10px 0 #0A2148,0 30px 50px -10px rgba(0,0,0,.65),0 0 80px -10px rgba(34,199,201,.45);animation:gfloat 6s ease-in-out infinite}
-.g3d-tile::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.7),transparent 45%);pointer-events:none;mix-blend-mode:soft-light}
-.g3d-tile img{height:64px;width:auto;transform:translateZ(34px);filter:drop-shadow(0 6px 8px rgba(7,27,59,.25))}
-@keyframes gfloat{50%{translate:0 -10px}}
 .ft-logos{margin:72px auto 0;border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px 0 34px;background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
 .ft-logos p{color:#DDE7F3;font-weight:600;font-size:.95rem;margin-bottom:22px}
 .ft-logos .track img{filter:brightness(0) invert(1);opacity:.55}
 .ft-logos .track .keep img{filter:grayscale(1) brightness(1.7) contrast(.9);opacity:.6}
 .ft-logos .track li:hover img{opacity:1;filter:none}
 .ft-top{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:96px 0 48px}
-.ft-brand .logo-w{display:inline-flex;padding:12px 16px;border-radius:14px;background:#fff}
-.ft-brand .logo-w img{height:34px;width:auto}
+.ft-brand .logo-w{display:inline-flex}
+.ft-brand .logo-w img{height:40px;width:auto}
 .ft-brand p{margin-top:18px;max-width:34ch;font-size:.95rem}
 footer h6{margin:0 0 16px;font:700 .95rem var(--display);color:#fff}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
@@ -532,7 +523,6 @@ footer ul a:hover{color:var(--turq)}
   .dem div::after{background-size:var(--w) 100%,auto}
   .journey::after{transform:scaleX(1)}
   .ag-step{opacity:1}
-  .g3d-tile{transform:none}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IA Conecta+","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Garde Inteligência Empresarial","url":"https://www.gardesolucoes.com.br/"}}</script>
@@ -1062,7 +1052,7 @@ footer ul a:hover{color:var(--turq)}
 <footer id="diagnostico">
   <div class="ft-cta">
     <div class="wrap">
-      <div class="g3d" id="g3d" aria-hidden="true"><div class="g3d-tile"><img src="/assets/marca/logo-ia-conecta.png" alt=""></div></div>
+      <img class="ft-logo" src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81">
       <h2 data-r>Nenhum cliente sem resposta. Nenhuma oportunidade parada.</h2>
       <p data-r style="--d:.1s">Aumente a capacidade de atendimento e de vendas do seu time sem precisar aumentar o tamanho da equipe.</p>
       <div data-r style="--d:.2s"><a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a></div>
@@ -1081,7 +1071,7 @@ footer ul a:hover{color:var(--turq)}
   <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
+        <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81"></a>
         <p>Plataforma de inteligência operacional com IA da Garde Inteligência Empresarial.</p>
         <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
       </div>
@@ -1131,9 +1121,6 @@ let tipOff=false;try{tipOff=sessionStorage.getItem('waTip')==='0'}catch(e){}
 if(!tipOff)setTimeout(()=>wf.classList.add('show'),4000);
 wf.querySelector('.tip button').addEventListener('click',()=>{wf.classList.remove('show');try{sessionStorage.setItem('waTip','0')}catch(e){}});
 
-// G em 3D acompanhando o mouse
-const g=document.querySelector('.g3d-tile'),ft=document.querySelector('.ft-cta');
-if(g&&!reduce)ft.addEventListener('mousemove',e=>{const r=g.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/innerWidth,y=(e.clientY-(r.top+r.height/2))/innerHeight;g.style.setProperty('--gy',(x*40)+'deg');g.style.setProperty('--gx',(-y*40)+'deg')});
 
 // revelar ao rolar
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -60px 0px'});
