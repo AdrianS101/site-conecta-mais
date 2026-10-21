@@ -9,7 +9,7 @@
 <meta property="og:description" content="WhatsApp, Instagram, site e e-mail em uma única operação, com agentes de IA treinados nos documentos da sua empresa.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#F3F7FC">
-<link rel="icon" href="/assets/marca/logo-ia-conecta.png" type="image/png">
+<link rel="icon" href="/assets/marca/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
@@ -88,7 +88,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--paper);box-shadow:var(--sh-1);font-weight:700;font-size:.85rem;color:var(--blue)}
 .pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(50,210,124,.2)}
 .hero h1{font-size:clamp(2.1rem,3.2vw,2.85rem);line-height:1.1;text-wrap:balance;margin:26px 0 24px;letter-spacing:-.035em}
-.hero .lead{font-size:1.22rem}
+.hero .lead{font-size:1.18rem;max-width:44ch}
 .hero-cta{margin-top:38px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 .hero-cta small{color:var(--ink-3);font-weight:600;font-size:.86rem}
 @media (max-width:980px){.hero{padding-top:120px}.hero-grid{grid-template-columns:1fr;min-height:0}}
@@ -131,7 +131,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .chatcard .phone{background:var(--paper);border-radius:22px;box-shadow:var(--sh-3);overflow:hidden}
 .chatcard .ph-h{display:flex;align-items:center;gap:10px;padding:14px;background:#075E54;color:#fff}
 .chatcard .ph-h .av{width:32px;height:32px;background:#fff}
-.chatcard .ph-h .av img{width:26px}
+.chatcard .ph-h .av img{height:20px;width:auto}
 .chatcard .ph-h b{font-size:.86rem;display:block}
 .chatcard .ph-h small{font-size:.7rem;opacity:.85}
 .chatcard .ph-b{background:#EFEAE2;padding:14px 12px;display:flex;flex-direction:column;gap:8px;font-size:.8rem;line-height:1.4;min-height:250px}
@@ -152,6 +152,66 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 @media (max-width:1240px){.window{right:-300px}}
 @media (max-width:980px){.stage{height:520px;max-width:680px;width:100%;margin:10px auto 0}.window{right:-120px;top:20px}}
 @media (max-width:640px){.stage{height:470px}.window{right:-360px;top:40px;width:600px}.chatcard{left:0;top:20px;width:272px}.bubble.b1{left:auto;right:0;top:310px}.bubble.b2{display:none}}
+
+
+/* janela no layout da tela de Conversas */
+.app .app-body{display:grid;grid-template-columns:236px 1fr;min-height:0;background:#F6F8FB}
+.app-list{background:#fff;border-right:1px solid var(--line);padding:12px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.app-search{height:30px;border-radius:8px;background:var(--page);font-size:.72rem;color:var(--ink-3);display:flex;align-items:center;padding:0 10px}
+.app-tabs{display:flex;gap:2px;background:var(--page);border-radius:8px;padding:3px;font-size:.64rem;font-weight:700;color:var(--ink-3)}
+.app-tabs>*{padding:4px 7px;border-radius:6px}
+.app-tabs b{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(7,27,59,.1)}
+.ci{display:grid;grid-template-columns:30px 1fr;gap:8px;padding:9px;border-radius:10px;border:1px solid var(--line);font-size:.68rem}
+.ci.on{border-color:var(--turq);box-shadow:0 0 0 2px rgba(34,199,201,.15);background:#F4FCFC}
+.ci .av,.app-h .av{width:30px;height:30px;font-size:.64rem}
+.ci>div{min-width:0}
+.ci p{display:flex;justify-content:space-between;gap:6px}
+.ci p b{font-size:.74rem;color:var(--ink)}
+.ci p small{color:var(--ink-3);font-size:.62rem}
+.ci>div>span{display:block;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:2px 0 4px}
+.ci i{font-style:normal;display:flex;gap:8px}
+.ci u{text-decoration:none;font-weight:700;font-size:.6rem}
+.ci u.ig{color:#D6249F}.ci u.wa{color:#16A34A}.ci u.st{color:var(--cyan)}.ci u.ia{color:#0E7C6B}.ci u.rc{color:var(--blue)}.ci u.es{color:#B87410}.ci u.hu{color:#4B3BA6}
+.app-chat{display:flex;flex-direction:column;min-width:0}
+.app-h{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.app-h div{min-width:0}
+.app-h b{display:block;font-size:.8rem}
+.app-h small{font-size:.62rem;color:var(--ink-3)}
+.app-h .live{margin-left:auto;font-size:.6rem;font-weight:800;color:#0E7C6B;background:#E3F9EC;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.app-h .assume{font-size:.64rem;font-weight:800;color:#fff;background:var(--turq);padding:5px 10px;border-radius:7px;white-space:nowrap}
+.app-note{font-size:.6rem;color:var(--ink-3);padding:6px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.app-note b{color:var(--ink-2)}
+.app-msgs{flex:1;padding:12px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.m{max-width:80%;padding:7px 10px;border-radius:10px;font-size:.7rem;line-height:1.4}
+.m.in{align-self:flex-start;background:#fff;box-shadow:0 1px 2px rgba(7,27,59,.08)}
+.m.ai{align-self:flex-end;background:#CDEFE3;color:#063B2E}
+.m.ai small{display:block;font-size:.56rem;font-weight:800;color:#0E7C6B;margin-bottom:2px}
+.app-auto{font-size:.62rem;font-weight:700;color:#0E7C6B;padding:6px 12px;background:#EEF9F6;border-top:1px solid var(--line)}
+.app-chips{display:flex;gap:5px;padding:6px 10px;background:#fff;flex-wrap:nowrap;overflow:hidden}
+.app-chips span{font-size:.58rem;font-weight:700;color:var(--ink-2);border:1px solid var(--line);border-radius:99px;padding:3px 8px;white-space:nowrap}
+.app-input{margin:0 10px 10px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:.64rem;color:var(--ink-3);background:#fff}
+
+/* botão no estilo WhatsApp */
+.btn-wa{display:inline-flex;align-items:center;gap:16px;padding:7px 7px 7px 28px;border-radius:999px;background:linear-gradient(180deg,#3FBF5B,#2FA84B);color:#fff;font:700 1.02rem var(--text);text-decoration:none;white-space:nowrap;box-shadow:0 12px 28px -12px rgba(37,160,72,.75),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .25s var(--ease),box-shadow .25s,filter .25s}
+.btn-wa .ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn-wa .ic svg{width:24px;height:24px}
+.btn-wa:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 18px 34px -12px rgba(37,160,72,.8),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn-wa.sm{font-size:.88rem;padding:4px 4px 4px 18px;gap:10px}
+.btn-wa.sm .ic{width:34px;height:34px}.btn-wa.sm .ic svg{width:18px;height:18px}
+@media (max-width:700px){.nav .btn-wa{display:none}}
+
+/* botão flutuante do WhatsApp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;align-items:center;gap:14px}
+.wa-float .tip{position:relative;background:#fff;border-radius:12px;box-shadow:var(--sh-2);padding:12px 36px 12px 16px;font-size:.85rem;color:var(--ink-2);max-width:220px;opacity:0;transform:translateX(10px);transition:opacity .4s var(--ease),transform .4s var(--ease);pointer-events:none}
+.wa-float.show .tip{opacity:1;transform:none;pointer-events:auto}
+.wa-float .tip button{position:absolute;right:8px;top:8px;width:22px;height:22px;border:0;background:none;cursor:pointer;color:var(--ink-3);font:700 .9rem var(--text);border-radius:6px}
+.wa-float .tip button:hover{background:var(--page)}
+.wa-float a{position:relative;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px -6px rgba(37,211,102,.6);flex:none;transition:transform .25s var(--ease)}
+.wa-float a:hover{transform:scale(1.06)}
+.wa-float a svg{width:32px;height:32px}
+.wa-float a::before{content:"";position:absolute;inset:-12px;border-radius:50%;background:rgba(37,211,102,.18);animation:ring 2.4s ease-out infinite;z-index:-1}
+@keyframes ring{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.35);opacity:0}}
+@media (max-width:560px){.wa-float .tip{display:none}}
 
 /* faixa de clientes: carrossel infinito */
 .clients{position:relative;margin-top:48px;padding:38px 0 42px;background:var(--paper);box-shadow:0 -1px 0 var(--line),0 1px 0 var(--line)}
@@ -398,23 +458,35 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .final .meta{color:#D2E2F3;margin-top:18px}.final .meta b{color:#fff}
 @media (max-width:860px){.final .box{grid-template-columns:1fr;padding:44px 26px}}
 
-/* rodapé */
-footer{margin-top:120px;background:#041227;color:#9FB2CC;position:relative;overflow:hidden}
-footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green),var(--turq),var(--cyan),var(--blue))}
-footer::after{content:"";position:absolute;left:-200px;bottom:-300px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(26,127,184,.18),transparent 65%);pointer-events:none}
-.ft-top{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:72px 0 48px}
+/* rodapé no estilo da referência */
+footer{background:radial-gradient(1000px 520px at 50% 18%,rgba(26,127,184,.35),transparent 60%),linear-gradient(180deg,#0B2550,#071B3B 55%,#041227);color:#9FB2CC;position:relative;overflow:hidden}
+.ft-cta{text-align:center;padding:120px 0 0;color:#fff}
+.ft-cta h2{color:#fff;font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.06;letter-spacing:-.035em;max-width:18ch;margin:34px auto 0;font-weight:600;text-wrap:balance}
+.ft-cta>.wrap>p{color:#C9D6E8;font-size:1.1rem;max-width:52ch;margin:20px auto 34px}
+.ft-cta small{display:block;margin-top:14px;color:#9FB2CC;font-size:.82rem;font-weight:600}
+.g3d{perspective:700px;display:inline-block}
+.g3d-tile{width:112px;height:112px;border-radius:30px;display:grid;place-items:center;transform-style:preserve-3d;transform:rotateX(var(--gx,10deg)) rotateY(var(--gy,-14deg));transition:transform .25s ease-out;
+  background:linear-gradient(145deg,#173A6E,#0A1E40);
+  box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 -10px 18px rgba(0,0,0,.35) inset,0 2px 0 #1F4A86,0 6px 0 #0E2A55,0 10px 0 #0A2148,0 30px 50px -10px rgba(0,0,0,.65),0 0 80px -10px rgba(34,199,201,.45);animation:gfloat 6s ease-in-out infinite}
+.g3d-tile::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.28),transparent 45%);pointer-events:none}
+.g3d-tile img{height:62px;width:auto;transform:translateZ(30px);filter:drop-shadow(0 8px 10px rgba(0,0,0,.45))}
+@keyframes gfloat{50%{translate:0 -10px}}
+.ft-logos{margin:72px auto 0;border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px 0 34px;background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
+.ft-logos p{color:#DDE7F3;font-weight:600;font-size:.95rem;margin-bottom:22px}
+.ft-logos .track img{filter:brightness(0) invert(1);opacity:.55}
+.ft-logos .track .keep img{filter:grayscale(1) brightness(1.7) contrast(.9);opacity:.6}
+.ft-logos .track li:hover img{opacity:1;filter:none}
+.ft-top{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:96px 0 48px}
 .ft-brand .logo-w{display:inline-flex;padding:12px 16px;border-radius:14px;background:#fff}
 .ft-brand .logo-w img{height:34px;width:auto}
 .ft-brand p{margin-top:18px;max-width:34ch;font-size:.95rem}
-.ft-brand .meta{margin-top:18px;color:#C9D6E8}.ft-brand .meta b{color:#fff}
 footer h6{margin:0 0 16px;font:700 .95rem var(--display);color:#fff}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 footer ul a{text-decoration:none;font-size:.93rem;transition:color .2s}
 footer ul a:hover{color:var(--turq)}
-.ft-big{position:relative;z-index:1;font:700 clamp(3rem,11vw,9.5rem)/.95 var(--display);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(159,178,204,.25);white-space:nowrap;user-select:none;padding-bottom:12px}
 .ft-bot{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:24px 0 32px;border-top:1px solid rgba(255,255,255,.08);font-size:.85rem}
 .ft-bot a{text-decoration:none;color:#C9D6E8}
-@media (max-width:900px){.ft-top{grid-template-columns:1fr 1fr}.ft-brand{grid-column:span 2}}
+@media (max-width:900px){.ft-top{grid-template-columns:1fr 1fr}.ft-brand{grid-column:span 2}.ft-cta{padding-top:90px}}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -425,6 +497,7 @@ footer ul a:hover{color:var(--turq)}
   .dem div::after{background-size:var(--w) 100%,auto}
   .journey::after{transform:scaleX(1)}
   .ag-step{opacity:1}
+  .g3d-tile{transform:none}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IA Conecta+","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Garde Inteligência Empresarial","url":"https://www.gardesolucoes.com.br/"}}</script>
@@ -460,7 +533,7 @@ footer ul a:hover{color:var(--turq)}
     </nav>
     <div class="right">
       <span class="meta"><img src="/assets/marca/meta-business-partners-navy.png" alt="Meta Business Partners" width="211" height="13"></span>
-      <a class="btn btn-primary" href="#diagnostico">Agendar diagnóstico</a>
+      <a class="btn-wa sm" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
       <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
@@ -473,42 +546,44 @@ footer ul a:hover{color:var(--turq)}
     <div>
       <span class="pill seq" style="--t:.05s">Inteligência operacional com IA</span>
       <h1 class="seq" style="--t:.15s">Agentes de IA que atendem, vendem e resolvem pela sua empresa</h1>
-      <p class="lead seq" style="--t:.3s">WhatsApp, Instagram, site e e-mail em uma única operação. Uma IA treinada nos documentos da sua empresa conversa, qualifica, agenda e entrega ao seu time só o que precisa de gente.</p>
+      <p class="lead seq" style="--t:.3s">Atenda, qualifique e venda em todos os canais com uma IA treinada nos seus documentos, sem aumentar o time.</p>
       <div class="hero-cta seq" style="--t:.45s">
-        <a class="btn btn-primary" href="#diagnostico">Agendar diagnóstico gratuito<svg><use href="#i-arrow"/></svg></a>
-        <small>Começamos entendendo a sua operação, sem custo.</small>
+        <a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+        <small>Atendimento imediato via WhatsApp</small>
       </div>
     </div>
 
     <div class="stage" aria-hidden="true">
-      <div class="window seq" style="--t:.35s">
-        <div class="win-bar"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>IA Conecta+</span></div>
-        <div class="win-body">
-          <div class="rail"><b></b><b></b><b></b><b></b><b></b></div>
-          <div class="list">
-            <h5>Todas as conversas</h5>
-            <div class="tb"><span>Abertas</span><span>IA cuidando</span><span>Precisam de atenção</span></div>
-            <div class="conv on"><span class="av" style="background:#1A7FB8">AS<em class="w"></em></span><div><b>Ana Souza</b><span>Sexta 9h30 fica ótimo</span></div><span class="tag ai">IA</span></div>
-            <div class="conv"><span class="av" style="background:#6B5BD2">RM<em class="g"></em></span><div><b>Rafael M.</b><span>Qual o valor do plano?</span></div><span class="tag ai">IA</span></div>
-            <div class="conv"><span class="av" style="background:#E8A23A">JP<em class="s"></em></span><div><b>Júlia P.</b><span>Preciso falar com alguém</span></div><span class="tag esc">Escalada</span></div>
-            <div class="conv"><span class="av" style="background:#167A45">CL<em class="m"></em></span><div><b>Carlos L.</b><span>Enviei o contrato assinado</span></div><span class="tag hum">Humano</span></div>
-            <div class="conv"><span class="av" style="background:#0E4D92">BN<em class="w"></em></span><div><b>Bia N.</b><span>Obrigada, deu certo!</span></div><span class="tag ok">Resolvido</span></div>
-          </div>
-          <div class="pane">
-            <div class="pane-h"><span class="av" style="background:#1A7FB8;width:28px;height:28px;font-size:.66rem">AS</span>Ana Souza<span class="tag ok">Agendado</span></div>
-            <div class="pane-b">
-              <div class="b in">Oi! Vocês atendem pelo convênio? Queria marcar dermatologia.</div>
-              <div class="b out">Atendemos sim, Ana. Tenho quinta às 14h ou sexta às 9h30.</div>
-              <div class="b in">Sexta de manhã fica ótimo</div>
-              <div class="sys">Agente <b>Agendamento</b> confirmou e moveu o card para <b>Agendado</b></div>
+      <div class="window app seq" style="--t:.35s">
+        <div class="win-bar"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>IA Conecta+ · Conversas</span></div>
+        <div class="app-body">
+          <aside class="app-list">
+            <div class="app-search"><span>Buscar</span></div>
+            <div class="app-tabs"><b>Todas</b><span>IA</span><span>Escaladas</span><span>Humano</span></div>
+            <div class="ci on"><span class="av" style="background:#E2F4FB;color:#0E5F8C">MS<em class="g"></em></span><div><p><b>Mariana Sá</b><small>09:41</small></p><span>Perfeito, pode agendar para sexta</span><i><u class="ig">Instagram</u><u class="ia">IA</u><u class="rc">Receptivo</u></i></div></div>
+            <div class="ci"><span class="av" style="background:#ECE9FB;color:#4B3BA6">LP<em class="w"></em></span><div><p><b>Lucas Prado</b><small>09:38</small></p><span>Qual o prazo de implantação?</span><i><u class="wa">WhatsApp</u><u class="ia">IA</u><u class="rc">Ativo</u></i></div></div>
+            <div class="ci"><span class="av" style="background:#FFF1DA;color:#9A5B00">CR<em class="w"></em></span><div><p><b>Clara Rocha</b><small>09:30</small></p><span>Preciso falar com o financeiro</span><i><u class="wa">WhatsApp</u><u class="es">Escalada</u></i></div></div>
+            <div class="ci"><span class="av" style="background:#E3F9EC;color:#167A45">TB<em class="s"></em></span><div><p><b>Tiago Brito</b><small>Ontem</small></p><span>Obrigado, deu tudo certo!</span><i><u class="st">Site</u><u class="hu">Humano</u></i></div></div>
+          </aside>
+          <div class="app-chat">
+            <div class="app-h"><span class="av" style="background:#E2F4FB;color:#0E5F8C">MS<em class="g"></em></span><div><b>Mariana Sá</b><small>Agente Comercial · desde 20/10</small></div><span class="live">IA ativa</span><span class="assume">Assumir</span></div>
+            <div class="app-note">Coluna <b>"qualificado"</b> definida pela IA: interesse em plano empresarial para 12 usuários.</div>
+            <div class="app-msgs">
+              <div class="m in">Oi! Vi o Reel de vocês. Funciona para clínica com 3 unidades?</div>
+              <div class="m ai"><small>IA · Agente Comercial</small>Funciona, sim! Cada unidade pode ter a sua agenda e o seu time. Quantas pessoas atendem hoje?</div>
+              <div class="m in">Umas 12, entre recepção e comercial</div>
+              <div class="m ai"><small>IA · Agente Comercial</small>Ótimo. Posso agendar uma conversa com um especialista na sexta, às 10h?</div>
             </div>
+            <div class="app-auto">A IA está respondendo automaticamente</div>
+            <div class="app-chips"><span>Respostas rápidas</span><span>Sugerir resposta</span><span>Melhorar meu texto</span><span>O que ele precisa</span></div>
+            <div class="app-input">Escreva uma resposta...</div>
           </div>
         </div>
       </div>
 
       <div class="chatcard seq" style="--t:.6s">
         <div class="phone">
-          <div class="ph-h"><span class="av"><img src="/assets/marca/logo-ia-conecta.png" alt=""></span><div><b>Clínica Viva</b><small>conta comercial verificada</small></div></div>
+          <div class="ph-h"><span class="av"><img src="/assets/marca/g-conecta.png" alt=""></span><div><b>Clínica Viva</b><small>conta comercial verificada</small></div></div>
           <div class="ph-b">
             <div class="w in seq" style="--t:1s">Oi, preciso de ajuda<time>09:41</time></div>
             <div class="w in seq" style="--t:1.5s">Quero remarcar minha consulta de amanhã<time>09:41</time></div>
@@ -525,7 +600,7 @@ footer ul a:hover{color:var(--turq)}
   <div class="clients">
     <p>Operações que já rodam com a IA Conecta+</p>
     <div class="marquee">
-      <div class="track" id="track">
+      <div class="track">
         <ul>
           <li><img src="/assets/clientes/bradesco.png" alt="Bradesco"></li>
           <li><img src="/assets/clientes/vivo.png" alt="Vivo"></li>
@@ -946,25 +1021,37 @@ footer ul a:hover{color:var(--turq)}
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section id="diagnostico" class="final">
-  <div class="wrap">
-    <div class="box" data-r="zoom">
-      <div style="position:relative;z-index:1">
-        <h2 class="h2">Descubra o que a sua equipe não precisa mais fazer à mão.</h2>
-        <p>O diagnóstico gratuito mapeia a sua operação e mostra onde a IA Conecta+ gera resultado primeiro. Fale com a gente pelo canal que preferir.</p>
-        <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
-      </div>
-      <div class="contact">
-        <a href="tel:+5511915192560"><svg><use href="#i-phone"/></svg><span><small>Ligue para um especialista</small><b>(11) 91519-2560</b></span></a>
-        <a href="mailto:lohany.souza@gardetech.com.br?subject=Diagn%C3%B3stico%20IA%20Conecta%2B"><svg><use href="#i-mail"/></svg><span><small>Envie um e-mail</small><b>lohany.souza@gardetech.com.br</b></span></a>
+</main>
+
+<footer id="diagnostico">
+  <div class="ft-cta">
+    <div class="wrap">
+      <div class="g3d" id="g3d" aria-hidden="true"><div class="g3d-tile"><img src="/assets/marca/g-conecta.png" alt=""></div></div>
+      <h2 data-r>Nenhum cliente sem resposta. Nenhuma oportunidade parada.</h2>
+      <p data-r style="--d:.1s">Aumente a capacidade de atendimento e de vendas do seu time sem precisar aumentar o tamanho da equipe.</p>
+      <div data-r style="--d:.2s"><a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a></div>
+      <small data-r style="--d:.25s">Via WhatsApp · Direto com um especialista · Sem formulário</small>
+      <div class="ft-logos" data-r="zoom">
+        <p>A inteligência por trás de operações que atendem e vendem todos os dias</p>
+        <div class="marquee"><div class="track"><ul>
+          <li><img src="/assets/clientes/bradesco.png" alt="Bradesco"></li>
+          <li><img src="/assets/clientes/vivo.png" alt="Vivo"></li>
+          <li class="tall keep"><img src="/assets/clientes/assai.png" alt="Assaí Atacadista"></li>
+          <li class="keep"><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago"></li>
+          <li><img src="/assets/clientes/enviai.png" alt="Enviaí"></li>
+          <li><img src="/assets/clientes/alya.png" alt="Alya"></li>
+          <li class="tall keep"><img src="/assets/clientes/grupo-monitor.png" alt="Grupo Monitor"></li>
+          <li class="tall"><img src="/assets/clientes/cobtec.png" alt="Cobtec"></li>
+          <li class="keep"><img src="/assets/clientes/dealers-club.png" alt="Dealers Club"></li>
+          <li class="tall"><img src="/assets/clientes/davinci.png" alt="daVinci"></li>
+          <li class="tall"><img src="/assets/clientes/lui-home.png" alt="Lui Home"></li>
+          <li class="tall"><img src="/assets/clientes/true-wellness.png" alt="True Wellness"></li>
+          <li class="tall"><img src="/assets/clientes/weramp.png" alt="We Ramp"></li>
+          <li><img src="/assets/clientes/vuelo.png" alt="Vuelo"></li>
+        </ul></div></div>
       </div>
     </div>
   </div>
-</section>
-</main>
-
-<footer>
   <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
@@ -974,12 +1061,16 @@ footer ul a:hover{color:var(--turq)}
       </div>
       <div><h6>Plataforma</h6><ul><li><a href="#plataforma">Visão geral</a></li><li><a href="#multiagentes">Multiagentes</a></li><li><a href="#instagram">Instagram</a></li><li><a href="#helpdesk">IA HelpDesk+</a></li><li><a href="#gestao">Indicadores</a></li></ul></div>
       <div><h6>Segmentos</h6><ul><li><a href="/segmentos/saude">Saúde</a></li><li><a href="/segmentos/franquias">Franquias</a></li><li><a href="/segmentos/varejo">Varejo</a></li><li><a href="/segmentos/imobiliario">Imobiliário</a></li><li><a href="/segmentos">Todos</a></li></ul></div>
-      <div><h6>Garde</h6><ul><li><a href="https://www.gardesolucoes.com.br/">Site da Garde</a></li><li><a href="https://www.instagram.com/garde.solucoes/">Instagram</a></li><li><a href="tel:+5511915192560">(11) 91519-2560</a></li><li><a href="mailto:lohany.souza@gardetech.com.br">E-mail</a></li></ul></div>
+      <div><h6>Garde</h6><ul><li><a href="https://www.gardesolucoes.com.br/">Site da Garde</a></li><li><a href="https://www.instagram.com/garde.solucoes/">Instagram</a></li><li><a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:lohany.souza@gardetech.com.br">E-mail</a></li></ul></div>
     </div>
-    <div class="ft-big" aria-hidden="true">IA Conecta+</div>
     <div class="ft-bot"><span>© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo</a></div>
   </div>
 </footer>
+
+<div class="wa-float" id="wafloat">
+  <div class="tip">Fale com um especialista agora mesmo<button type="button" aria-label="Fechar aviso">×</button></div>
+  <a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+</div>
 
 <script>
 document.body.classList.remove('no-js');
@@ -1001,8 +1092,18 @@ mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAtt
 menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
 
 // carrossel infinito: duplica a lista
-const track=document.getElementById('track');
-const copy=track.firstElementChild.cloneNode(true);copy.setAttribute('aria-hidden','true');copy.querySelectorAll('img').forEach(i=>i.alt='');track.appendChild(copy);
+document.querySelectorAll('.track').forEach(t=>{const c=t.firstElementChild.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('img').forEach(i=>i.alt='');t.appendChild(c)});
+document.querySelectorAll('.ft-logos .track ul:first-child img').forEach(i=>i.alt='');
+
+// botão flutuante: aviso aparece depois de alguns segundos e pode ser fechado
+const wf=document.getElementById('wafloat');
+let tipOff=false;try{tipOff=sessionStorage.getItem('waTip')==='0'}catch(e){}
+if(!tipOff)setTimeout(()=>wf.classList.add('show'),4000);
+wf.querySelector('.tip button').addEventListener('click',()=>{wf.classList.remove('show');try{sessionStorage.setItem('waTip','0')}catch(e){}});
+
+// G em 3D acompanhando o mouse
+const g=document.querySelector('.g3d-tile'),ft=document.querySelector('.ft-cta');
+if(g&&!reduce)ft.addEventListener('mousemove',e=>{const r=g.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/innerWidth,y=(e.clientY-(r.top+r.height/2))/innerHeight;g.style.setProperty('--gy',(x*40)+'deg');g.style.setProperty('--gx',(-y*40)+'deg')});
 
 // revelar ao rolar
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -60px 0px'});
