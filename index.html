@@ -3,801 +3,1041 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IA Conecta+ | Atendimento, vendas e suporte com IA · Garde</title>
-<meta name="description" content="Plataforma de inteligência operacional da Garde: IA treinada com os seus documentos atendendo WhatsApp, Instagram, site e e-mail, com funil de vendas, campanhas e gestão de chamados em um só sistema.">
-<meta property="og:title" content="IA Conecta+ | Atendimento, vendas e suporte com IA">
-<meta property="og:description" content="WhatsApp, Instagram, site e e-mail atendidos por uma IA treinada com os documentos da sua empresa, com funil, campanhas e chamados em um só sistema.">
+<title>IA Conecta+ | Agentes de IA que atendem, vendem e resolvem · Garde</title>
+<meta name="description" content="Agentes de IA treinados nos documentos da sua empresa atendendo WhatsApp, Instagram, site e e-mail, com funil de vendas, campanhas e chamados em uma única operação. Parceiro oficial Meta.">
+<meta property="og:title" content="IA Conecta+ | Agentes de IA que atendem, vendem e resolvem">
+<meta property="og:description" content="WhatsApp, Instagram, site e e-mail em uma única operação, com agentes de IA treinados nos documentos da sua empresa.">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#F3F7FC">
 <link rel="icon" href="/assets/marca/logo-ia-conecta.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
-  :root{
-    --navy:#071B3B; --navy-2:#0D2A55; --blue:#0E4D92; --cyan:#1A7FB8; --turq:#22C7C9; --green:#32D27C;
-    --ink:#071B3B; --ink-2:#3E4E68; --ink-3:#6B7A92;
-    --page:#F5F8FC; --paper:#FFFFFF; --mist:#EAF2FA; --line:#DCE5EF;
-    --wa:#25D366; --wa-bg:#EFEAE2; --wa-out:#D9FDD3;
-    --r-sm:8px; --r:14px; --r-lg:22px;
-    --shadow:0 1px 2px rgba(7,27,59,.06), 0 12px 32px -12px rgba(7,27,59,.18);
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{margin:0;background:var(--page);color:var(--ink);font:400 17px/1.6 'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;letter-spacing:-.02em;margin:0;color:var(--ink)}
-  p{margin:0}
-  a{color:inherit}
-  img{max-width:100%;display:block}
-  :focus-visible{outline:3px solid var(--turq);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  .lead{font-size:1.15rem;color:var(--ink-2);max-width:60ch}
-  .kicker{font-weight:600;color:var(--cyan);font-size:.95rem;margin-bottom:12px}
-  section{padding:104px 0}
-  @media (max-width:760px){section{padding:72px 0}}
+:root{
+  --navy:#071B3B; --navy-2:#0D2A55; --blue:#0E4D92; --cyan:#1A7FB8; --turq:#22C7C9; --green:#32D27C;
+  --ink:#071B3B; --ink-2:#3B4B66; --ink-3:#6A7891;
+  --page:#F3F7FC; --paper:#FFFFFF; --mist:#E8F1FA; --line:#DCE5EF;
+  --wa:#25D366; --wa-out:#D9FDD3;
+  --display:'Sora',system-ui,sans-serif; --text:'Manrope',system-ui,sans-serif;
+  --r-sm:10px; --r:16px; --r-lg:24px;
+  --sh-1:0 1px 2px rgba(7,27,59,.06),0 4px 14px -6px rgba(7,27,59,.12);
+  --sh-2:0 2px 4px rgba(7,27,59,.04),0 24px 60px -24px rgba(7,27,59,.28);
+  --sh-3:0 40px 100px -40px rgba(7,27,59,.45);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.025em;margin:0;color:var(--ink);font-weight:700}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--turq);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.lead{font-size:1.14rem;color:var(--ink-2);max-width:60ch}
+.h2{font-size:clamp(2rem,3.6vw,3.05rem);line-height:1.08}
+.h3{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15}
+.kicker{display:inline-block;font-weight:700;color:var(--cyan);font-size:.92rem;margin-bottom:14px}
+.sec{padding:120px 0}
+@media (max-width:760px){.sec{padding:80px 0}}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
 
-  /* botões */
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer}
-  .btn-primary{background:var(--blue);color:#fff}
-  .btn-primary:hover{background:var(--navy)}
-  .btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
-  .btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--cyan)}
-  .btn svg{width:18px;height:18px}
+/* reveal ao rolar */
+[data-r]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+[data-r=left]{transform:translateX(-36px)}[data-r=right]{transform:translateX(36px)}[data-r=zoom]{transform:scale(.94)}
+[data-r].in{opacity:1;transform:none}
+.no-js [data-r]{opacity:1;transform:none}
 
-  /* selo Meta */
-  .meta-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font-size:.85rem;font-weight:600;color:var(--ink-2);white-space:nowrap}
-  .meta-badge .dot{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#0668E1,#0081FB);color:#fff}
-  .meta-badge .dot svg{width:13px;height:13px}
-  .meta-badge strong{color:var(--ink)}
+/* barra de progresso */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--blue),var(--turq),var(--green));z-index:60}
 
-  /* header */
-  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
-  header.scrolled{border-bottom-color:var(--line)}
-  .nav{display:flex;align-items:center;gap:28px;height:76px}
-  .nav .logo img{height:38px;width:auto}
-  .nav nav{display:flex;gap:26px;margin-left:12px}
-  .nav nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-2)}
-  .nav nav a:hover{color:var(--blue)}
-  .nav .right{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .nav .btn{padding:11px 20px}
-  .menu-btn{display:none;background:none;border:0;padding:8px;color:var(--ink);cursor:pointer}
-  @media (max-width:1020px){.nav nav{display:none}.nav .meta-badge{display:none}}
-  @media (max-width:640px){.nav .btn{display:none}.menu-btn{display:block}
-    .nav nav.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);margin:0;padding:8px 24px 20px}
-    .nav nav.open a{padding:12px 0;border-bottom:1px solid var(--line)}}
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font:700 1rem var(--text);text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 28px -10px rgba(14,77,146,.7)}
+.btn-primary:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(7,27,59,.7)}
+.btn svg{width:18px;height:18px;flex:none}
 
-  /* hero */
-  .hero{padding:56px 0 96px;overflow:hidden;position:relative}
-  .hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(34,199,201,.16),rgba(14,77,146,.06) 45%,transparent 70%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;position:relative}
-  .hero h1{font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.05;font-weight:700;margin:22px 0 22px}
-  .hero .lead{font-size:1.2rem}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-  .channels{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;padding:0;list-style:none}
-  .channels li{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--ink-2);padding:7px 12px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)}
-  .channels svg{width:16px;height:16px}
-  @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:32px}}
+/* selo Meta */
+.meta{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--ink-2);white-space:nowrap}
+.meta i{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#0668E1,#0A84FF);color:#fff;font-style:normal}
+.meta i svg{width:13px;height:13px}
+.meta b{color:var(--ink);font-weight:800}
 
-  /* palco do hero: celular + cards da plataforma */
-  .stage{position:relative;height:600px}
-  .phone{position:absolute;left:8%;top:0;width:300px;height:600px;border-radius:44px;background:#0B1424;padding:11px;box-shadow:0 40px 80px -30px rgba(7,27,59,.55)}
-  .screen{width:100%;height:100%;border-radius:34px;overflow:hidden;background:var(--wa-bg);display:flex;flex-direction:column}
-  .wa-top{background:#075E54;color:#fff;display:flex;align-items:center;gap:10px;padding:34px 14px 12px}
-  .wa-top .av{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
-  .wa-top .av img{width:30px}
-  .wa-top b{display:block;font-size:.92rem;font-family:'Manrope'}
-  .wa-top small{font-size:.74rem;opacity:.85}
-  .wa-top .ok{width:14px;height:14px;vertical-align:-2px;margin-left:4px}
-  .chat{flex:1;padding:14px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;font-size:.84rem;line-height:1.4}
-  .msg{max-width:84%;padding:7px 10px 16px;border-radius:9px;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08)}
-  .msg time{position:absolute;right:8px;bottom:3px;font-size:.64rem;color:#667781}
-  .msg.in{align-self:flex-start;background:#fff;border-top-left-radius:2px}
-  .msg.out{align-self:flex-end;background:var(--wa-out);border-top-right-radius:2px}
-  .msg.audio{display:flex;align-items:center;gap:8px;padding-bottom:16px;min-width:170px}
-  .msg.audio .play{width:22px;height:22px;border-radius:50%;background:#54656F;display:grid;place-items:center}
-  .msg.audio .wave{flex:1;height:18px;background:repeating-linear-gradient(90deg,#8696A0 0 2px,transparent 2px 5px);mask:linear-gradient(90deg,#000 60%,rgba(0,0,0,.35) 60%);-webkit-mask:linear-gradient(90deg,#000 60%,rgba(0,0,0,.35) 60%)}
-  .msg .tr{display:block;font-size:.72rem;color:#667781;margin-top:4px;font-style:italic}
-  .typing{align-self:flex-end;background:var(--wa-out);border-radius:9px;padding:9px 12px;display:flex;gap:4px}
-  .typing i{width:6px;height:6px;border-radius:50%;background:#7C8B95;animation:blink 1s infinite}
-  .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
-  @keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
-  .wa-input{display:flex;gap:6px;padding:8px;background:#F0F2F5}
-  .wa-input span{flex:1;height:34px;border-radius:20px;background:#fff}
-  .wa-input b{width:34px;height:34px;border-radius:50%;background:#00A884}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:80px}
+.nav .logo img{height:40px;width:auto}
+.nav nav{display:flex;gap:28px;margin-left:16px}
+.nav nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-2);position:relative}
+.nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--turq);transform:scaleX(0);transition:transform .25s var(--ease)}
+.nav nav a:hover::after{transform:scaleX(1)}
+.nav .right{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav .btn{padding:12px 22px;font-size:.93rem}
+.menu-btn{display:none;background:none;border:0;padding:8px;color:var(--ink);cursor:pointer}
+@media (max-width:1080px){.nav nav{display:none}}
+@media (max-width:700px){.nav .meta{display:none}.nav .btn{display:none}.menu-btn{display:block}
+  .nav nav.open{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);box-shadow:var(--sh-2);margin:0;padding:8px 24px 18px}
+  .nav nav.open a{padding:14px 0;border-bottom:1px solid var(--line)}}
 
-  .float{position:absolute;background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:14px 16px;font-size:.84rem}
-  .float h4{margin:0 0 8px;font:700 .8rem 'Sora',system-ui,sans-serif;color:var(--ink-3);letter-spacing:0}
-  .lead-card{right:0;top:56px;width:232px}
-  .lead-card .row{display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--line);color:var(--ink-2)}
-  .lead-card .row:first-of-type{border-top:0}
-  .lead-card .row b{color:var(--ink)}
-  .tag{display:inline-block;padding:3px 9px;border-radius:999px;font-weight:700;font-size:.74rem}
-  .tag.hot{background:#E3F9EC;color:#167A45}
-  .tag.ai{background:#E2F4FB;color:#0E5F8C}
-  .tag.esc{background:#FFF1DA;color:#9A5B00}
-  .tag.hum{background:#ECE9FB;color:#4B3BA6}
-  .owner-card{right:-8px;top:262px;width:232px}
-  .owner-card .st{display:flex;gap:6px;flex-wrap:wrap}
-  .owner-card p{color:var(--ink-2);margin-top:8px;font-size:.8rem}
-  .ig-card{right:12px;bottom:40px;width:244px;display:flex;gap:10px;align-items:flex-start}
-  .ig-card .ig{width:30px;height:30px;flex:none;border-radius:9px;background:radial-gradient(circle at 30% 110%,#FDD56E,#F6763A 30%,#D6249F 60%,#6C3FD1);display:grid;place-items:center}
-  .ig-card .ig svg{width:16px;height:16px;color:#fff}
-  .ig-card p{color:var(--ink-2);font-size:.8rem}
-  .ig-card p b{color:var(--ink)}
-  /* sequência de entrada do hero (único momento animado da página) */
-  .seq{opacity:0;transform:translateY(8px);animation:pop .45s cubic-bezier(.2,.7,.3,1) forwards}
-  @keyframes pop{to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){.seq{animation:none;opacity:1;transform:none}.typing{display:none}}
-  @media (max-width:960px){.stage{height:620px;max-width:520px;margin:0 auto;width:100%}}
-  @media (max-width:520px){
-    .stage{height:auto;display:flex;flex-direction:column;gap:14px}
-    .phone{position:relative;left:auto;transform:none;margin:0 auto;width:286px;height:570px}
-    .float{position:relative;inset:auto;width:auto}
-  }
+/* HERO */
+.hero{position:relative;padding:150px 0 0;overflow:hidden;background:
+  radial-gradient(900px 520px at 85% 10%,rgba(34,199,201,.18),transparent 60%),
+  radial-gradient(700px 500px at 0% 100%,rgba(14,77,146,.10),transparent 60%),var(--page)}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='104'%3E%3Crect x='10' y='10' width='84' height='84' rx='22' fill='none' stroke='%230E4D92' stroke-opacity='.07' stroke-width='2'/%3E%3C/svg%3E");mask:linear-gradient(180deg,#000,transparent 85%);-webkit-mask:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1.08fr;gap:40px;align-items:center;min-height:560px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--paper);box-shadow:var(--sh-1);font-weight:700;font-size:.85rem;color:var(--blue)}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(50,210,124,.2)}
+.hero h1{font-size:clamp(2.5rem,4.3vw,3.7rem);line-height:1.02;margin:26px 0 24px;letter-spacing:-.035em}
+.hero .lead{font-size:1.22rem}
+.hero-cta{margin-top:38px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.hero-cta small{color:var(--ink-3);font-weight:600;font-size:.86rem}
+@media (max-width:980px){.hero{padding-top:120px}.hero-grid{grid-template-columns:1fr;min-height:0}}
 
-  /* clientes */
-  .clients{padding:44px 0 56px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .clients p{text-align:center;color:var(--ink-3);font-weight:600;font-size:.95rem}
-  .logos{display:grid;grid-template-columns:repeat(7,1fr);gap:28px 36px;align-items:center;margin-top:30px}
-  .logos li{list-style:none;min-width:0;display:flex;justify-content:center;align-items:center;height:56px}
-  .logos img{max-height:44px;max-width:min(120px,100%);width:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .2s,opacity .2s}
-  .logos li:hover img{filter:none;opacity:1}
-  .logos .tall img{max-height:54px}
-  .logos .dark{background:var(--navy);border-radius:var(--r-sm);padding:0 14px}
-  .logos .dark img{filter:none;opacity:1;max-height:26px}
-  .logos ul{display:contents}
-  @media (max-width:960px){.logos{grid-template-columns:repeat(4,1fr)}}
-  @media (max-width:560px){.logos{grid-template-columns:repeat(3,1fr);gap:22px}}
+/* palco: janela da plataforma + cartão de conversa */
+.stage{position:relative;height:540px;perspective:1600px}
+.window{position:absolute;right:-250px;top:30px;width:640px;height:500px;background:var(--paper);border-radius:18px 0 0 18px;box-shadow:var(--sh-3);display:grid;grid-template-rows:38px 1fr;overflow:hidden;transform-origin:70% 50%;transform:rotateY(var(--ry,-8deg)) rotateX(var(--rx,4deg));transition:transform .2s linear}
+.win-bar{display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line);background:#FAFCFE}
+.win-bar i{width:11px;height:11px;border-radius:50%}
+.win-bar span{margin-left:auto;margin-right:auto;font-size:.78rem;color:var(--ink-3);font-weight:600}
+.win-body{display:grid;grid-template-columns:52px 240px 1fr;min-height:0}
+.rail{border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:16px;padding-top:16px;background:#FAFCFE}
+.rail b{width:26px;height:26px;border-radius:8px;background:var(--mist)}
+.rail b:first-child{background:linear-gradient(135deg,var(--green),var(--cyan),var(--blue))}
+.list{border-right:1px solid var(--line);overflow:hidden}
+.list h5{margin:0;padding:14px 16px 8px;font:700 .95rem var(--display)}
+.list .tb{display:flex;gap:14px;padding:0 16px 10px;font-size:.74rem;font-weight:700;color:var(--ink-3);border-bottom:1px solid var(--line)}
+.list .tb span:first-child{color:var(--blue);box-shadow:0 2px 0 var(--blue)}
+.conv{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:.76rem}
+.conv.on{background:var(--mist)}
+.av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 .78rem var(--display);color:#fff;position:relative;flex:none}
+.av em{position:absolute;right:-2px;bottom:-2px;width:14px;height:14px;border-radius:50%;border:2px solid #fff}
+.av em.w{background:var(--wa)}.av em.g{background:linear-gradient(45deg,#F6763A,#D6249F,#6C3FD1)}.av em.s{background:var(--cyan)}.av em.m{background:var(--blue)}
+.conv b{display:block;font-size:.8rem;color:var(--ink)}
+.conv div span{color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:120px}
+.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-weight:800;font-size:.66rem;white-space:nowrap}
+.tag.ai{background:#E2F4FB;color:#0E5F8C}.tag.esc{background:#FFF1DA;color:#9A5B00}.tag.hum{background:#ECE9FB;color:#4B3BA6}.tag.ok{background:#E3F9EC;color:#167A45}
+.pane{display:flex;flex-direction:column;min-width:0}
+.pane-h{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);font:700 .88rem var(--display)}
+.pane-h .tag{margin-left:auto}
+.pane-b{flex:1;padding:16px;display:flex;flex-direction:column;gap:10px;background:#F8FAFD;font-size:.78rem}
+.b{max-width:78%;padding:9px 12px;border-radius:12px;line-height:1.45;box-shadow:0 1px 1px rgba(7,27,59,.06)}
+.b.in{background:#fff;border:1px solid var(--line);align-self:flex-start}
+.b.out{background:var(--mist);align-self:flex-end;color:var(--ink)}
+.sys{align-self:center;font-size:.7rem;color:var(--ink-3);font-weight:600;text-align:center}
+.sys b{color:var(--blue)}
 
-  /* blocos de recurso: texto + visual alternados */
-  .sec-head{max-width:720px;margin-bottom:64px}
-  .sec-head h2{font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;font-weight:700;margin-bottom:18px}
-  .sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
-  .sec-head.center .lead{margin:0 auto}
-  .feature{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
-  .feature:first-of-type{border-top:0;padding-top:0}
-  .feature.flip .f-text{order:2}
-  .feature h3{font-size:clamp(1.55rem,2.4vw,2rem);line-height:1.15;margin-bottom:16px}
-  .feature .lead{font-size:1.05rem}
-  .checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
-  .checks li{display:grid;grid-template-columns:22px 1fr;gap:12px;color:var(--ink-2);font-size:.98rem}
-  .checks li::before{content:"";width:22px;height:22px;border-radius:50%;margin-top:1px;background:var(--mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E4D92' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
-  .checks b{color:var(--ink)}
-  @media (max-width:900px){.feature{grid-template-columns:1fr;gap:36px}.feature.flip .f-text{order:0}}
+.chatcard{position:absolute;left:-24px;top:120px;width:256px;z-index:2}
+.chatcard .phone{background:var(--paper);border-radius:22px;box-shadow:var(--sh-3);overflow:hidden}
+.chatcard .ph-h{display:flex;align-items:center;gap:10px;padding:14px;background:#075E54;color:#fff}
+.chatcard .ph-h .av{width:32px;height:32px;background:#fff}
+.chatcard .ph-h .av img{width:26px}
+.chatcard .ph-h b{font-size:.86rem;display:block}
+.chatcard .ph-h small{font-size:.7rem;opacity:.85}
+.chatcard .ph-b{background:#EFEAE2;padding:14px 12px;display:flex;flex-direction:column;gap:8px;font-size:.8rem;line-height:1.4;min-height:250px}
+.w{max-width:86%;padding:7px 10px 15px;border-radius:9px;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.w time{position:absolute;right:8px;bottom:2px;font-size:.62rem;color:#667781}
+.w.in{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.w.out{background:var(--wa-out);align-self:flex-end;border-top-right-radius:2px}
+.bubble{position:absolute;z-index:3;background:var(--paper);border-radius:14px;box-shadow:var(--sh-2);padding:12px 14px;font-size:.8rem;color:var(--ink-2);max-width:230px}
+.bubble b{color:var(--ink);display:block;font-size:.78rem;margin-bottom:2px}
+.bubble.b1{left:-34px;top:20px}
+.bubble.b2{left:170px;bottom:6px}
+.bubble .spark{position:absolute;right:-16px;top:-14px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--turq));box-shadow:0 8px 20px -6px rgba(14,77,146,.6)}
+.bubble .spark svg{width:18px;height:18px;color:#fff}
+.seq{opacity:0;transform:translateY(10px) scale(.98);animation:pop .55s var(--ease) forwards;animation-delay:var(--t,0s)}
+@keyframes pop{to{opacity:1;transform:none}}
+.float{opacity:0;animation:pop .55s var(--ease) forwards,bob 6s ease-in-out infinite;animation-delay:var(--t,0s),calc(var(--t,0s) + .6s)}
+@keyframes bob{50%{translate:0 -8px}}
+@media (max-width:1240px){.window{right:-300px}}
+@media (max-width:980px){.stage{height:520px;max-width:680px;width:100%;margin:10px auto 0}.window{right:-120px;top:20px}}
+@media (max-width:640px){.stage{height:470px}.window{right:-360px;top:40px;width:600px}.chatcard{left:0;top:20px;width:272px}.bubble.b1{left:auto;right:0;top:310px}.bubble.b2{display:none}}
 
-  /* painéis de produto desenhados em HTML */
-  .panel{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;position:relative}
-  .panel-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;font:600 .95rem 'Sora',system-ui,sans-serif}
-  .panel-title small{font:500 .8rem 'Manrope',system-ui,sans-serif;color:var(--ink-3)}
-  .docs{display:grid;gap:10px}
-  .doc{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r);background:var(--page);font-size:.92rem}
-  .doc .ext{width:38px;height:44px;border-radius:7px;display:grid;place-items:center;font:700 .66rem 'Sora',system-ui,sans-serif;color:#fff}
-  .doc .ext.pdf{background:#D9473B}.doc .ext.xls{background:#1E7B45}.doc .ext.doc2{background:#2B5DB9}.doc .ext.txt{background:#5B6B85}
-  .doc span:not(.ext){flex:1;color:var(--ink-2)}
-  .doc .ext{flex:none}
-  .doc em{font-style:normal;font-size:.78rem;color:#167A45;font-weight:700}
-  .answer{margin-top:16px;padding:14px 16px;border-radius:var(--r);background:var(--mist);font-size:.9rem;color:var(--ink-2)}
-  .answer b{color:var(--ink)}
+/* faixa de clientes: carrossel infinito */
+.clients{position:relative;margin-top:48px;padding:38px 0 42px;background:var(--paper);box-shadow:0 -1px 0 var(--line),0 1px 0 var(--line)}
+.clients p{text-align:center;color:var(--ink-3);font-weight:700;font-size:.92rem;margin-bottom:26px}
+.marquee{overflow:hidden;mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.track{display:flex;width:max-content;animation:scroll 46s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track ul{display:flex;align-items:center;gap:72px;padding:0 36px;margin:0;list-style:none}
+.track li{flex:none;height:56px;display:flex;align-items:center}
+.track img{max-height:40px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) contrast(1.05);opacity:.6;transition:filter .3s,opacity .3s}
+.track li:hover img{filter:none;opacity:1}
+.track .tall img{max-height:54px}
+.track .dark{background:var(--navy);border-radius:10px;padding:0 16px}
+.track .dark img{max-height:24px;filter:none;opacity:1}
+@keyframes scroll{to{transform:translateX(-50%)}}
 
-  .camp-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-  .camp-stats div{padding:12px 8px;border-radius:var(--r-sm);background:var(--page);text-align:center}
-  .camp-stats b{display:block;font:700 1.25rem 'Sora',system-ui,sans-serif;color:var(--ink)}
-  .camp-stats span{font-size:.74rem;color:var(--ink-3);font-weight:600}
-  .camp-stats .bad b{color:#C2410C}
-  .bar{height:10px;border-radius:99px;background:var(--page);overflow:hidden;margin:20px 0 8px;display:flex}
-  .bar i{display:block;height:100%}
-  .camp-list{margin-top:14px;display:grid;gap:8px;font-size:.86rem}
-  .camp-list div{display:flex;justify-content:space-between;padding:10px 12px;border-radius:var(--r-sm);border:1px solid var(--line);color:var(--ink-2)}
-  .camp-list .note{font-size:.78rem;color:var(--ink-3);border:0;padding:4px 0 0}
-  @media (max-width:520px){.camp-stats{grid-template-columns:repeat(3,1fr)}}
+/* problema → virada */
+.shift{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.shift .sticky{position:sticky;top:120px}
+.ba{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{display:grid;grid-template-columns:1fr 46px 1fr;align-items:center;background:var(--paper);border-radius:var(--r);box-shadow:var(--sh-1);padding:18px 22px;transition:box-shadow .3s,transform .3s var(--ease)}
+.ba li.in:hover{box-shadow:var(--sh-2);transform:translateY(-3px)}
+.ba .was{color:var(--ink-3);text-decoration:line-through;text-decoration-color:rgba(194,65,12,.45);text-decoration-thickness:2px}
+.ba .now{color:var(--ink);font-weight:700}
+.ba svg{width:22px;height:22px;color:var(--turq);justify-self:center}
+@media (max-width:900px){.shift{grid-template-columns:1fr;gap:40px}.shift .sticky{position:static}.ba li{grid-template-columns:1fr;gap:4px}.ba svg{display:none}}
 
-  .ig-post{display:grid;grid-template-columns:120px 1fr;gap:16px}
-  .ig-thumb{border-radius:var(--r);aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy),var(--blue) 55%,var(--turq));display:grid;place-items:center;color:#fff;font:700 .95rem/1.2 'Sora',system-ui,sans-serif;text-align:center;padding:10px}
-  .cmt{font-size:.86rem;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
-  .cmt b{color:var(--ink)}
-  .cmt.reply{padding-left:18px;border-left:2px solid var(--turq);margin-left:4px;border-bottom:0}
-  .dm{margin-top:12px;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:var(--mist);font-size:.84rem;color:var(--ink-2)}
-  .sched{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  .sched div{border:1px dashed var(--line);border-radius:var(--r-sm);padding:10px;font-size:.78rem;color:var(--ink-3)}
-  .sched b{display:block;color:var(--ink);font-size:.85rem}
-  @media (max-width:520px){.ig-post{grid-template-columns:1fr}.ig-thumb{aspect-ratio:16/9}}
+/* bento: plataforma */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(220px,auto);gap:18px;margin-top:60px}
+.tile{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--sh-1);padding:30px;position:relative;overflow:hidden;transition:box-shadow .35s,transform .35s var(--ease)}
+.tile.in:hover{box-shadow:var(--sh-2);transform:translateY(-4px)}
+.tile h3{font-size:1.3rem;margin-bottom:10px}
+.tile p{color:var(--ink-2);font-size:.97rem;max-width:42ch}
+.tile .verb{font:800 .8rem var(--text);color:var(--cyan);margin-bottom:10px;display:block}
+.t1{grid-column:span 4;grid-row:span 2;background:linear-gradient(160deg,#fff 40%,var(--mist))}
+.t2,.t3,.t4,.t5,.t6{grid-column:span 2}
+.mini{margin-top:26px;display:grid;gap:10px;max-width:520px}
+.mini .row{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;background:var(--paper);border-radius:12px;padding:10px 14px;box-shadow:var(--sh-1);font-size:.85rem}
+.mini .row .av{width:30px;height:30px;font-size:.7rem}
+.chan{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.chan span{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font-weight:700;font-size:.84rem;color:var(--ink-2)}
+.chan svg{width:16px;height:16px}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.t1{grid-column:span 2;grid-row:auto}.t2,.t3,.t4,.t5,.t6{grid-column:span 1}}
+@media (max-width:600px){.bento{grid-template-columns:1fr}.t1,.t2,.t3,.t4,.t5,.t6{grid-column:auto}}
 
-  .kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .col{background:var(--page);border-radius:var(--r);padding:12px;min-height:250px}
-  .col h5{margin:0 0 10px;font:700 .8rem 'Sora',system-ui,sans-serif;color:var(--ink-2);display:flex;justify-content:space-between}
-  .card{background:var(--paper);border-radius:var(--r-sm);padding:10px;font-size:.8rem;margin-bottom:8px;box-shadow:0 1px 2px rgba(7,27,59,.08)}
-  .card b{display:block;color:var(--ink);font-size:.85rem}
-  .card span{color:var(--ink-3)}
-  .card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-  .card .nobody{color:#C2410C;font-weight:700}
-  .tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
-  .tabs button{font:600 .8rem 'Manrope',system-ui,sans-serif;padding:6px 12px;border-radius:999px;border:0;background:var(--page);color:var(--ink-2);cursor:pointer}
-  .tabs button[aria-selected=true]{background:var(--navy);color:#fff}
-  @media (max-width:520px){.kanban{grid-template-columns:1fr}.col{min-height:0}}
+/* multiagentes: scrollytelling */
+.agents{background:linear-gradient(180deg,var(--page),#fff 30%,#fff 70%,var(--page))}
+.ag-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:70px}
+.ag-visual{position:sticky;top:110px;height:560px}
+.ag-step{min-height:62vh;display:flex;flex-direction:column;justify-content:center;padding:20px 0;opacity:.28;transition:opacity .5s}
+.ag-step.on{opacity:1}
+.ag-step .n{font:700 .85rem var(--display);color:var(--cyan);margin-bottom:10px}
+.ag-step h3{font-size:1.6rem;line-height:1.2;margin-bottom:12px}
+.ag-step p{color:var(--ink-2);max-width:46ch}
+.ag-step .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.ag-step .acts span{font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--mist);color:var(--blue)}
+.orbit{position:absolute;inset:0;border-radius:var(--r-lg);background:radial-gradient(circle at 50% 46%,rgba(34,199,201,.14),transparent 60%),var(--paper);box-shadow:var(--sh-2);overflow:hidden}
+.orbit svg.links{position:absolute;inset:0;width:100%;height:100%}
+.orbit svg.links path{stroke:var(--line);stroke-width:2;fill:none;stroke-dasharray:6 8;vector-effect:non-scaling-stroke;transition:stroke .4s}
+.orbit svg.links path.on{stroke:var(--turq);animation:flow 1.2s linear infinite}
+@keyframes flow{from{stroke-dashoffset:28}to{stroke-dashoffset:0}}
+.node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform .45s var(--ease)}
+.node .dot{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:var(--paper);box-shadow:var(--sh-1),inset 0 0 0 2px var(--line);transition:box-shadow .4s,background .4s}
+.node .dot svg{width:28px;height:28px;color:var(--ink-3);transition:color .4s}
+.node span{font:700 .8rem var(--text);color:var(--ink-3);white-space:nowrap;transition:color .4s}
+.node.on{transform:translate(-50%,-50%) scale(1.1)}
+.node.on .dot{background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 14px 30px -10px rgba(14,77,146,.6)}
+.node.on .dot svg{color:#fff}
+.node.on span{color:var(--ink)}
+.node.hub .dot{width:84px;height:84px;border-radius:26px;background:var(--navy)}
+.node.hub .dot svg{color:var(--turq);width:34px;height:34px}
+.ag-msg{position:absolute;left:24px;right:24px;bottom:22px;background:var(--page);border-radius:var(--r);padding:14px 16px;font-size:.88rem;color:var(--ink-2);min-height:72px;box-shadow:inset 0 0 0 1px var(--line)}
+.ag-msg b{color:var(--ink);display:block;font-size:.8rem;margin-bottom:2px}
+.ag-lib{margin-top:80px}
+.ag-lib h3{font-size:1.4rem;margin-bottom:22px}
+.lib{display:flex;flex-wrap:wrap;gap:10px}
+.lib span{padding:12px 18px;border-radius:14px;background:var(--paper);box-shadow:var(--sh-1);font-weight:700;font-size:.92rem}
+.lib span small{display:block;font-weight:500;color:var(--ink-3);font-size:.8rem}
+@media (max-width:900px){.ag-grid{grid-template-columns:1fr;gap:20px}.ag-visual{position:sticky;top:84px;height:330px;z-index:2}.ag-step{min-height:auto;padding:40px 0;opacity:1}.ag-msg{display:none}.node .dot{width:52px;height:52px}.node.hub .dot{width:64px;height:64px}}
 
-  /* conversas: IA -> escalada -> humano (sequência real) */
-  .handoff{display:grid;grid-template-columns:1fr;gap:14px;counter-reset:s;max-width:440px}
-  .step{padding:20px 24px 20px 40px;border-left:3px solid var(--line);position:relative;background:var(--paper);border-radius:0 var(--r) var(--r) 0}
-  .step::before{counter-increment:s;content:counter(s);position:absolute;top:20px;left:-17px;width:30px;height:30px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 2px currentColor;display:grid;place-items:center;font:700 .85rem 'Sora',system-ui,sans-serif}
-  .step.s1{border-color:var(--cyan);color:var(--cyan)}.step.s2{border-color:#E8A23A;color:#B87410}.step.s3{border-color:#6B5BD2;color:#4B3BA6}
-  .step h4{margin:8px 0 8px;font:700 1.15rem 'Sora',system-ui,sans-serif;color:var(--ink)}
-  .step p{color:var(--ink-2);font-size:.95rem}
-  
+/* blocos de recurso */
+.feature{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center;padding:70px 0}
+.feature.flip .f-text{order:2}
+.feature + .feature{border-top:1px solid var(--line)}
+.f-text .lead{font-size:1.06rem;margin-top:16px}
+.checks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:13px}
+.checks li{display:grid;grid-template-columns:24px 1fr;gap:12px;color:var(--ink-2);font-size:.98rem}
+.checks li::before{content:"";width:24px;height:24px;border-radius:50%;background:var(--mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E4D92' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.checks b{color:var(--ink)}
+@media (max-width:900px){.feature{grid-template-columns:1fr;gap:40px;padding:56px 0}.feature.flip .f-text{order:0}}
+.panel{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--sh-2);padding:26px;position:relative}
+.panel-t{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px;font:700 .95rem var(--display)}
+.panel-t small{font:600 .8rem var(--text);color:var(--ink-3)}
+.docs{display:grid;gap:10px}
+.doc{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-sm);background:var(--page);font-size:.92rem}
+.doc .ext{flex:none;width:38px;height:44px;border-radius:7px;display:grid;place-items:center;font:700 .66rem var(--display);color:#fff}
+.ext.pdf{background:#D9473B}.ext.xls{background:#1E7B45}.ext.dc{background:#2B5DB9}.ext.txt{background:#5B6B85}
+.doc .nm{flex:1;color:var(--ink-2)}
+.doc em{font-style:normal;font-size:.78rem;color:#167A45;font-weight:800}
+.answer{margin-top:16px;padding:14px 16px;border-radius:var(--r-sm);background:var(--mist);font-size:.9rem;color:var(--ink-2)}
+.answer b{color:var(--ink)}
+.camp{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.camp div{padding:12px 6px;border-radius:var(--r-sm);background:var(--page);text-align:center}
+.camp b{display:block;font:700 1.2rem var(--display)}
+.camp span{font-size:.72rem;color:var(--ink-3);font-weight:700}
+.camp .bad b{color:#C2410C}
+.bar{height:10px;border-radius:99px;background:var(--page);overflow:hidden;margin:20px 0 10px;display:flex}
+.bar i{display:block;height:100%;width:0;transition:width 1.4s var(--ease)}
+.in .bar i{width:var(--w)}
+.clist{display:grid;gap:8px;font-size:.86rem}
+.clist div{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:var(--r-sm);border:1px solid var(--line);color:var(--ink-2)}
+.note{font-size:.76rem;color:var(--ink-3);margin-top:10px}
+@media (max-width:520px){.camp{grid-template-columns:repeat(3,1fr)}}
+.igp{display:grid;grid-template-columns:128px 1fr;gap:16px}
+.thumb{border-radius:var(--r-sm);aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy),var(--blue) 55%,var(--turq));display:grid;place-items:center;color:#fff;font:700 .95rem/1.2 var(--display);text-align:center;padding:10px}
+.cmt{font-size:.86rem;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.cmt b{color:var(--ink)}
+.cmt.rp{padding-left:14px;border-left:2px solid var(--turq);margin-left:4px;border-bottom:0}
+.dm{margin-top:12px;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:var(--mist);font-size:.84rem;color:var(--ink-2)}
+.sched{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sched div{border:1px dashed var(--line);border-radius:var(--r-sm);padding:10px;font-size:.78rem;color:var(--ink-3)}
+.sched b{display:block;color:var(--ink);font-size:.85rem}
+@media (max-width:520px){.igp{grid-template-columns:1fr}.thumb{aspect-ratio:16/9}}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{font:700 .82rem var(--text);padding:7px 14px;border-radius:999px;border:0;background:var(--page);color:var(--ink-2);cursor:pointer;transition:background .2s}
+.tabs button[aria-selected=true]{background:var(--navy);color:#fff}
+.kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.col{background:var(--page);border-radius:var(--r);padding:12px;min-height:250px}
+.col h5{margin:0 0 10px;font:700 .8rem var(--display);color:var(--ink-2);display:flex;justify-content:space-between}
+.card{background:var(--paper);border-radius:var(--r-sm);padding:10px;font-size:.8rem;margin-bottom:8px;box-shadow:var(--sh-1);animation:pop .4s var(--ease) both}
+.card b{display:block;color:var(--ink);font-size:.85rem}
+.card span{color:var(--ink-3)}
+.card .ft{display:flex;justify-content:space-between;gap:6px;margin-top:8px;white-space:nowrap;font-size:.74rem}
+.card .nobody{color:#C2410C;font-weight:800}
+@media (max-width:520px){.kanban{grid-template-columns:1fr}.col{min-height:0}}
+.handoff{display:grid;gap:14px;counter-reset:s;max-width:460px;padding-left:17px}
+.step{padding:22px 24px 22px 40px;border-left:3px solid var(--line);position:relative;background:var(--paper);border-radius:0 var(--r) var(--r) 0;box-shadow:var(--sh-1)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:22px;left:-17px;width:30px;height:30px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 2px currentColor;display:grid;place-items:center;font:700 .85rem var(--display)}
+.step.s1{border-color:var(--cyan);color:var(--cyan)}.step.s2{border-color:#E8A23A;color:#B87410}.step.s3{border-color:#6B5BD2;color:#4B3BA6}
+.step h4{font-size:1.1rem;margin-bottom:6px}
+.step p{color:var(--ink-2);font-size:.95rem}
 
-  /* plataforma em números de recurso */
-  .grid-ai{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
-  .grid-ai div{background:var(--paper);padding:28px 24px}
-  .grid-ai h4{margin:0 0 8px;font:700 1.02rem 'Sora',system-ui,sans-serif}
-  .grid-ai p{color:var(--ink-2);font-size:.92rem}
-  @media (max-width:960px){.grid-ai{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:560px){.grid-ai{grid-template-columns:1fr}}
+/* HelpDesk+ */
+.helpdesk{background:var(--navy);color:#E6EEF8;position:relative;overflow:hidden}
+.helpdesk::after{content:"";position:absolute;right:-220px;top:-220px;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(34,199,201,.22),transparent 65%);pointer-events:none}
+.helpdesk h2{color:#fff}.helpdesk .lead{color:#B8C7DC}.helpdesk .kicker{color:var(--turq)}
+.hd{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.hd-list{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:20px}
+.hd-list li{padding-left:18px;border-left:2px solid rgba(34,199,201,.5)}
+.hd-list b{display:block;color:#fff;font-family:var(--display);font-weight:600}
+.hd-list span{color:#B8C7DC;font-size:.95rem}
+.mgr{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:26px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.mgr .panel-t{color:#fff}.mgr .panel-t small{color:#8FA3C0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpis div{background:rgba(255,255,255,.05);border-radius:var(--r-sm);padding:14px}
+.kpis span{display:block;font-size:.74rem;color:#8FA3C0;font-weight:700}
+.kpis b{font:700 1.6rem var(--display);color:#fff}
+.kpis .warn b{color:#F5B451}.kpis .ok b{color:var(--green)}
+.tickets{margin-top:14px;display:grid;gap:8px;font-size:.84rem}
+.tickets div{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:rgba(255,255,255,.04);color:#CFE0F2}
+.tickets code{font:700 .78rem var(--text);color:#8FA3C0}
+.pri{font-size:.72rem;font-weight:800;padding:2px 8px;border-radius:99px}
+.pri.a{background:rgba(245,180,81,.16);color:#F5B451}.pri.m{background:rgba(26,127,184,.2);color:#7CC4EE}
+.copilot{margin-top:16px;border-radius:var(--r-sm);background:rgba(34,199,201,.1);border:1px solid rgba(34,199,201,.3);padding:14px 16px;font-size:.88rem;color:#CFE0F2}
+.copilot b{color:var(--turq);display:block;margin-bottom:4px;font:700 .82rem var(--display)}
+@media (max-width:960px){.hd{grid-template-columns:1fr;gap:48px}}
+@media (max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}}
 
-  /* HelpDesk+: faixa escura */
-  .helpdesk{background:var(--navy);color:#E6EEF8;position:relative;overflow:hidden}
-  .helpdesk::after{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(34,199,201,.22),transparent 65%);pointer-events:none}
-  .helpdesk h2,.helpdesk h3{color:#fff}
-  .helpdesk .lead{color:#B8C7DC}
-  .helpdesk .kicker{color:var(--turq)}
-  .hd-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;position:relative;z-index:1}
-  .hd-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:18px}
-  .hd-list li{padding-left:18px;border-left:2px solid rgba(34,199,201,.5)}
-  .hd-list b{display:block;color:#fff;font-family:'Sora';font-weight:600}
-  .hd-list span{color:#B8C7DC;font-size:.95rem}
-  .mgr{background:#0D2A55;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:24px}
-  .mgr .panel-title{color:#fff}
-  .mgr .panel-title small{color:#8FA3C0}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .kpis div{background:rgba(255,255,255,.05);border-radius:var(--r);padding:14px}
-  .kpis span{display:block;font-size:.76rem;color:#8FA3C0;font-weight:600}
-  .kpis b{font:700 1.6rem 'Sora',system-ui,sans-serif;color:#fff}
-  .kpis .warn b{color:#F5B451}.kpis .ok b{color:var(--green)}
-  .copilot{margin-top:16px;border-radius:var(--r);background:rgba(34,199,201,.1);border:1px solid rgba(34,199,201,.3);padding:14px 16px;font-size:.88rem;color:#CFE0F2}
-  .copilot b{color:var(--turq);display:block;margin-bottom:4px;font-family:'Sora';font-size:.82rem}
-  .tickets{margin-top:14px;display:grid;gap:8px;font-size:.84rem}
-  .tickets div{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:rgba(255,255,255,.04);color:#CFE0F2}
-  .tickets code{font:600 .78rem 'Manrope',system-ui,sans-serif;color:#8FA3C0}
-  .pri{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:99px}
-  .pri.a{background:rgba(245,180,81,.16);color:#F5B451}.pri.m{background:rgba(26,127,184,.2);color:#7CC4EE}
-  @media (max-width:960px){.hd-grid{grid-template-columns:1fr}}
-  @media (max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}}
+/* gestão */
+.mgmt{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.mg{background:var(--paper);border-radius:var(--r-lg);padding:30px;box-shadow:var(--sh-1);transition:box-shadow .35s,transform .35s var(--ease)}
+.mg.in:hover{box-shadow:var(--sh-2);transform:translateY(-4px)}
+.mg.wide{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.mg h3{font-size:1.22rem;margin-bottom:10px}
+.mg p{color:var(--ink-2);font-size:.96rem}
+.split{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--page);margin:6px 0 12px}
+.split i{display:block;height:100%;width:0;transition:width 1.4s var(--ease)}
+.in .split i{width:var(--w)}
+.legend{display:flex;gap:16px;font-size:.82rem;color:var(--ink-3);flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.dem{display:grid;gap:10px;margin-top:16px}
+.dem div{font-size:.86rem;color:var(--ink-2)}
+.dem div::after{content:"";display:block;margin-top:5px;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--turq)) no-repeat 0 0/0 100%,var(--page);transition:background-size 1.4s var(--ease)}
+.in .dem div::after{background-size:var(--w) 100%,auto}
+@media (max-width:960px){.mgmt{grid-template-columns:1fr}.mg.wide{grid-column:auto;grid-template-columns:1fr}}
 
-  /* gestão */
-  .mgmt{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .mgmt article{background:var(--paper);border-radius:var(--r-lg);padding:30px;border:1px solid var(--line)}
-  .mgmt article.wide{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-  .mgmt h3{font-size:1.25rem;margin-bottom:10px}
-  .mgmt p{color:var(--ink-2);font-size:.96rem}
-  .split{display:flex;height:14px;border-radius:99px;overflow:hidden;margin:18px 0 10px}
-  .legend{display:flex;gap:16px;font-size:.82rem;color:var(--ink-3);flex-wrap:wrap}
-  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:0}
-  .roi{font:700 2.2rem 'Sora',system-ui,sans-serif;color:var(--ink);letter-spacing:-.02em}
-  .roi small{display:block;font:500 .84rem 'Manrope',system-ui,sans-serif;color:var(--ink-3);letter-spacing:0}
-  .demand{display:grid;gap:8px;margin-top:16px}
-  .demand div{display:grid;grid-template-columns:1fr auto;font-size:.86rem;color:var(--ink-2);gap:8px;align-items:center}
-  .demand div::after{content:"";grid-column:1/-1;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--cyan) var(--w),var(--page) var(--w))}
-  @media (max-width:960px){.mgmt{grid-template-columns:1fr}.mgmt article.wide{grid-column:auto;grid-template-columns:1fr}}
+/* Garde */
+.proof{background:var(--paper);box-shadow:0 -1px 0 var(--line),0 1px 0 var(--line)}
+.proof-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:40px;align-items:center}
+.stat b{display:block;font:700 clamp(2.4rem,4vw,3.4rem)/1 var(--display);letter-spacing:-.03em;background:linear-gradient(120deg,var(--navy),var(--blue) 60%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;margin-top:10px;color:var(--ink-2);font-weight:600}
+@media (max-width:900px){.proof-grid{grid-template-columns:1fr 1fr}.proof-grid>div:first-child{grid-column:span 2}}
 
-  /* segmentos */
-  .segs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .segs a{display:block;text-decoration:none;padding:22px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);transition:border-color .2s}
-  .segs a:hover{border-color:var(--cyan)}
-  .segs b{display:block;font:700 1.05rem 'Sora',system-ui,sans-serif;margin-bottom:6px}
-  .segs span{font-size:.88rem;color:var(--ink-2);line-height:1.5}
-  @media (max-width:960px){.segs{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:520px){.segs{grid-template-columns:1fr}}
+/* segmentos */
+.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.segs a{display:block;text-decoration:none;padding:26px;border-radius:var(--r);background:var(--paper);box-shadow:var(--sh-1);transition:transform .35s var(--ease),box-shadow .35s}
+.segs a.in:hover{transform:translateY(-5px);box-shadow:var(--sh-2)}
+.segs b{display:block;font:700 1.08rem var(--display);margin-bottom:8px}
+.segs span{font-size:.9rem;color:var(--ink-2);line-height:1.5;display:block}
+.segs em{display:inline-block;margin-top:14px;font-style:normal;font-weight:800;font-size:.85rem;color:var(--blue)}
+@media (max-width:960px){.segs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.segs{grid-template-columns:1fr}}
 
-  /* segurança + integrações */
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-  .chips span{padding:9px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:.9rem;font-weight:600;color:var(--ink-2)}
-  .chips span.meta{border-color:#9CC3F5;color:#0B4FB3;background:#F1F7FF}
-  @media (max-width:900px){.two{grid-template-columns:1fr;gap:56px}}
+/* segurança + integrações */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{padding:10px 16px;border-radius:999px;background:var(--paper);box-shadow:var(--sh-1);font-size:.9rem;font-weight:700;color:var(--ink-2)}
+.chips span.m{color:#0B4FB3;background:#F1F7FF;box-shadow:inset 0 0 0 1px #9CC3F5}
+@media (max-width:900px){.two{grid-template-columns:1fr;gap:60px}}
 
-  /* jornada de implantação (sequência real) */
-  .journey{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:j}
-  .journey li{padding:0 18px 0 0;position:relative}
-  .journey li::before{counter-increment:j;content:counter(j);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--cyan);color:var(--blue);font:700 1rem 'Sora',system-ui,sans-serif;margin-bottom:16px;position:relative;z-index:1}
-  .journey li::after{content:"";position:absolute;top:20px;left:40px;right:0;height:2px;background:var(--line)}
-  .journey li:last-child::after{display:none}
-  .journey b{display:block;font:700 1rem 'Sora',system-ui,sans-serif;margin-bottom:6px}
-  .journey span{font-size:.88rem;color:var(--ink-2);display:block;padding-right:8px}
-  @media (max-width:960px){.journey{grid-template-columns:1fr 1fr;gap:28px}.journey li::after{display:none}}
+/* jornada */
+.journey{list-style:none;padding:0;margin:60px 0 0;display:grid;grid-template-columns:repeat(6,1fr);counter-reset:j;position:relative}
+.journey::before,.journey::after{content:"";position:absolute;top:21px;left:22px;right:8%;height:2px;background:var(--line)}
+.journey::after{background:linear-gradient(90deg,var(--blue),var(--turq));transform-origin:0 50%;transform:scaleX(0);transition:transform 1.8s var(--ease) .3s}
+.journey.in::after{transform:scaleX(1)}
+.journey li{position:relative;z-index:1;padding-right:16px}
+.journey li::before{counter-increment:j;content:counter(j);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--paper);box-shadow:var(--sh-1),inset 0 0 0 2px var(--cyan);color:var(--blue);font:700 1rem var(--display);margin-bottom:18px}
+.journey b{display:block;font:700 1.02rem var(--display);margin-bottom:6px}
+.journey span{font-size:.9rem;color:var(--ink-2);display:block}
+@media (max-width:960px){.journey{grid-template-columns:1fr 1fr;gap:30px}.journey::before,.journey::after{display:none}}
 
-  /* FAQ */
-  .faq{max-width:820px;margin:0 auto}
-  .faq details{border-bottom:1px solid var(--line);padding:4px 0}
-  .faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font:600 1.1rem 'Sora',system-ui,sans-serif;position:relative}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
-  .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
-  .faq details p{color:var(--ink-2);padding:0 0 22px;max-width:70ch}
+/* FAQ */
+.faq{max-width:840px;margin:56px auto 0}
+.faq details{background:var(--paper);border-radius:var(--r);box-shadow:var(--sh-1);margin-bottom:12px;padding:0 26px;transition:box-shadow .3s}
+.faq details[open]{box-shadow:var(--sh-2)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font:600 1.08rem var(--display);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:4px;top:50%;width:11px;height:11px;border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:translateY(-70%) rotate(45deg);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{color:var(--ink-2);padding:0 0 24px;max-width:70ch}
 
-  /* CTA final */
-  .final{padding:0 0 104px}
-  .final .box{background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 70%,var(--cyan) 100%);border-radius:28px;padding:64px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;color:#fff;position:relative;overflow:hidden}
-  .final h2{color:#fff;font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.12}
-  .final p{color:#D2E2F3;margin-top:16px;font-size:1.08rem}
-  .final .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-  .final .btn-primary{background:#fff;color:var(--navy)}
-  .final .btn-primary:hover{background:var(--mist)}
-  .final .meta-badge{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);color:#D2E2F3}
-  .final .meta-badge strong{color:#fff}
-  @media (max-width:860px){.final .box{grid-template-columns:1fr;padding:40px 28px}}
+/* CTA final */
+.final .box{background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 65%,var(--cyan) 100%);border-radius:32px;padding:72px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh-3)}
+.final .box::after{content:"";position:absolute;right:-120px;bottom:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(50,210,124,.35),transparent 65%)}
+.final h2{color:#fff}
+.final p{color:#D2E2F3;margin-top:18px;font-size:1.1rem;max-width:52ch}
+.contact{position:relative;z-index:1;display:grid;gap:12px}
+.contact a{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);text-decoration:none;color:#fff;transition:background .25s,transform .25s var(--ease);min-width:0}
+.contact a:hover{background:rgba(255,255,255,.18);transform:translateX(4px)}
+.contact a svg{width:22px;height:22px;flex:none;color:var(--turq)}
+.contact a span{min-width:0}
+.contact small{display:block;color:#B8CCE4;font-size:.8rem;font-weight:600}
+.contact b{font-size:1.05rem;display:block;overflow-wrap:anywhere}
+.final .meta{color:#D2E2F3;margin-top:18px}.final .meta b{color:#fff}
+@media (max-width:860px){.final .box{grid-template-columns:1fr;padding:44px 26px}}
 
-  footer{border-top:1px solid var(--line);background:var(--paper);padding:48px 0 40px;font-size:.9rem;color:var(--ink-3)}
-  .foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-  .foot img{height:34px;width:auto}
-  .foot nav{display:flex;gap:22px;flex-wrap:wrap}
-  .foot nav a{text-decoration:none;color:var(--ink-2);font-weight:600}
-  .foot nav a:hover{color:var(--blue)}
-  .copy{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+/* rodapé */
+footer{margin-top:120px;background:#041227;color:#9FB2CC;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green),var(--turq),var(--cyan),var(--blue))}
+footer::after{content:"";position:absolute;left:-200px;bottom:-300px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(26,127,184,.18),transparent 65%);pointer-events:none}
+.ft-top{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:72px 0 48px}
+.ft-brand .logo-w{display:inline-flex;padding:12px 16px;border-radius:14px;background:#fff}
+.ft-brand .logo-w img{height:34px;width:auto}
+.ft-brand p{margin-top:18px;max-width:34ch;font-size:.95rem}
+.ft-brand .meta{margin-top:18px;color:#C9D6E8}.ft-brand .meta b{color:#fff}
+footer h6{margin:0 0 16px;font:700 .95rem var(--display);color:#fff}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer ul a{text-decoration:none;font-size:.93rem;transition:color .2s}
+footer ul a:hover{color:var(--turq)}
+.ft-big{position:relative;z-index:1;font:700 clamp(3rem,11vw,9.5rem)/.95 var(--display);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(159,178,204,.25);white-space:nowrap;user-select:none;padding-bottom:12px}
+.ft-bot{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:24px 0 32px;border-top:1px solid rgba(255,255,255,.08);font-size:.85rem}
+.ft-bot a{text-decoration:none;color:#C9D6E8}
+@media (max-width:900px){.ft-top{grid-template-columns:1fr 1fr}.ft-brand{grid-column:span 2}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-r],.seq,.float{opacity:1;transform:none}
+  .window{transform:none}
+  .bar i,.split i{width:var(--w)}
+  .dem div::after{background-size:var(--w) 100%,auto}
+  .journey::after{transform:scaleX(1)}
+  .ag-step{opacity:1}
+}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IA Conecta+","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Garde Inteligência Empresarial"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IA Conecta+","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Garde Inteligência Empresarial","url":"https://www.gardesolucoes.com.br/"}}</script>
 </head>
-<body>
+<body class="no-js" id="topo">
+<div class="progress" aria-hidden="true"></div>
 
-<!-- Ícones reutilizados -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
-  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></g></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
-  <symbol id="i-meta" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6.5 10 16.5 4.5 11l1.4-1.4 4.1 4.1 8.6-8.6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6zM19 15l.9 2.6L22 18.5l-2.1.9L19 22l-.9-2.6L16 18.5l2.1-.9z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 11 16M16 7.5 13 16M8.5 6h7"/></g></symbol>
+  <symbol id="i-sell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></g></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><circle cx="12" cy="12" r="2.5"/></g></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-5-5 8-8zM3 21l5-5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
 </svg>
 
-<header id="topo">
+<header>
   <div class="wrap nav">
     <a class="logo" href="/" aria-label="IA Conecta+, página inicial"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
     <nav id="menu" aria-label="Principal">
       <a href="#plataforma">Plataforma</a>
+      <a href="#multiagentes">Multiagentes</a>
       <a href="#instagram">Instagram</a>
       <a href="#helpdesk">HelpDesk+</a>
       <a href="#segmentos">Segmentos</a>
-      <a href="#faq">Dúvidas</a>
     </nav>
     <div class="right">
-      <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong></span>
-      <a class="btn btn-primary" href="#contato">Falar com especialista</a>
-      <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+      <span class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></span>
+      <a class="btn btn-primary" href="#diagnostico">Agendar diagnóstico</a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong> · API oficial do WhatsApp</span>
-        <h1>Atendimento, vendas e suporte em uma só operação com IA.</h1>
-        <p class="lead">A IA Conecta+ atende WhatsApp, Instagram, site e e-mail com uma inteligência artificial treinada nos documentos da sua empresa. E organiza cada conversa em funil, campanha ou chamado.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contato"><svg><use href="#i-wa"/></svg>Falar com especialista</a>
-          <a class="btn btn-ghost" href="#plataforma">Ver a plataforma</a>
-        </div>
-        <ul class="channels" aria-label="Canais atendidos">
-          <li><svg style="color:#25D366"><use href="#i-wa"/></svg>WhatsApp</li>
-          <li><svg style="color:#D6249F"><use href="#i-ig"/></svg>Instagram</li>
-          <li><svg style="color:var(--cyan)"><use href="#i-web"/></svg>Chat no site</li>
-          <li><svg style="color:var(--blue)"><use href="#i-mail"/></svg>E-mail</li>
-        </ul>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill seq" style="--t:.05s">Inteligência operacional com IA</span>
+      <h1 class="seq" style="--t:.15s">Agentes de IA que atendem, vendem e resolvem pela sua empresa</h1>
+      <p class="lead seq" style="--t:.3s">WhatsApp, Instagram, site e e-mail em uma única operação. Uma IA treinada nos documentos da sua empresa conversa, qualifica, agenda e entrega ao seu time só o que precisa de gente.</p>
+      <div class="hero-cta seq" style="--t:.45s">
+        <a class="btn btn-primary" href="#diagnostico">Agendar diagnóstico gratuito<svg><use href="#i-arrow"/></svg></a>
+        <small>Começamos entendendo a sua operação, sem custo.</small>
       </div>
+    </div>
 
-      <div class="stage" aria-label="Exemplo de atendimento pela IA no WhatsApp">
-        <div class="phone">
-          <div class="screen">
-            <div class="wa-top">
-              <div class="av"><img src="/assets/marca/logo-ia-conecta.png" alt=""></div>
-              <div><b>Clínica Viva <svg class="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#25D366"/><path d="m7.5 12.5 3 3 6-6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></b><small>conta comercial</small></div>
+    <div class="stage" aria-hidden="true">
+      <div class="window seq" style="--t:.35s">
+        <div class="win-bar"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>IA Conecta+</span></div>
+        <div class="win-body">
+          <div class="rail"><b></b><b></b><b></b><b></b><b></b></div>
+          <div class="list">
+            <h5>Todas as conversas</h5>
+            <div class="tb"><span>Abertas</span><span>IA cuidando</span><span>Precisam de atenção</span></div>
+            <div class="conv on"><span class="av" style="background:#1A7FB8">AS<em class="w"></em></span><div><b>Ana Souza</b><span>Sexta 9h30 fica ótimo</span></div><span class="tag ai">IA</span></div>
+            <div class="conv"><span class="av" style="background:#6B5BD2">RM<em class="g"></em></span><div><b>Rafael M.</b><span>Qual o valor do plano?</span></div><span class="tag ai">IA</span></div>
+            <div class="conv"><span class="av" style="background:#E8A23A">JP<em class="s"></em></span><div><b>Júlia P.</b><span>Preciso falar com alguém</span></div><span class="tag esc">Escalada</span></div>
+            <div class="conv"><span class="av" style="background:#167A45">CL<em class="m"></em></span><div><b>Carlos L.</b><span>Enviei o contrato assinado</span></div><span class="tag hum">Humano</span></div>
+            <div class="conv"><span class="av" style="background:#0E4D92">BN<em class="w"></em></span><div><b>Bia N.</b><span>Obrigada, deu certo!</span></div><span class="tag ok">Resolvido</span></div>
+          </div>
+          <div class="pane">
+            <div class="pane-h"><span class="av" style="background:#1A7FB8;width:28px;height:28px;font-size:.66rem">AS</span>Ana Souza<span class="tag ok">Agendado</span></div>
+            <div class="pane-b">
+              <div class="b in">Oi! Vocês atendem pelo convênio? Queria marcar dermatologia.</div>
+              <div class="b out">Atendemos sim, Ana. Tenho quinta às 14h ou sexta às 9h30.</div>
+              <div class="b in">Sexta de manhã fica ótimo</div>
+              <div class="sys">Agente <b>Agendamento</b> confirmou e moveu o card para <b>Agendado</b></div>
             </div>
-            <div class="chat" id="chat">
-              <div class="msg in seq" style="animation-delay:.3s">Oi! Vocês atendem pelo convênio? Queria marcar com dermatologista.<time>09:41</time></div>
-              <div class="msg out seq" style="animation-delay:1.3s">Oi, Ana! Atendemos sim, pelos convênios da nossa lista. Para dermatologia, tenho quinta às 14h ou sexta às 9h30. Qual prefere?<time>09:41</time></div>
-              <div class="msg in audio seq" style="animation-delay:2.4s"><span class="play"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="#fff"/></svg></span><span class="wave"></span><time>09:42</time></div>
-              <div class="msg in seq" style="animation-delay:2.6s;padding-top:4px;padding-bottom:6px;background:transparent;box-shadow:none"><span class="tr">Transcrição: "sexta de manhã fica ótimo"</span></div>
-              <div class="msg out seq" style="animation-delay:3.6s">Pronto! Sexta, 9h30, com a Dra. Paula. Enviei o lembrete na sua agenda.<time>09:42</time></div>
-              <div class="typing seq" style="animation-delay:4.4s" aria-hidden="true"><i></i><i></i><i></i></div>
-            </div>
-            <div class="wa-input" aria-hidden="true"><span></span><b></b></div>
           </div>
         </div>
+      </div>
 
-        <div class="float lead-card seq" style="animation-delay:2s">
-          <h4>Card no funil</h4>
-          <div class="row"><span>Contato</span><b>Ana Souza</b></div>
-          <div class="row"><span>Interesse</span><b>Dermatologia</b></div>
-          <div class="row"><span>Classificação</span><span class="tag hot">Agendado</span></div>
-          <div class="row"><span>Responsável</span><b>Recepção</b></div>
+      <div class="chatcard seq" style="--t:.6s">
+        <div class="phone">
+          <div class="ph-h"><span class="av"><img src="/assets/marca/logo-ia-conecta.png" alt=""></span><div><b>Clínica Viva</b><small>conta comercial verificada</small></div></div>
+          <div class="ph-b">
+            <div class="w in seq" style="--t:1s">Oi, preciso de ajuda<time>09:41</time></div>
+            <div class="w in seq" style="--t:1.5s">Quero remarcar minha consulta de amanhã<time>09:41</time></div>
+            <div class="w out seq" style="--t:2.3s">Claro! Encontrei sua consulta de quinta, 14h. Tenho sexta às 9h30 ou segunda às 16h. Qual prefere?<time>09:41</time></div>
+          </div>
         </div>
-        <div class="float owner-card seq" style="animation-delay:4.2s">
-          <h4>Quem conduz a conversa</h4>
-          <div class="st"><span class="tag ai">IA</span><span class="tag esc">Escalada</span><span class="tag hum">Humano</span></div>
-          <p>Se a resposta não está na base, a IA passa para a equipe com o resumo.</p>
+      </div>
+
+      <div class="bubble b1 float" style="--t:2.9s"><span class="spark"><svg><use href="#i-spark"/></svg></span><b>Resposta pela base da clínica</b>Agenda e política de remarcação consultadas em segundos.</div>
+      <div class="bubble b2 float" style="--t:3.5s"><b>Lead qualificado</b>Card criado no funil com responsável e data de retorno.</div>
+    </div>
+  </div>
+
+  <div class="clients">
+    <p>Operações que já rodam com a IA Conecta+</p>
+    <div class="marquee">
+      <div class="track" id="track">
+        <ul>
+          <li><img src="/assets/clientes/bradesco.png" alt="Bradesco"></li>
+          <li><img src="/assets/clientes/vivo.png" alt="Vivo"></li>
+          <li class="tall"><img src="/assets/clientes/assai.png" alt="Assaí Atacadista"></li>
+          <li><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago"></li>
+          <li><img src="/assets/clientes/enviai.png" alt="Enviaí"></li>
+          <li><img src="/assets/clientes/alya.png" alt="Alya"></li>
+          <li class="tall"><img src="/assets/clientes/grupo-monitor.png" alt="Grupo Monitor"></li>
+          <li class="tall"><img src="/assets/clientes/cobtec.png" alt="Cobtec"></li>
+          <li><img src="/assets/clientes/dealers-club.png" alt="Dealers Club"></li>
+          <li class="tall"><img src="/assets/clientes/davinci.png" alt="daVinci"></li>
+          <li class="tall"><img src="/assets/clientes/lui-home.png" alt="Lui Home"></li>
+          <li class="tall"><img src="/assets/clientes/true-wellness.png" alt="True Wellness"></li>
+          <li class="tall"><img src="/assets/clientes/weramp.png" alt="We Ramp"></li>
+          <li class="dark"><img src="/assets/clientes/vuelo.png" alt="Vuelo"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA → VIRADA -->
+<section class="sec">
+  <div class="wrap shift">
+    <div class="sticky" data-r="left">
+      <span class="kicker">O que trava a sua operação</span>
+      <h2 class="h2">Canais demais. Inteligência de menos.</h2>
+      <p class="lead" style="margin-top:20px">Mensagem chegando de todo lado, lead esfriando na fila, base desatualizada e o time apagando incêndio. Contratar mais gente ou instalar mais um robô não resolve, porque o problema não está no canal. Está na operação.</p>
+      <p class="lead" style="margin-top:16px;color:var(--ink)"><b>A IA Conecta+ conecta canais, agentes, dados e processos. E o dia a dia muda assim:</b></p>
+    </div>
+    <ul class="ba">
+      <li data-r style="--d:.0s"><span class="was">Atendimento lento e filas</span><svg><use href="#i-arrow"/></svg><span class="now">Resposta na hora, a qualquer hora</span></li>
+      <li data-r style="--d:.08s"><span class="was">Informação espalhada</span><svg><use href="#i-arrow"/></svg><span class="now">Conhecimento da empresa em um só lugar</span></li>
+      <li data-r style="--d:.16s"><span class="was">Base suja e CRM poluído</span><svg><use href="#i-arrow"/></svg><span class="now">Base limpa e classificada por potencial</span></li>
+      <li data-r style="--d:.24s"><span class="was">Cada atendente responde de um jeito</span><svg><use href="#i-arrow"/></svg><span class="now">Experiência padronizada e personalizada</span></li>
+      <li data-r style="--d:.32s"><span class="was">Crescer é contratar mais gente</span><svg><use href="#i-arrow"/></svg><span class="now">Escala sem aumentar o time na mesma proporção</span></li>
+      <li data-r style="--d:.40s"><span class="was">Decisão no feeling</span><svg><use href="#i-arrow"/></svg><span class="now">Operação guiada por indicadores</span></li>
+      <li data-r style="--d:.48s"><span class="was">Sistemas que não conversam</span><svg><use href="#i-arrow"/></svg><span class="now">Canais, CRM, ERP e processos conectados</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PLATAFORMA (bento) -->
+<section id="plataforma" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r>
+      <span class="kicker">Uma plataforma, a operação inteira</span>
+      <h2 class="h2" style="max-width:20ch;margin:0 auto">Muito além de automatizar o WhatsApp.</h2>
+      <p class="lead" style="margin-top:20px">Prospecção, atendimento, Instagram, funil, chamados e indicadores sobre a mesma IA e o mesmo histórico. Você liga os módulos que fazem sentido para o seu negócio.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t1" data-r="zoom">
+        <span class="verb">Atender</span>
+        <h3>Todos os canais, uma conversa só</h3>
+        <p>O cliente escolhe por onde fala. A IA responde com o mesmo conhecimento e o mesmo tom em qualquer canal, e o histórico acompanha a pessoa.</p>
+        <div class="chan">
+          <span><svg style="color:#25D366"><use href="#i-wa"/></svg>WhatsApp oficial</span>
+          <span><svg style="color:#D6249F"><use href="#i-ig"/></svg>Instagram</span>
+          <span><svg style="color:var(--cyan)"><use href="#i-web"/></svg>Chat no site</span>
+          <span><svg style="color:var(--blue)"><use href="#i-mail"/></svg>E-mail</span>
         </div>
-        <div class="float ig-card seq" style="animation-delay:5s">
-          <span class="ig"><svg><use href="#i-ig"/></svg></span>
-          <p><b>Novo comentário no Reel</b><br>Resposta pública enviada e conversa aberta no Direct.</p>
+        <div class="mini" aria-hidden="true">
+          <div class="row"><span class="av" style="background:#1A7FB8">AS<em class="w"></em></span><span>Quero remarcar minha consulta</span><span class="tag ai">IA</span></div>
+          <div class="row"><span class="av" style="background:#6B5BD2">RM<em class="g"></em></span><span>Comentou no Reel: "qual o valor?"</span><span class="tag ai">IA</span></div>
+          <div class="row"><span class="av" style="background:#E8A23A">JP<em class="s"></em></span><span>Pedido chegou com defeito</span><span class="tag esc">Escalada</span></div>
+        </div>
+      </article>
+      <article class="tile t2" data-r style="--d:.1s"><span class="verb">Vender</span><h3>Prospecção que não queima o número</h3><p>Campanhas pela API oficial com a base higienizada antes, follow-up automático e o lead qualificado caindo direto no funil.</p></article>
+      <article class="tile t3" data-r style="--d:.2s"><span class="verb">Relacionar</span><h3>Instagram que vira conversa</h3><p>Comentário respondido, Direct aberto e publicação agendada pelo mesmo painel.</p></article>
+      <article class="tile t4" data-r style="--d:.05s"><span class="verb">Resolver</span><h3>Chamados com prazo e dono</h3><p>O IA HelpDesk+ organiza o que chega ao time humano, com copiloto sugerindo a resposta.</p></article>
+      <article class="tile t5" data-r style="--d:.15s"><span class="verb">Cobrar e agendar</span><h3>A conversa já fecha o negócio</h3><p>PIX e cartão na conversa, assinatura eletrônica e agenda com Google e Microsoft 365.</p></article>
+      <article class="tile t6" data-r style="--d:.25s"><span class="verb">Decidir</span><h3>A operação em números</h3><p>Quanto a IA resolveu sozinha, o retorno em reais e onde o atendimento está travando.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- MULTIAGENTES -->
+<section id="multiagentes" class="sec agents">
+  <div class="wrap">
+    <div class="center" data-r>
+      <span class="kicker">Sistema multiagentes</span>
+      <h2 class="h2" style="max-width:22ch;margin:0 auto">Não é um robô tentando saber de tudo. É um time de especialistas.</h2>
+      <p class="lead" style="margin-top:20px">Na IA Conecta+ você monta vários agentes de IA, cada um com personalidade, base de conhecimento e nível de acesso próprios. A conversa passa de um para o outro com o contexto inteiro, e o cliente nunca precisa repetir nada.</p>
+    </div>
+
+    <div class="ag-grid">
+      <div class="ag-visual" aria-hidden="true">
+        <div class="orbit">
+          <svg class="links" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path data-l="1" d="M50 44 L22 20"/><path data-l="2" d="M50 44 L78 20"/><path data-l="3" d="M50 44 L82 64"/><path data-l="4" d="M50 44 L18 64"/>
+          </svg>
+          <div class="node hub" data-n="0" style="left:50%;top:44%"><span class="dot"><svg><use href="#i-route"/></svg></span><span>Roteador de entrada</span></div>
+          <div class="node" data-n="1" style="left:22%;top:20%"><span class="dot"><svg><use href="#i-sell"/></svg></span><span>Comercial</span></div>
+          <div class="node" data-n="2" style="left:78%;top:20%"><span class="dot"><svg><use href="#i-coin"/></svg></span><span>Financeiro</span></div>
+          <div class="node" data-n="3" style="left:82%;top:64%"><span class="dot"><svg><use href="#i-tool"/></svg></span><span>Suporte técnico</span></div>
+          <div class="node" data-n="4" style="left:18%;top:64%"><span class="dot"><svg><use href="#i-user"/></svg></span><span>Seu time</span></div>
+          <div class="ag-msg" id="agmsg"><b>Cliente</b>"Oi, quero conhecer o plano empresarial."</div>
+        </div>
+      </div>
+
+      <div class="ag-steps">
+        <div class="ag-step" data-msg='<b>Roteador de entrada</b>Entendeu o assunto e chamou o agente Comercial.'>
+          <span class="n">1. A mensagem chega</span>
+          <h3>O roteador entende o assunto e chama o agente certo.</h3>
+          <p>Não importa o canal. A primeira coisa que acontece é a IA identificar o que a pessoa precisa e direcionar a conversa para quem resolve aquilo melhor.</p>
+        </div>
+        <div class="ag-step" data-msg='<b>Agente Comercial</b>"Para quantos usuários seria? Posso te apresentar o plano numa call amanhã às 10h."'>
+          <span class="n">2. O especialista assume</span>
+          <h3>O agente Comercial qualifica, apresenta e agenda.</h3>
+          <p>Ele conhece a sua tabela, as suas regras e o seu jeito de vender. Classifica o lead, registra o valor mencionado e move o card no funil sozinho.</p>
+          <div class="acts"><span>Qualificar</span><span>Agendar</span><span>Mover no funil</span></div>
+        </div>
+        <div class="ag-step" data-msg='<b>Agente Financeiro</b>"Aqui está a segunda via do seu boleto. Prefere pagar por PIX?"'>
+          <span class="n">3. Mudou de assunto? Muda de agente</span>
+          <h3>A dúvida virou boleto. Entra o agente Financeiro.</h3>
+          <p>Com acesso só ao que precisa, ele consulta o seu sistema, envia a segunda via ou cobra por PIX e cartão dentro da conversa.</p>
+          <div class="acts"><span>Consultar sistema</span><span>Cobrar</span><span>Segunda via</span></div>
+        </div>
+        <div class="ag-step" data-msg='<b>Agente de Suporte</b>"Pelo print, o erro é de configuração. Siga estes dois passos."'>
+          <span class="n">4. Cada um com a sua base</span>
+          <h3>O agente de Suporte lê o print do erro e resolve.</h3>
+          <p>Ele interpreta a imagem, transcreve o áudio e responde pelo manual técnico. Se a resposta não estiver na base, não inventa.</p>
+          <div class="acts"><span>Ler imagem</span><span>Transcrever áudio</span><span>Abrir chamado</span></div>
+        </div>
+        <div class="ag-step" data-msg='<b>Seu time</b>Assumiu com o resumo da conversa e tudo o que os agentes já fizeram.'>
+          <span class="n">5. Gente onde faz diferença</span>
+          <h3>Quando precisa de uma pessoa, ela recebe tudo pronto.</h3>
+          <p>A escalada chega ao time com o resumo do atendimento e o histórico completo. A IA cuida do repetitivo, e a sua equipe fica com o que gera valor.</p>
+          <div class="acts"><span>Passar para humano</span><span>Resumo automático</span></div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- CLIENTES -->
-  <section class="clients" aria-label="Clientes">
-    <div class="wrap">
-      <p>Empresas que operam com a IA Conecta+</p>
-      <ul class="logos">
-        <li><img src="/assets/clientes/bradesco.png" alt="Bradesco" loading="lazy"></li>
-        <li><img src="/assets/clientes/vivo.png" alt="Vivo" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/assai.png" alt="Assaí Atacadista" loading="lazy"></li>
-        <li><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago" loading="lazy"></li>
-        <li><img src="/assets/clientes/enviai.png" alt="Enviaí" loading="lazy"></li>
-        <li><img src="/assets/clientes/alya.png" alt="Alya" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/grupo-monitor.png" alt="Grupo Monitor" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/cobtec.png" alt="Cobtec" loading="lazy"></li>
-        <li><img src="/assets/clientes/dealers-club.png" alt="Dealers Club" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/davinci.png" alt="daVinci" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/lui-home.png" alt="Lui Home" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/true-wellness.png" alt="True Wellness" loading="lazy"></li>
-        <li class="tall"><img src="/assets/clientes/weramp.png" alt="We Ramp" loading="lazy"></li>
-        <li class="dark"><img src="/assets/clientes/vuelo.png" alt="Vuelo" loading="lazy"></li>
+    <div class="ag-lib">
+      <h3 data-r>Agentes que a sua operação pode ter</h3>
+      <div class="lib">
+        <span data-r style="--d:0s">Comercial / SDR<small>Qualifica e agenda</small></span>
+        <span data-r style="--d:.04s">Atendimento<small>SAC e acompanhamento</small></span>
+        <span data-r style="--d:.08s">Customer Success<small>Adoção e retenção</small></span>
+        <span data-r style="--d:.12s">Cobrança<small>Régua e renegociação</small></span>
+        <span data-r style="--d:.16s">Financeiro<small>Boletos e contratos</small></span>
+        <span data-r style="--d:.2s">Suporte técnico<small>Diagnóstico e escalonamento</small></span>
+        <span data-r style="--d:.24s">RH<small>Políticas e onboarding</small></span>
+        <span data-r style="--d:.28s">Operações<small>Procedimentos e checklists</small></span>
+        <span data-r style="--d:.32s">Instrutor<small>Treinamento e dúvidas</small></span>
+        <span data-r style="--d:.36s">Assistente executivo<small>Indicadores e consultas</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECURSOS -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="feature">
+      <div class="f-text" data-r="left">
+        <span class="kicker">Uma IA que é só da sua empresa</span>
+        <h2 class="h3">Responde pelo que está nos seus documentos. E só por isso.</h2>
+        <p class="lead">Envie PDF, Excel, Word ou texto e a IA aprende. Mudou a tabela de preços? Atualize o arquivo e a resposta muda na hora, sem retreino e sem espera.</p>
+        <ul class="checks">
+          <li><span><b>Não inventa.</b> Quando a informação não está na base, reconhece o limite e passa para uma pessoa.</span></li>
+          <li><span><b>Entende foto e áudio:</b> lê a imagem que o cliente mandou e transcreve a mensagem de voz.</span></li>
+          <li><span><b>Fala o idioma de quem escreveu</b>, reavaliado a cada mensagem.</span></li>
+          <li><span><b>Não para por causa de um fornecedor:</b> se um provedor de IA falha, o sistema troca sozinho.</span></li>
+        </ul>
+      </div>
+      <div class="panel" data-r="right" aria-hidden="true">
+        <div class="panel-t">Base de conhecimento <small>Agente: Atendimento</small></div>
+        <div class="docs">
+          <div class="doc"><span class="ext pdf">PDF</span><span class="nm">Tabela de convênios 2026</span><em>Atualizado agora</em></div>
+          <div class="doc"><span class="ext xls">XLS</span><span class="nm">Agenda do corpo clínico</span><em>Ativo</em></div>
+          <div class="doc"><span class="ext dc">DOC</span><span class="nm">Política de cancelamento</span><em>Ativo</em></div>
+          <div class="doc"><span class="ext txt">TXT</span><span class="nm">Perguntas frequentes da recepção</span><em>Ativo</em></div>
+        </div>
+        <div class="answer"><b>Fora da base:</b> "Vocês fazem procedimento a laser?" A IA não encontrou a resposta nos documentos e transferiu para a recepção, com o resumo da conversa.</div>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="f-text" data-r="right">
+        <span class="kicker">Prospecção ativa pelo WhatsApp</span>
+        <h2 class="h3">Mais conversas abertas. Nenhum número queimado.</h2>
+        <p class="lead">Disparo em escala pela API oficial da Meta, com conta verificada e modelos aprovados. Antes de enviar, a base é limpa. Depois, a IA conversa, qualifica e coloca no funil.</p>
+        <ul class="checks">
+          <li><span><b>Base higienizada:</b> duplicados removidos, telefones validados e enriquecimento por DDD, estado e perfil.</span></li>
+          <li><span><b>Números sem WhatsApp descartados antes do envio</b>, preservando a reputação da conta.</span></li>
+          <li><span><b>Envio em blocos com limite diário</b> e follow-up automático para quem não respondeu, mesmo dias depois.</span></li>
+          <li><span><b>Quem pediu para sair, sai de vez:</b> o descadastro vale para todas as campanhas futuras.</span></li>
+        </ul>
+      </div>
+      <div class="panel" data-r="left" aria-hidden="true">
+        <div class="panel-t">Campanha: reativação de clientes <small>WhatsApp · em andamento</small></div>
+        <div class="camp">
+          <div><b>2.400</b><span>Enviadas</span></div><div><b>2.310</b><span>Entregues</span></div><div><b>1.720</b><span>Lidas</span></div><div><b>486</b><span>Respostas</span></div><div class="bad"><b>90</b><span>Falhas</span></div>
+        </div>
+        <div class="bar"><i style="--w:20%;background:var(--green)"></i><i style="--w:52%;background:var(--cyan)"></i><i style="--w:24%;background:#BFD6EA"></i><i style="--w:4%;background:#F2A97C"></i></div>
+        <div class="clist"><div><span>Bloco 3 de 5</span><b>Hoje, 14:00</b></div><div><span>Follow-up de quem não respondeu</span><b>Em 2 dias</b></div></div>
+        <p class="note">Números ilustrativos.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="f-text" data-r="left">
+        <span class="kicker">Funil e CRM</span>
+        <h2 class="h3">Um funil que segue o processo da sua área, e não o contrário.</h2>
+        <p class="lead">As etapas se organizam pela classificação que a própria IA faz durante a conversa. Serve para vendas, atendimento, RH ou qualquer fluxo por etapas.</p>
+        <ul class="checks">
+          <li><span><b>A conversa dentro do card</b>, com data de retorno, responsável e valor mencionado pelo lead.</span></li>
+          <li><span><b>Contato do Dia:</b> quem chamar hoje, quem está atrasado e quem vem a seguir.</span></li>
+          <li><span><b>Nenhum lead parado:</b> distribuição automática entre vendedores e reatribuição por tempo de espera.</span></li>
+          <li><span><b>Promessa cumprida:</b> o retorno combinado com o lead vira mensagem agendada e dispara sozinho.</span></li>
+        </ul>
+      </div>
+      <div class="panel" data-r="right">
+        <div class="tabs" role="tablist" aria-label="Exemplos de funil">
+          <button role="tab" aria-selected="true" data-f="com">Comercial</button>
+          <button role="tab" aria-selected="false" data-f="at">Atendimento</button>
+          <button role="tab" aria-selected="false" data-f="rh">RH</button>
+        </div>
+        <div class="kanban" id="kanban" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="f-text" data-r="right">
+        <span class="kicker">Central de conversas</span>
+        <h2 class="h3">A IA e o seu time no mesmo atendimento, sem perder o fio.</h2>
+        <p class="lead">Todos os canais em uma tela, e cada conversa mostra quem está conduzindo. Quando a equipe assume, a IA continua do lado, sugerindo a melhor resposta.</p>
+        <ul class="checks">
+          <li><span><b>A IA reconhece quem está falando</b> pelo telefone e usa os dados do cadastro no atendimento.</span></li>
+          <li><span><b>Chat no seu site</b> instalado com uma linha de código e com a identidade da sua marca.</span></li>
+          <li><span><b>Roteiros montados em tela</b>, sem programação.</span></li>
+        </ul>
+      </div>
+      <div class="handoff" data-r="left">
+        <div class="step s1"><h4>IA</h4><p>A inteligência artificial conduz a conversa com a base da sua empresa.</p></div>
+        <div class="step s2"><h4>Escalada</h4><p>A IA percebe que o caso precisa de uma pessoa e avisa o time.</p></div>
+        <div class="step s3"><h4>Humano</h4><p>Alguém da equipe assume, já com o resumo e todo o histórico.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="sec" style="background:var(--paper);box-shadow:0 -1px 0 var(--line),0 1px 0 var(--line)">
+  <div class="wrap">
+    <div class="feature" style="padding:0">
+      <div class="f-text" data-r="left">
+        <span class="kicker">Automação de Instagram</span>
+        <h2 class="h3">Do comentário para a conversa. Da conversa para a venda.</h2>
+        <p class="lead">Cada comentário é uma pessoa levantando a mão. A IA Conecta+ responde, puxa para o Direct e continua o atendimento com o mesmo conhecimento do WhatsApp.</p>
+        <ul class="checks">
+          <li><span><b>Comentários em posts e Reels</b> respondidos pela IA em público, no Direct ou nos dois.</span></li>
+          <li><span><b>Resposta pública com trava:</b> nada de preço, link ou dado pessoal embaixo do post.</span></li>
+          <li><span><b>Respostas a Stories</b> entram direto no atendimento.</span></li>
+          <li><span><b>Publicações agendadas</b> pelo próprio painel.</span></li>
+        </ul>
+      </div>
+      <div class="panel" data-r="right" aria-hidden="true">
+        <div class="panel-t">Comentários <small>Reel publicado ontem</small></div>
+        <div class="igp">
+          <div class="thumb">Nova unidade em Moema</div>
+          <div>
+            <div class="cmt"><b>@marina.rp</b> Qual o valor da consulta?</div>
+            <div class="cmt rp"><b>Resposta da IA</b> Oi, Marina! Te chamei no Direct com todos os detalhes.</div>
+            <div class="dm"><svg width="18" height="18" style="color:#D6249F"><use href="#i-ig"/></svg>Conversa aberta no Direct com a IA</div>
+          </div>
+        </div>
+        <div class="sched"><div><b>Qui, 10h</b>Carrossel</div><div><b>Sáb, 18h</b>Reel</div><div><b>Seg, 9h</b>Post</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HELPDESK -->
+<section id="helpdesk" class="sec helpdesk">
+  <div class="wrap hd">
+    <div data-r="left">
+      <span class="kicker">IA HelpDesk+</span>
+      <h2 class="h2">Atender bem é importante. Saber onde a operação trava, também.</h2>
+      <p class="lead" style="margin-top:20px">O IA HelpDesk+ organiza os chamados que precisam do time humano e mostra ao gestor onde o atendimento está parado, e com quem. Funciona junto com a IA Conecta+ ou sozinho.</p>
+      <ul class="hd-list">
+        <li><b>Prazo por prioridade</b><span>Status, prioridade, responsável e numeração curta em cada chamado.</span></li>
+        <li><b>Copiloto ao vivo para o atendente</b><span>Sugere a resposta a cada mensagem, melhora o rascunho, aponta chamados parecidos e resume o que o cliente precisa.</span></li>
+        <li><b>Anexos lidos automaticamente</b><span>Imagem convertida em texto e áudio transcrito.</span></li>
       </ul>
     </div>
-  </section>
-
-  <!-- PLATAFORMA -->
-  <section id="plataforma">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Uma plataforma, toda a operação</p>
-        <h2>Não é só automação de WhatsApp. É a operação inteira conectada.</h2>
-        <p class="lead">Prospecção, atendimento, relacionamento no Instagram, funil de vendas e chamados compartilham a mesma IA e o mesmo histórico. Você liga os módulos que fazem sentido para o seu negócio.</p>
+    <div class="mgr" data-r="right" aria-hidden="true">
+      <div class="panel-t">Painel do gestor <small>Exemplo</small></div>
+      <div class="kpis">
+        <div><span>Abertos</span><b>38</b></div><div class="warn"><span>Vencidos</span><b>4</b></div><div class="ok"><span>Resolvidos</span><b>126</b></div><div class="warn"><span>Sem responsável</span><b>2</b></div>
       </div>
-
-      <div class="feature">
-        <div class="f-text">
-          <p class="kicker">IA exclusiva da sua empresa</p>
-          <h3>Responde pelo que está nos seus documentos. E só por isso.</h3>
-          <p class="lead">Cada cliente tem uma IA própria, alimentada por PDF, Excel, Word e texto. Atualizou o documento, a resposta muda na hora, sem retreino.</p>
-          <ul class="checks">
-            <li><span><b>Não inventa resposta.</b> Quando a informação não está na base, reconhece o limite e passa para uma pessoa.</span></li>
-            <li><span><b>Vários agentes por empresa</b>, cada um com personalidade, base e nível de acesso próprios.</span></li>
-            <li><span><b>Entende foto e áudio:</b> lê a imagem do erro e transcreve a mensagem de voz.</span></li>
-            <li><span><b>Responde no idioma de quem escreveu</b> e troca de provedor de IA sozinha se um deles falhar.</span></li>
-          </ul>
-        </div>
-        <div class="panel" aria-hidden="true">
-          <div class="panel-title">Base de conhecimento <small>Agente: Atendimento</small></div>
-          <div class="docs">
-            <div class="doc"><span class="ext pdf">PDF</span><span>Tabela de convênios 2026</span><em>Atualizado agora</em></div>
-            <div class="doc"><span class="ext xls">XLS</span><span>Agenda do corpo clínico</span><em>Ativo</em></div>
-            <div class="doc"><span class="ext doc2">DOC</span><span>Política de cancelamento</span><em>Ativo</em></div>
-            <div class="doc"><span class="ext txt">TXT</span><span>Perguntas frequentes da recepção</span><em>Ativo</em></div>
-          </div>
-          <div class="answer"><b>Pergunta fora da base:</b> "Vocês fazem procedimento estético a laser?" A IA não encontrou na base e transferiu para a recepção, com o resumo da conversa.</div>
-        </div>
+      <div class="tickets">
+        <div><code>#4821</code><span>Erro ao emitir boleto (foto anexada)</span><span class="pri a">Alta</span></div>
+        <div><code>#4819</code><span>Troca de endereço de entrega</span><span class="pri m">Média</span></div>
       </div>
+      <div class="copilot"><b>Copiloto</b>O cliente enviou print do erro 402. Há 3 chamados parecidos resolvidos com a reemissão pelo financeiro. Sugestão de resposta pronta para revisar.</div>
+    </div>
+  </div>
+</section>
 
-      <div class="feature flip">
-        <div class="f-text">
-          <p class="kicker">Prospecção ativa pelo WhatsApp</p>
-          <h3>Campanhas em escala pela API oficial, com a base limpa antes do envio.</h3>
-          <p class="lead">Conta verificada e modelos aprovados pela Meta, sem os riscos do WhatsApp comum. A IA conduz a conversa, qualifica o lead e coloca no funil.</p>
-          <ul class="checks">
-            <li><span><b>Base higienizada:</b> duplicados removidos, telefones validados e enriquecimento por DDD, estado e perfil.</span></li>
-            <li><span><b>Números sem WhatsApp descartados antes do envio</b>, preservando a reputação da conta.</span></li>
-            <li><span><b>Envio agendado em blocos</b>, com limite diário por canal e follow-up automático de quem não respondeu.</span></li>
-            <li><span><b>Quem pediu para sair, sai de vez:</b> o descadastro vale para todas as campanhas futuras.</span></li>
-          </ul>
+<!-- GESTÃO -->
+<section id="gestao" class="sec">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Gestão e indicadores</span>
+      <h2 class="h2">O que antes dependia de percepção, agora aparece em números.</h2>
+    </div>
+    <div class="mgmt">
+      <article class="mg wide" data-r>
+        <div><h3>Quanto a IA resolveu sozinha</h3><p>O painel separa o que a IA resolveu do que foi para o time, e apura o retorno em reais com base no que ela atendeu.</p></div>
+        <div aria-hidden="true">
+          <div class="split"><i style="--w:68%;background:linear-gradient(90deg,var(--blue),var(--cyan))"></i><i style="--w:32%;background:#BFD6EA"></i></div>
+          <div class="legend"><span><i style="background:var(--cyan)"></i>Resolvido pela IA</span><span><i style="background:#BFD6EA"></i>Encaminhado ao time</span></div>
+          <p class="note">Proporção ilustrativa.</p>
         </div>
-        <div class="panel" aria-hidden="true">
-          <div class="panel-title">Campanha: Reativação de clientes <small>WhatsApp · em andamento</small></div>
-          <div class="camp-stats">
-            <div><b>2.400</b><span>Enviadas</span></div>
-            <div><b>2.310</b><span>Entregues</span></div>
-            <div><b>1.720</b><span>Lidas</span></div>
-            <div><b>486</b><span>Respostas</span></div>
-            <div class="bad"><b>90</b><span>Falhas</span></div>
-          </div>
-          <div class="bar"><i style="width:20%;background:var(--green)"></i><i style="width:52%;background:var(--cyan)"></i><i style="width:24%;background:#BFD6EA"></i><i style="width:4%;background:#F2A97C"></i></div>
-          <div class="camp-list">
-            <div><span>Bloco 3 de 5</span><b>Hoje, 14:00</b></div>
-            <div><span>Follow-up de quem não respondeu</span><b>Em 2 dias</b></div>
-            <div class="note">Números ilustrativos.</div>
-          </div>
-        </div>
-      </div>
+      </article>
+      <article class="mg" data-r style="--d:.1s"><h3>O que mais se repete</h3><p>Pedidos parecidos agrupados e contados, para você saber onde agir primeiro.</p>
+        <div class="dem" aria-hidden="true"><div style="--w:82%">Segunda via de boleto</div><div style="--w:61%">Prazo de entrega</div><div style="--w:38%">Troca e devolução</div></div></article>
+      <article class="mg" data-r><h3>Painel ao vivo na TV</h3><p>Uma visão da operação para deixar aberta no televisor da equipe.</p></article>
+      <article class="mg" data-r style="--d:.1s"><h3>Alerta de cliente insatisfeito</h3><p>Central de reclamações e aviso imediato quando uma conversa azeda.</p></article>
+      <article class="mg" data-r style="--d:.2s"><h3>Saúde do seu WhatsApp</h3><p>Qualidade do número, limite de envio e situação dos modelos de mensagem em um só lugar.</p></article>
+    </div>
+  </div>
+</section>
 
-      <div class="feature" id="funil">
-        <div class="f-text">
-          <p class="kicker">Funil e CRM</p>
-          <h3>Um funil que segue o processo da sua área, não o contrário.</h3>
-          <p class="lead">As colunas se organizam pela classificação que a própria IA faz durante a conversa. Serve para vendas, atendimento, RH ou qualquer fluxo por etapas.</p>
-          <ul class="checks">
-            <li><span><b>Histórico da conversa dentro do card</b>, com data de retorno, responsável e valor mencionado pelo lead.</span></li>
-            <li><span><b>Contato do Dia:</b> quem precisa ser chamado hoje, os atrasados e os próximos.</span></li>
-            <li><span><b>Distribuição automática entre vendedores</b>, com reatribuição por tempo de espera e alerta de lead sem dono.</span></li>
-            <li><span><b>Mensagem agendada:</b> o compromisso combinado com o lead dispara sozinho na hora certa.</span></li>
-          </ul>
-        </div>
-        <div class="panel">
-          <div class="tabs" role="tablist" aria-label="Exemplos de funil">
-            <button role="tab" aria-selected="true" data-f="com">Comercial</button>
-            <button role="tab" aria-selected="false" data-f="at">Atendimento</button>
-            <button role="tab" aria-selected="false" data-f="rh">RH</button>
-          </div>
-          <div class="kanban" id="kanban" aria-live="polite"></div>
-        </div>
-      </div>
+<!-- GARDE -->
+<section class="sec proof" style="padding:90px 0">
+  <div class="wrap proof-grid">
+    <div data-r="left">
+      <h2 class="h3">Por trás da IA Conecta+ está a Garde.</h2>
+      <p class="lead" style="margin-top:14px;font-size:1.02rem">Inteligência empresarial aplicada à operação, com implantação consultiva e parceria oficial com a Meta.</p>
+      <p class="meta" style="margin-top:18px"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+    </div>
+    <div class="stat" data-r style="--d:.05s"><b data-count="20" data-pre="+">+20</b><span>anos de experiência</span></div>
+    <div class="stat" data-r style="--d:.15s"><b data-count="54">54</b><span>clientes</span></div>
+    <div class="stat" data-r style="--d:.25s"><b data-count="1.5" data-dec="1" data-suf=" mi">1,5 mi</b><span>atendimentos realizados</span></div>
+  </div>
+</section>
 
-      <div class="feature flip">
-        <div class="f-text">
-          <p class="kicker">Central de conversas</p>
-          <h3>A IA e a equipe trabalham juntas, sem perder o contexto.</h3>
-          <p class="lead">Todos os canais em uma tela, e cada conversa mostra quem está conduzindo. Quando a equipe assume, a IA continua apoiando o atendente com sugestões de resposta.</p>
-          <ul class="checks">
-            <li><span><b>Respostas rápidas</b> sugeridas logo na abertura da conversa.</span></li>
-            <li><span><b>A IA reconhece quem está falando</b> pelo telefone e usa os dados cadastrais do contato.</span></li>
-            <li><span><b>Widget para o seu site</b> instalado com uma linha de código e com a identidade da sua marca.</span></li>
-            <li><span><b>Construtor de fluxo em tela</b> para montar o roteiro de atendimento sem programação.</span></li>
-          </ul>
-        </div>
-        <div class="handoff">
-          <div class="step s1"><h4>IA</h4><p>A inteligência artificial conduz a conversa com a base da sua empresa.</p></div>
-          <div class="step s2"><h4>Escalada</h4><p>A IA identifica que o caso precisa de uma pessoa e avisa o time.</p></div>
-          <div class="step s3"><h4>Humano</h4><p>Alguém da equipe assume, já com o resumo e todo o histórico.</p></div>
-        </div>
+<!-- SEGMENTOS -->
+<section id="segmentos" class="sec">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Módulos por segmento</span>
+      <h2 class="h2">Feita para o jeito que o seu mercado funciona.</h2>
+      <p class="lead" style="margin-top:20px">Os módulos de cada setor são habilitados conforme a sua operação. Veja como a IA Conecta+ trabalha no seu.</p>
+    </div>
+    <div class="segs">
+      <a href="/segmentos/saude" data-r style="--d:0s"><b>Saúde</b><span>Especialidades, corpo clínico, agenda, pagamento e página de agendamento com a marca da clínica.</span><em>Ver Saúde</em></a>
+      <a href="/segmentos/franquias" data-r style="--d:.06s"><b>Franquias</b><span>Catálogo de marcas, cobertura por estado e o lead qualificado entregue ao franqueado certo.</span><em>Ver Franquias</em></a>
+      <a href="/segmentos/varejo" data-r style="--d:.12s"><b>Varejo</b><span>Catálogo e preços para a IA, PIX e cartão na conversa e acompanhamento do pedido.</span><em>Ver Varejo</em></a>
+      <a href="/segmentos/imobiliario" data-r style="--d:.18s"><b>Imobiliário</b><span>Resposta imediata ao lead, qualificação e agendamento de visitas.</span><em>Ver Imobiliário</em></a>
+      <a href="/segmentos/educacao" data-r style="--d:0s"><b>Educação</b><span>Captação, matrícula e rematrícula com atendimento contínuo.</span><em>Ver Educação</em></a>
+      <a href="/segmentos/financeiro" data-r style="--d:.06s"><b>Financeiro</b><span>Onboarding, crédito e cobrança com trilha de auditoria.</span><em>Ver Financeiro</em></a>
+      <a href="/segmentos/logistica" data-r style="--d:.12s"><b>Logística</b><span>Rastreamento proativo, ocorrências e agendamento de entrega.</span><em>Ver Logística</em></a>
+      <a href="/segmentos/industria" data-r style="--d:.18s"><b>Indústria</b><span>Pedido de distribuidores, pós-venda técnico e recompra recorrente.</span><em>Ver Indústria</em></a>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURANÇA + INTEGRAÇÕES -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap two">
+    <div data-r="left">
+      <span class="kicker">Segurança e LGPD</span>
+      <h2 class="h3">Os dados da sua empresa ficam só com a sua empresa.</h2>
+      <ul class="checks">
+        <li><span><b>Isolamento total entre clientes:</b> nenhum dado ou configuração atravessa de uma empresa para outra.</span></li>
+        <li><span><b>Criptografia</b> de conversas, documentos e dados pessoais, com chave própria por cliente.</span></li>
+        <li><span><b>Perfis e filas de acesso:</b> cada pessoa vê só os módulos e as conversas liberadas para ela.</span></li>
+        <li><span><b>LGPD:</b> exportação e exclusão de dados por titular, com trilha de auditoria.</span></li>
+        <li><span><b>Proteção contra manipulação da IA</b> para obter informação indevida.</span></li>
+      </ul>
+    </div>
+    <div data-r="right">
+      <span class="kicker">Integrações</span>
+      <h2 class="h3">Conecta com o que você já usa. Não pede para trocar nada.</h2>
+      <p class="lead" style="margin-top:16px;font-size:1.02rem">A IA Conecta+ trabalha como camada de orquestração sobre os seus sistemas e envia os dados para o CRM que você já utiliza.</p>
+      <div class="chips">
+        <span class="m">WhatsApp Cloud API oficial da Meta</span><span class="m">Instagram</span><span>Chat para qualquer site</span><span>E-mail</span><span>Mercado Pago</span><span>Assinatura eletrônica</span><span>Google Calendar e Meet</span><span>Microsoft 365</span><span>Login integrado ao seu sistema</span><span>Conectores para CRM</span><span>API para abertura de chamados</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- INSTAGRAM -->
-  <section id="instagram" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <div class="feature" style="padding:0;border:0">
-        <div class="f-text">
-          <p class="kicker">Instagram dentro da plataforma</p>
-          <h3>Do comentário para a conversa. Da conversa para a oportunidade.</h3>
-          <p class="lead">Comentários, Direct e publicações do Instagram no mesmo painel do WhatsApp e do site, com a mesma IA respondendo.</p>
-          <ul class="checks">
-            <li><span><b>Comentários em posts e Reels</b> respondidos pela IA, em público, no Direct ou nos dois.</span></li>
-            <li><span><b>Resposta pública com trava:</b> nada de preço, link ou dado pessoal embaixo do post.</span></li>
-            <li><span><b>Direct após o comentário</b> e respostas a Stories entrando direto no atendimento.</span></li>
-            <li><span><b>Publicações agendadas</b> pelo próprio painel.</span></li>
-          </ul>
-        </div>
-        <div class="panel" aria-hidden="true">
-          <div class="panel-title">Comentários <small>Reel publicado ontem</small></div>
-          <div class="ig-post">
-            <div class="ig-thumb">Nova unidade em Moema</div>
-            <div>
-              <div class="cmt"><b>@marina.rp</b> Qual o valor da consulta?</div>
-              <div class="cmt reply"><b>Resposta da IA</b> Oi, Marina! Te chamei no Direct com os detalhes.</div>
-              <div class="dm"><svg width="18" height="18" style="color:#D6249F"><use href="#i-ig"/></svg>Conversa aberta no Direct, com a IA</div>
-            </div>
-          </div>
-          <div class="sched">
-            <div><b>Qui, 10h</b>Carrossel</div>
-            <div><b>Sáb, 18h</b>Reel</div>
-            <div><b>Seg, 9h</b>Post</div>
-          </div>
-        </div>
+<!-- JORNADA -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Como começamos</span>
+      <h2 class="h2">Primeiro entendemos a sua operação. Depois colocamos a IA para trabalhar.</h2>
+      <p class="lead" style="margin-top:20px">Implantação consultiva, com escopo controlado no começo e evolução contínua depois. Nada de ferramenta entregue e esquecida.</p>
+    </div>
+    <ol class="journey" data-r>
+      <li><b>Diagnóstico</b><span>Mapeamos onde a operação perde tempo e dinheiro.</span></li>
+      <li><b>Workshop</b><span>Alinhamos com a liderança o que priorizar.</span></li>
+      <li><b>Mapa de oportunidades</b><span>Definimos jornadas, canais e indicadores.</span></li>
+      <li><b>Prova de conceito</b><span>Colocamos um escopo controlado no ar.</span></li>
+      <li><b>Implantação</b><span>Integramos sistemas e treinamos a equipe.</span></li>
+      <li><b>Evolução</b><span>Acompanhamos os números e expandimos por área.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r><h2 class="h2">Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details data-r><summary>Já temos um robô de atendimento. Precisamos trocar?</summary><p>Não. A IA Conecta+ amplia o que já existe com contexto, integração com os seus sistemas, qualificação de leads e evolução contínua.</p></details>
+      <details data-r><summary>E se a IA responder algo errado?</summary><p>Ela só responde pelo que está nos documentos da sua empresa. Quando a informação não está na base, reconhece o limite e passa para uma pessoa da equipe, com o histórico e o resumo da conversa.</p></details>
+      <details data-r><summary>Corro risco de bloqueio no WhatsApp?</summary><p>Os envios usam a API oficial da Meta, com conta verificada e modelos de mensagem aprovados. A base é higienizada antes, números sem WhatsApp são descartados e o envio respeita limite diário, o que protege a reputação do número.</p></details>
+      <details data-r><summary>Preciso contratar tudo de uma vez?</summary><p>Não. Os módulos são habilitados conforme a sua operação. Dá para contratar a IA Conecta+, o IA HelpDesk+ ou os dois, e começar por um escopo controlado.</p></details>
+      <details data-r><summary>Vou ter que trocar meu CRM ou ERP?</summary><p>Não. A IA Conecta+ trabalha sobre os sistemas que você já tem, preserva o investimento feito e envia os dados para o CRM que a sua empresa já utiliza.</p></details>
+      <details data-r><summary>Meus dados ficam seguros?</summary><p>Cada empresa tem os dados isolados e criptografados com chave própria, perfis de acesso configuráveis e conformidade com a LGPD, incluindo exportação e exclusão por titular.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="diagnostico" class="final">
+  <div class="wrap">
+    <div class="box" data-r="zoom">
+      <div style="position:relative;z-index:1">
+        <h2 class="h2">Descubra o que a sua equipe não precisa mais fazer à mão.</h2>
+        <p>O diagnóstico gratuito mapeia a sua operação e mostra onde a IA Conecta+ gera resultado primeiro. Fale com a gente pelo canal que preferir.</p>
+        <p class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+      </div>
+      <div class="contact">
+        <a href="tel:+5511915192560"><svg><use href="#i-phone"/></svg><span><small>Ligue para um especialista</small><b>(11) 91519-2560</b></span></a>
+        <a href="mailto:lohany.souza@gardetech.com.br?subject=Diagn%C3%B3stico%20IA%20Conecta%2B"><svg><use href="#i-mail"/></svg><span><small>Envie um e-mail</small><b>lohany.souza@gardetech.com.br</b></span></a>
       </div>
     </div>
-  </section>
-
-  <!-- HELPDESK -->
-  <section id="helpdesk" class="helpdesk">
-    <div class="wrap hd-grid">
-      <div>
-        <p class="kicker">IA HelpDesk+</p>
-        <h2 style="font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.1">O chamado que chega ao time humano, sob controle.</h2>
-        <p class="lead" style="margin-top:18px">Funciona junto com a IA Conecta+ ou sozinho. Organiza o que precisa de acompanhamento e mostra ao gestor onde o atendimento está travando, e com quem.</p>
-        <ul class="hd-list">
-          <li><b>Prazo por prioridade</b><span>Status, prioridade, responsável e numeração curta em cada chamado.</span></li>
-          <li><b>Copiloto para o atendente</b><span>Sugere a resposta, melhora o rascunho, aponta chamados parecidos e resume o que o cliente precisa.</span></li>
-          <li><b>Anexos lidos automaticamente</b><span>Imagem convertida em texto e áudio transcrito.</span></li>
-        </ul>
-      </div>
-      <div class="mgr" aria-hidden="true">
-        <div class="panel-title">Painel do gestor <small>Hoje</small></div>
-        <div class="kpis">
-          <div><span>Abertos</span><b>38</b></div>
-          <div class="warn"><span>Vencidos</span><b>4</b></div>
-          <div class="ok"><span>Resolvidos</span><b>126</b></div>
-          <div class="warn"><span>Sem responsável</span><b>2</b></div>
-        </div>
-        <div class="tickets">
-          <div><code>#4821</code><span>Erro ao emitir boleto (foto anexada)</span><span class="pri a">Alta</span></div>
-          <div><code>#4819</code><span>Troca de endereço de entrega</span><span class="pri m">Média</span></div>
-        </div>
-        <div class="copilot"><b>Copiloto</b>O cliente enviou print do erro 402. Há 3 chamados parecidos resolvidos com a reemissão pelo financeiro. Sugestão de resposta pronta para revisar.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GESTÃO -->
-  <section id="gestao">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Gestão e indicadores</p>
-        <h2>O que antes dependia de percepção passa a ser acompanhado por dados.</h2>
-      </div>
-      <div class="mgmt">
-        <article class="wide">
-          <div>
-            <h3>Quanto a IA resolveu sozinha</h3>
-            <p>O painel separa o volume resolvido pela IA do que foi para o time, e apura o retorno em reais com base no que a IA atendeu.</p>
-          </div>
-          <div aria-hidden="true">
-            <div class="split"><i style="width:68%;background:var(--cyan)"></i><i style="width:32%;background:#BFD6EA"></i></div>
-            <div class="legend"><span><i style="background:var(--cyan)"></i>Resolvido pela IA</span><span><i style="background:#BFD6EA"></i>Encaminhado ao time</span></div>
-            <p class="roi" style="margin-top:18px">R$ 18.450<small>retorno apurado no mês (exemplo ilustrativo)</small></p>
-          </div>
-        </article>
-        <article>
-          <h3>O que mais se repete</h3>
-          <p>Pedidos parecidos agrupados e contados, para você saber onde agir primeiro.</p>
-          <div class="demand" aria-hidden="true">
-            <div style="--w:82%"><span>Segunda via de boleto</span></div>
-            <div style="--w:61%"><span>Prazo de entrega</span></div>
-            <div style="--w:38%"><span>Troca e devolução</span></div>
-          </div>
-        </article>
-        <article>
-          <h3>Painel ao vivo na TV</h3>
-          <p>Uma visão da operação para deixar aberta no televisor da equipe.</p>
-        </article>
-        <article>
-          <h3>Alerta de insatisfação</h3>
-          <p>Central de reclamações e aviso quando uma conversa mostra cliente insatisfeito.</p>
-        </article>
-        <article>
-          <h3>Saúde do WhatsApp</h3>
-          <p>Qualidade do número, limite de envio e situação dos modelos de mensagem em um só lugar.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEGMENTOS -->
-  <section id="segmentos" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Módulos por segmento</p>
-        <h2>A plataforma se adapta ao seu negócio.</h2>
-        <p class="lead">Os módulos de cada setor são habilitados conforme a sua operação. Veja como funciona no seu mercado.</p>
-      </div>
-      <div class="segs">
-        <a href="/segmentos/saude"><b>Saúde</b><span>Especialidades, corpo clínico, agenda, pagamento e página de agendamento com a marca da clínica.</span></a>
-        <a href="/segmentos/franquias"><b>Franquias</b><span>Catálogo de marcas, cobertura por estado e lead qualificado entregue ao franqueado certo.</span></a>
-        <a href="/segmentos/varejo"><b>Varejo</b><span>Catálogo e preços para a IA, cobrança por PIX e cartão na conversa e pós-venda.</span></a>
-        <a href="/segmentos/imobiliario"><b>Imobiliário</b><span>Resposta imediata ao lead, qualificação e agendamento de visitas.</span></a>
-        <a href="/segmentos/educacao"><b>Educação</b><span>Captação, matrícula e rematrícula com atendimento contínuo.</span></a>
-        <a href="/segmentos/financeiro"><b>Financeiro</b><span>Onboarding, crédito e cobrança com trilha de auditoria.</span></a>
-        <a href="/segmentos/logistica"><b>Logística</b><span>Rastreamento proativo, ocorrências e agendamento de entrega.</span></a>
-        <a href="/segmentos/industria"><b>Indústria</b><span>Pedido de distribuidores, pós-venda técnico e recompra recorrente.</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEGURANÇA + INTEGRAÇÕES -->
-  <section>
-    <div class="wrap two">
-      <div>
-        <p class="kicker">Segurança e LGPD</p>
-        <h2 style="font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.15;margin-bottom:16px">Os dados de cada empresa ficam isolados e criptografados.</h2>
-        <ul class="checks">
-          <li><span><b>Isolamento total entre clientes:</b> nenhum dado ou configuração atravessa de uma empresa para outra.</span></li>
-          <li><span><b>Criptografia</b> de conversas, documentos e dados pessoais, com chave própria por cliente.</span></li>
-          <li><span><b>Perfis e filas de acesso:</b> cada pessoa vê só os módulos e as conversas liberadas para ela.</span></li>
-          <li><span><b>LGPD:</b> exportação e exclusão de dados por titular, com trilha de auditoria.</span></li>
-          <li><span><b>Proteção contra manipulação da IA</b> para obter informação indevida.</span></li>
-        </ul>
-      </div>
-      <div>
-        <p class="kicker">Integrações</p>
-        <h2 style="font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.15;margin-bottom:16px">Conecta com o que a sua empresa já usa.</h2>
-        <p class="lead" style="font-size:1.02rem">E envia os dados para o CRM que você já utiliza, quando for o caso.</p>
-        <div class="chips">
-          <span class="meta">WhatsApp Cloud API oficial da Meta</span>
-          <span class="meta">Instagram</span>
-          <span>Widget para qualquer site</span>
-          <span>E-mail</span>
-          <span>Mercado Pago</span>
-          <span>Assinatura eletrônica</span>
-          <span>Google Calendar e Meet</span>
-          <span>Microsoft 365</span>
-          <span>Login integrado ao seu sistema</span>
-          <span>Conectores para CRM</span>
-          <span>API para abertura de chamados</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- JORNADA -->
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Implantação assistida</p>
-        <h2>A gente começa pelo seu processo, não pela ferramenta.</h2>
-      </div>
-      <ol class="journey">
-        <li><b>Diagnóstico</b><span>Entendemos a operação e onde ela perde tempo.</span></li>
-        <li><b>Workshop</b><span>Alinhamos com a liderança o que priorizar.</span></li>
-        <li><b>Mapa</b><span>Definimos jornadas, canais e indicadores.</span></li>
-        <li><b>Prova de conceito</b><span>Colocamos um escopo controlado no ar.</span></li>
-        <li><b>Implantação</b><span>Integramos sistemas e treinamos a equipe.</span></li>
-        <li><b>Evolução</b><span>Acompanhamos os números e expandimos por área.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" style="background:var(--paper);border-top:1px solid var(--line)">
-    <div class="wrap">
-      <div class="sec-head center"><h2>Dúvidas frequentes</h2></div>
-      <div class="faq">
-        <details><summary>Já temos um robô de atendimento. A IA Conecta+ substitui?</summary><p>Não precisa substituir. A IA Conecta+ amplia o que já existe com contexto, integração com seus sistemas, qualificação de leads e evolução contínua.</p></details>
-        <details><summary>E se a IA responder algo errado?</summary><p>Ela só responde pelo que está nos documentos da sua empresa. Quando a informação não está na base, reconhece o limite e transfere para uma pessoa da equipe, com o histórico e o resumo da conversa.</p></details>
-        <details><summary>Corro risco de bloqueio no WhatsApp?</summary><p>Os envios usam a API oficial da Meta, com conta verificada e modelos de mensagem aprovados. A base é higienizada antes, números sem WhatsApp são descartados e o envio respeita limite diário, o que protege a reputação do número.</p></details>
-        <details><summary>Preciso contratar tudo?</summary><p>Não. Os módulos são habilitados conforme a sua operação. Você pode contratar a IA Conecta+, o IA HelpDesk+ ou os dois, e começar por um escopo controlado.</p></details>
-        <details><summary>Meus dados ficam seguros?</summary><p>Cada empresa tem os dados isolados e criptografados com chave própria, perfis de acesso configuráveis e conformidade com a LGPD, incluindo exportação e exclusão por titular.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section id="contato" class="final" style="background:var(--paper);padding-top:40px">
-    <div class="wrap">
-      <div class="box">
-        <div>
-          <h2>Descubra o que a sua equipe não precisa mais fazer manualmente.</h2>
-          <p>Fale com um especialista e receba um diagnóstico da sua operação.</p>
-        </div>
-        <div class="acts">
-          <!-- PENDENTE: definir o link de contato (WhatsApp comercial ou formulário) -->
-          <a class="btn btn-primary" href="#contato" data-pendente="link-contato"><svg><use href="#i-wa"/></svg>Falar com especialista</a>
-          <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="foot">
-      <div><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"><p style="margin-top:12px;max-width:34ch">Um produto da Garde Inteligência Empresarial.</p></div>
-      <nav aria-label="Rodapé">
-        <a href="#plataforma">Plataforma</a><a href="#instagram">Instagram</a><a href="#helpdesk">HelpDesk+</a><a href="/segmentos">Segmentos</a><a href="#faq">Dúvidas</a>
-      </nav>
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
+        <p>Plataforma de inteligência operacional com IA da Garde Inteligência Empresarial.</p>
+        <p class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+      </div>
+      <div><h6>Plataforma</h6><ul><li><a href="#plataforma">Visão geral</a></li><li><a href="#multiagentes">Multiagentes</a></li><li><a href="#instagram">Instagram</a></li><li><a href="#helpdesk">IA HelpDesk+</a></li><li><a href="#gestao">Indicadores</a></li></ul></div>
+      <div><h6>Segmentos</h6><ul><li><a href="/segmentos/saude">Saúde</a></li><li><a href="/segmentos/franquias">Franquias</a></li><li><a href="/segmentos/varejo">Varejo</a></li><li><a href="/segmentos/imobiliario">Imobiliário</a></li><li><a href="/segmentos">Todos</a></li></ul></div>
+      <div><h6>Garde</h6><ul><li><a href="https://www.gardesolucoes.com.br/">Site da Garde</a></li><li><a href="https://www.instagram.com/garde.solucoes/">Instagram</a></li><li><a href="tel:+5511915192560">(11) 91519-2560</a></li><li><a href="mailto:lohany.souza@gardetech.com.br">E-mail</a></li></ul></div>
     </div>
-    <p class="copy">© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</p>
+    <div class="ft-big" aria-hidden="true">IA Conecta+</div>
+    <div class="ft-bot"><span>© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo</a></div>
   </div>
 </footer>
 
 <script>
-  // header com borda ao rolar
-  const hd=document.querySelector('header');
-  addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>8),{passive:true});
-  // menu mobile
-  const mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
-  mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-  menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
-  // exemplos de funil
-  const F={
-    com:[['Oportunidade',[['Carlos M.','Plano empresarial','R$ 4.800','Marina'],['Loja Bela','Orçamento 40 un.','R$ 12.000','']]],['Negociação',[['Ana Souza','Renovação anual','R$ 9.600','Diego']]],['Fechamento',[['Grupo Luz','Contrato assinado','R$ 22.000','Marina']]]],
-    at:[['Novo atendimento',[['Pedido #3391','Atraso na entrega','','Fila SAC'],['João P.','Segunda via','','']]],['Em análise',[['Pedido #3375','Produto com defeito','','Rafa']]],['Resolvido',[['Bia N.','Troca concluída','','Rafa']]]],
-    rh:[['Candidato',[['Lucas T.','Vendedor interno','','Recrutamento']]],['Entrevista',[['Paula R.','Analista financeiro','','Gestora'],['Igor S.','Atendente','','']]],['Contratação',[['Vera M.','Recepcionista','','RH']]]]
-  };
-  const kb=document.getElementById('kanban');
-  function draw(k){kb.innerHTML=F[k].map(([t,cs])=>`<div class="col"><h5>${t}<span>${cs.length}</span></h5>${cs.map(([n,d,v,o])=>`<div class="card"><b>${n}</b><span>${d}</span><div class="foot"><span>${v}</span>${o?`<span>${o}</span>`:'<span class="nobody">Sem dono</span>'}</div></div>`).join('')}</div>`).join('')}
-  draw('com');
-  document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));draw(b.dataset.f)}));
+document.body.classList.remove('no-js');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// header sólido, barra de progresso e inclinação da janela do hero
+const hd=document.querySelector('header'),pb=document.querySelector('.progress'),win=document.querySelector('.window');
+function onScroll(){
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  hd.classList.toggle('solid',y>10);
+  pb.style.setProperty('--p',h>0?y/h:0);
+  if(win&&!reduce){const k=Math.min(y/500,1);win.style.setProperty('--ry',(-8+8*k)+'deg');win.style.setProperty('--rx',(4-4*k)+'deg')}
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// menu mobile
+const mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+// carrossel infinito: duplica a lista
+const track=document.getElementById('track');
+const copy=track.firstElementChild.cloneNode(true);copy.setAttribute('aria-hidden','true');copy.querySelectorAll('img').forEach(i=>i.alt='');track.appendChild(copy);
+
+// revelar ao rolar
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('[data-r], .panel, .mg').forEach(el=>io.observe(el));
+
+// contadores
+const fmt=(n,d)=>n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);
+  const el=e.target,to=+el.dataset.count,d=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'';
+  if(reduce){el.textContent=pre+fmt(to,d)+suf;return}
+  const t0=performance.now(),dur=1600;(function tick(t){const k=Math.min((t-t0)/dur,1),v=to*(1-Math.pow(1-k,3));el.textContent=pre+fmt(v,d)+suf;if(k<1)requestAnimationFrame(tick)})(t0)}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// multiagentes: etapa ativa conforme a rolagem
+const steps=[...document.querySelectorAll('.ag-step')],nodes=[...document.querySelectorAll('.node')],links=[...document.querySelectorAll('.links path')],msg=document.getElementById('agmsg');
+function setStep(i){
+  steps.forEach((s,k)=>s.classList.toggle('on',k===i));
+  nodes.forEach(n=>n.classList.toggle('on',+n.dataset.n===i));
+  links.forEach(l=>l.classList.toggle('on',+l.dataset.l===i));
+  msg.innerHTML=steps[i].dataset.msg;
+}
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setStep(steps.indexOf(e.target))}),{rootMargin:'-45% 0px -45% 0px'});
+steps.forEach(s=>so.observe(s));setStep(0);
+
+// exemplos de funil
+const F={
+  com:[['Oportunidade',[['Carlos M.','Plano empresarial','R$ 4.800','Marina'],['Loja Bela','Orçamento 40 un.','R$ 12.000','']]],['Negociação',[['Ana Souza','Renovação anual','R$ 9.600','Diego']]],['Fechamento',[['Grupo Luz','Contrato assinado','R$ 22.000','Marina']]]],
+  at:[['Novo atendimento',[['Pedido #3391','Atraso na entrega','','Fila SAC'],['João P.','Segunda via','','']]],['Em análise',[['Pedido #3375','Produto com defeito','','Rafa']]],['Resolvido',[['Bia N.','Troca concluída','','Rafa']]]],
+  rh:[['Candidato',[['Lucas T.','Vendedor interno','','Recrutamento']]],['Entrevista',[['Paula R.','Analista financeiro','','Gestora'],['Igor S.','Atendente','','']]],['Contratação',[['Vera M.','Recepcionista','','RH']]]]
+};
+const kb=document.getElementById('kanban');
+function draw(k){kb.innerHTML=F[k].map(([t,cs])=>`<div class="col"><h5>${t}<span>${cs.length}</span></h5>${cs.map(([n,d,v,o],i)=>`<div class="card" style="animation-delay:${i*.08}s"><b>${n}</b><span>${d}</span><div class="ft"><span>${v}</span>${o?`<span>${o}</span>`:'<span class="nobody">Sem dono</span>'}</div></div>`).join('')}</div>`).join('')}
+draw('com');
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));draw(b.dataset.f)}));
 </script>
 </body>
 </html>
