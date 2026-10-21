@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IA Conecta+ | Agentes de IA que atendem, vendem e resolvem · Garde</title>
-<meta name="description" content="Agentes de IA treinados nos documentos da sua empresa atendendo WhatsApp, Instagram, site e e-mail, com funil de vendas, campanhas e chamados em uma única operação. Parceiro oficial Meta.">
+<meta name="description" content="Agentes de IA treinados nos documentos da sua empresa atendendo WhatsApp, Instagram, site e e-mail, com funil de vendas, campanhas e chamados em uma única operação. Meta Business Partner.">
 <meta property="og:title" content="IA Conecta+ | Agentes de IA que atendem, vendem e resolvem">
 <meta property="og:description" content="WhatsApp, Instagram, site e e-mail em uma única operação, com agentes de IA treinados nos documentos da sua empresa.">
 <meta property="og:type" content="website">
@@ -53,16 +53,14 @@ img{max-width:100%;display:block}
 .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--blue),var(--turq),var(--green));z-index:60}
 
 /* botões */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font:700 1rem var(--text);text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+.btn{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:16px 28px;border-radius:999px;font:700 1rem var(--text);text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
 .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 28px -10px rgba(14,77,146,.7)}
 .btn-primary:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(7,27,59,.7)}
 .btn svg{width:18px;height:18px;flex:none}
 
 /* selo Meta */
-.meta{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--ink-2);white-space:nowrap}
-.meta i{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#0668E1,#0A84FF);color:#fff;font-style:normal}
-.meta i svg{width:13px;height:13px}
-.meta b{color:var(--ink);font-weight:800}
+.meta{display:inline-flex;align-items:center}
+.meta img{height:15px;width:auto}
 
 /* header */
 header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
@@ -89,7 +87,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .hero-grid{position:relative;display:grid;grid-template-columns:1fr 1.08fr;gap:40px;align-items:center;min-height:560px}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--paper);box-shadow:var(--sh-1);font-weight:700;font-size:.85rem;color:var(--blue)}
 .pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(50,210,124,.2)}
-.hero h1{font-size:clamp(2.5rem,4.3vw,3.7rem);line-height:1.02;margin:26px 0 24px;letter-spacing:-.035em}
+.hero h1{font-size:clamp(2.1rem,3.2vw,2.85rem);line-height:1.1;text-wrap:balance;margin:26px 0 24px;letter-spacing:-.035em}
 .hero .lead{font-size:1.22rem}
 .hero-cta{margin-top:38px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 .hero-cta small{color:var(--ink-3);font-weight:600;font-size:.86rem}
@@ -111,6 +109,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 .list .tb span:first-child{color:var(--blue);box-shadow:0 2px 0 var(--blue)}
 .conv{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:.76rem}
 .conv.on{background:var(--mist)}
+.conv>div{min-width:0}
 .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 .78rem var(--display);color:#fff;position:relative;flex:none}
 .av em{position:absolute;right:-2px;bottom:-2px;width:14px;height:14px;border-radius:50%;border:2px solid #fff}
 .av em.w{background:var(--wa)}.av em.g{background:linear-gradient(45deg,#F6763A,#D6249F,#6C3FD1)}.av em.s{background:var(--cyan)}.av em.m{background:var(--blue)}
@@ -460,7 +459,7 @@ footer ul a:hover{color:var(--turq)}
       <a href="#segmentos">Segmentos</a>
     </nav>
     <div class="right">
-      <span class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></span>
+      <span class="meta"><img src="/assets/marca/meta-business-partners-navy.png" alt="Meta Business Partners" width="211" height="13"></span>
       <a class="btn btn-primary" href="#diagnostico">Agendar diagnóstico</a>
       <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
@@ -859,7 +858,7 @@ footer ul a:hover{color:var(--turq)}
     <div data-r="left">
       <h2 class="h3">Por trás da IA Conecta+ está a Garde.</h2>
       <p class="lead" style="margin-top:14px;font-size:1.02rem">Inteligência empresarial aplicada à operação, com implantação consultiva e parceria oficial com a Meta.</p>
-      <p class="meta" style="margin-top:18px"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+      <p class="meta" style="margin-top:18px"><img src="/assets/marca/meta-business-partners-navy.png" alt="Meta Business Partners" width="211" height="13"></p>
     </div>
     <div class="stat" data-r style="--d:.05s"><b data-count="20" data-pre="+">+20</b><span>anos de experiência</span></div>
     <div class="stat" data-r style="--d:.15s"><b data-count="54">54</b><span>clientes</span></div>
@@ -954,7 +953,7 @@ footer ul a:hover{color:var(--turq)}
       <div style="position:relative;z-index:1">
         <h2 class="h2">Descubra o que a sua equipe não precisa mais fazer à mão.</h2>
         <p>O diagnóstico gratuito mapeia a sua operação e mostra onde a IA Conecta+ gera resultado primeiro. Fale com a gente pelo canal que preferir.</p>
-        <p class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+        <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
       </div>
       <div class="contact">
         <a href="tel:+5511915192560"><svg><use href="#i-phone"/></svg><span><small>Ligue para um especialista</small><b>(11) 91519-2560</b></span></a>
@@ -971,7 +970,7 @@ footer ul a:hover{color:var(--turq)}
       <div class="ft-brand">
         <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
         <p>Plataforma de inteligência operacional com IA da Garde Inteligência Empresarial.</p>
-        <p class="meta"><i><svg><use href="#i-check"/></svg></i>Parceiro oficial <b>Meta</b></p>
+        <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
       </div>
       <div><h6>Plataforma</h6><ul><li><a href="#plataforma">Visão geral</a></li><li><a href="#multiagentes">Multiagentes</a></li><li><a href="#instagram">Instagram</a></li><li><a href="#helpdesk">IA HelpDesk+</a></li><li><a href="#gestao">Indicadores</a></li></ul></div>
       <div><h6>Segmentos</h6><ul><li><a href="/segmentos/saude">Saúde</a></li><li><a href="/segmentos/franquias">Franquias</a></li><li><a href="/segmentos/varejo">Varejo</a></li><li><a href="/segmentos/imobiliario">Imobiliário</a></li><li><a href="/segmentos">Todos</a></li></ul></div>
