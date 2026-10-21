@@ -3,89 +3,228 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IA para Indústria | Pedido Assistido, Pós-venda e Back Office · IA Conecta+ Garde</title>
-<meta name="description" content="Inteligência Operacional com IA para a indústria: pedido assistido de distribuidores, pós-venda técnico de primeiro nível, recompra recorrente e back office documental integrados ao ERP.">
-<meta property="og:title" content="IA para Indústria | Pedido Assistido, Pós-venda e Back Office · IA Conecta+ Garde">
-<meta property="og:description" content="Inteligência Operacional com IA para a indústria: pedido assistido de distribuidores, pós-venda técnico de primeiro nível, recompra recorrente e back office documental integrados ao ERP.">
+<title>IA para indústria: pedido de distribuidores, pós-venda técnico e recompra · IA Conecta+</title>
+<meta name="description" content="Pedido de distribuidores, suporte técnico de primeiro nível e recompra recorrente, conectados aos sistemas que você já usa.">
+<meta property="og:title" content="IA para indústria: pedido de distribuidores, pós-venda técnico e recompra · IA Conecta+">
+<meta property="og:description" content="Pedido de distribuidores, suporte técnico de primeiro nível e recompra recorrente, conectados aos sistemas que você já usa.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://iaconecta.lovable.app/favicon.png" type="image/png">
+<meta name="theme-color" content="#F3F7FC">
+<link rel="icon" href="/assets/marca/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        display: ['Sora','ui-sans-serif','system-ui','sans-serif'],
-        sans: ['Manrope','ui-sans-serif','system-ui','sans-serif'],
-      },
-      colors: {
-        navy: '#071B3B',
-        'navy-soft': '#0D2A55',
-        blue: '#0E4D92',
-        cyan: '#1A7FB8',
-        turquoise: '#22C7C9',
-        greenx: '#32D27C',
-        background: '#FFFFFF',
-        foreground: '#071B3B',
-        card: '#FFFFFF',
-        'card-foreground': '#071B3B',
-        primary: { DEFAULT: '#0E4D92', foreground: '#FFFFFF' },
-        secondary: { DEFAULT: '#F5F7FA', foreground: '#071B3B' },
-        muted: { DEFAULT: '#F7F9FB', foreground: '#5B6B85' },
-        accent: { DEFAULT: '#22C7C9', foreground: '#071B3B' },
-        border: '#E3E8EF',
-        input: '#E3E8EF',
-        ring: '#1A7FB8',
-      },
-      borderRadius: { xl: '0.75rem', '2xl': '1rem' },
-    }
-  }
-}
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 5rem; }
-  body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; background:#fff; color:#071B3B; -webkit-font-smoothing: antialiased; }
-  h1,h2,h3,h4 { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; letter-spacing:-0.025em; }
-  .font-display { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; }
-
-  .eyebrow { font-size:.75rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#1A7FB8; }
-
-  .surface-dark {
-    background:
-      radial-gradient(120% 100% at 80% 0%, rgba(14,77,146,.45) 0%, transparent 60%),
-      linear-gradient(180deg, #071B3B 0%, #04122A 100%);
-    color:#FAFBFD;
-  }
-
-  .card-premium {
-    background:#fff; border:1px solid #E3E8EF; border-radius:.75rem;
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease, border-color .35s ease;
-  }
-  .card-premium:hover { transform: translateY(-4px); border-color: rgba(26,127,184,.45); box-shadow: 0 24px 60px -32px rgba(7,27,59,.55); }
-
-  .card-glass {
-    background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
-    border-radius:.75rem; backdrop-filter: blur(8px);
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), border-color .35s ease;
-  }
-  .card-glass:hover { transform: translateY(-4px); border-color: rgba(34,199,201,.5); }
-
-  .rule-gradient { height:1px; background: linear-gradient(90deg, transparent, rgba(34,199,201,.7), transparent); }
-
-  .reveal { animation: reveal-up .9s cubic-bezier(.2,.7,.3,1) both; }
-  @keyframes reveal-up { from { opacity:0; transform: translateY(18px);} to { opacity:1; transform:none; } }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
+<body class="no-js" id="topo">
+<div class="progress" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6zM19 15l.9 2.6L22 18.5l-2.1.9L19 22l-.9-2.6L16 18.5l2.1-.9z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 11 16M16 7.5 13 16M8.5 6h7"/></g></symbol>
+  <symbol id="i-sell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></g></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><circle cx="12" cy="12" r="2.5"/></g></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-5-5 8-8zM3 21l5-5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5l-5.5 5.5M12 11.5l5.5 5.5"/></g></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></g></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></g></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 20V9l5 3V9l5 3V9l5 3V4h3v16z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+</svg>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="IA Conecta+, página inicial"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
+    <nav id="menu" aria-label="Principal">
+      <a href="/#plataforma">Plataforma</a>
+      <a href="/#multiagentes">Multiagentes</a>
+      <a href="/#instagram">Instagram</a>
+      <a href="/#helpdesk">HelpDesk+</a>
+      <a href="/segmentos">Segmentos</a>
+    </nav>
+    <div class="right">
+      <a class="btn-wa sm" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B%20para%20Ind%C3%BAstria." target="_blank" rel="noopener">Falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero seg-hero">
+  <div class="wrap hero-grid">
+    <div>
+      <nav class="crumb seq" style="--t:.02s" aria-label="Você está em"><a href="/">IA Conecta+</a><span>/</span><a href="/segmentos">Segmentos</a><span>/</span>Indústria</nav>
+      <span class="pill seq" style="--t:.05s">IA Conecta+ para Indústria</span>
+      <h1 class="seq" style="--t:.15s">A fábrica já é automatizada. O comercial e o pós-venda também podem ser</h1>
+      <p class="lead seq" style="--t:.3s">Pedido de distribuidores, suporte técnico de primeiro nível e recompra recorrente, conectados aos sistemas que você já usa.</p>
+      <div class="hero-cta seq" style="--t:.45s">
+        <a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B%20para%20Ind%C3%BAstria." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+        <small>Atendimento imediato via WhatsApp</small>
+      </div>
+    </div>
+    <div class="stage seg-stage" aria-hidden="true">
+      <div class="meta meta-top seq" style="--t:.3s"><img src="/assets/marca/meta-business-partners-navy.png" alt="Meta Business Partners" width="211" height="13"></div>
+      <div class="chatcard seq" style="--t:.4s">
+        <div class="phone">
+          <div class="ph-h"><span class="av"><img src="/assets/marca/g-conecta.png" alt=""></span><div><b>Metalúrgica Forte</b><small>conta comercial verificada</small></div></div>
+          <div class="ph-b">
+            <div class="w in seq" style="--t:0.8s">Bom dia! Preciso repor 40 caixas do parafuso M8 inox<time>09:41</time></div>
+            <div class="w out seq" style="--t:1.4s"><span class="chip-ia">IA da Metalúrgica Forte</span><br>Bom dia, Carlos! Pela sua tabela, o M8 inox sai a R$ 86,00 a caixa. Confirmo as 40 com entrega na quinta?<time>09:42</time></div>
+            <div class="w in seq" style="--t:2.0s">Confirma<time>09:43</time></div>
+            <div class="w out seq" style="--t:2.6s"><span class="chip-ia">IA da Metalúrgica Forte</span><br>Pedido registrado e enviado ao comercial. Te aviso assim que for faturado.<time>09:44</time></div>
+          </div>
+        </div>
+      </div>
+      <div class="bubble b1 float" style="--t:3.4s"><span class="spark"><svg><use href="#i-spark"/></svg></span><b>Tabela do distribuidor</b>A IA responde pela política comercial da base.</div>
+      <div class="bubble b2 float" style="--t:3.9s"><b>Pedido sem redigitação</b>Dados enviados ao seu sistema pela integração.</div>
+    </div>
+  </div>
+</section>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Garde Inteligência Empresarial","description":"Consultoria e plataforma de Inteligência Operacional com IA. Conectamos pessoas, processos, dados e Inteligência Artificial.","url":"/"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Integra com nosso ERP corporativo?","acceptedAnswer":{"@type":"Answer","text":"Sim. A plataforma opera como camada de orquestração sobre o ERP já implantado — incluindo integrações por API, EDI ou middleware corporativo — preservando as regras comerciais existentes."}},{"@type":"Question","name":"Os distribuidores precisam adotar um novo sistema?","acceptedAnswer":{"@type":"Answer","text":"Não. O pedido assistido acontece nos canais que o distribuidor já usa; a estruturação e a gravação no ERP ficam a cargo da camada de orquestração."}},{"@type":"Question","name":"Como o conhecimento técnico é incorporado?","acceptedAnswer":{"@type":"Answer","text":"Catálogos, fichas técnicas, manuais e políticas comerciais são estruturados como base de conhecimento governada, com curadoria e versionamento definidos pela indústria."}},{"@type":"Question","name":"É possível iniciar apenas pelo back office?","acceptedAnswer":{"@type":"Answer","text":"Sim. A implantação é modular. É comum começar pelo processamento de pedidos e documentos, com expansão posterior para pós-venda técnico e cadência de recompra."}}]},{"@type":"Service","name":"IA Conecta+ para Indústria","serviceType":"Plataforma de Inteligência Operacional com IA","provider":{"@type":"Organization","name":"Garde Inteligência Empresarial"},"description":"Inteligência Operacional com IA para a indústria: pedido assistido de distribuidores, pós-venda técnico de primeiro nível, recompra recorrente e back office documental integrados ao ERP.","areaServed":"BR"}]}</script>
-</head>
-<body>
-<main><header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/80 backdrop-blur-md"><div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10"><a aria-label="Garde Inteligência Empresarial" href="/" class="flex items-center gap-3"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/eff635c1-06f0-43ac-86b1-7fb84174352a/logo-garde-white.png" alt="Garde Inteligência Empresarial" class="h-9 w-auto" width="1000" height="400"><span class="hidden h-7 w-px bg-white/20 sm:block" aria-hidden="true"></span><img src="https://iaconecta.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="hidden h-7 w-auto sm:block" width="300" height="120"></a><nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex"><a class="transition-colors hover:text-white" href="#dores">Desafios</a><a class="transition-colors hover:text-white" href="#icp">Perfil</a><a class="transition-colors hover:text-white" href="#casos">Casos de uso</a><a class="transition-colors hover:text-white" href="#kpis">Indicadores</a><a class="transition-colors hover:text-white" href="#jornada">Como começar</a><a class="transition-colors hover:text-white active" href="/segmentos" data-status="active" aria-current="page">Segmentos</a></nav><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Falar com especialista</a></div></header><section class="surface-dark relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/8d472039-6ec5-44a0-b22c-72b39725af1d/hero-garde.png" alt="Arquitetura digital de inteligência operacional aplicada ao setor de Indústria" width="1600" height="1200" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"><div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-transparent"></div><div class="relative mx-auto max-w-6xl px-6 lg:px-10"><nav class="mb-8 text-xs text-white/45"><a href="/" class="transition-colors hover:text-turquoise">IA Conecta+</a><span class="px-2">/</span><a class="transition-colors hover:text-turquoise active" href="/segmentos" data-status="active" aria-current="page">Segmentos</a><span class="px-2">/</span><span class="text-white/70">Indústria</span></nav><div class="max-w-3xl"><p class="eyebrow mb-5">Inteligência Operacional para a Indústria</p><h1 class="text-4xl leading-[1.08] font-semibold text-white md:text-6xl">A fábrica já foi automatizada.<span class="block text-turquoise">A operação comercial e o back office, não.</span></h1><p class="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">O IA Conecta+ orquestra o relacionamento com distribuidores e representantes, o pedido assistido, o pós-venda técnico e o back office documental, integrando ERP, MES, portal do cliente e canais de atendimento B2B.</p><div class="mt-10 flex flex-wrap gap-4"><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Solicitar diagnóstico industrial</a><a href="#casos" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 border border-current/25 text-current hover:border-turquoise hover:text-turquoise">Ver casos de uso do setor</a></div><div class="mt-16 grid max-w-2xl grid-cols-2 gap-8 border-t border-white/10 pt-8 md:grid-cols-4"><div><p class="font-display text-2xl font-semibold text-white">-52%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Esforço manual no processamento de pedidos</p></div><div><p class="font-display text-2xl font-semibold text-white">+23%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Recompra recorrente na carteira de distribuidores</p></div><div><p class="font-display text-2xl font-semibold text-white">24/7</p><p class="mt-2 text-xs leading-relaxed text-white/50">Atendimento a representantes e clientes B2B</p></div><div><p class="font-display text-2xl font-semibold text-white">100%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Pedidos e documentos rastreados no ERP</p></div></div></div></div></section><section id="dores" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-24"><div class="lg:sticky lg:top-28 lg:self-start"><p class="eyebrow mb-5">Desafios do setor</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">O que trava a operação em <!-- -->Indústria</h2><p class="mt-6 text-lg leading-relaxed text-muted-foreground">Canal de vendas, pós-venda técnico e back office conectados ao ERP.<!-- --> O diagnóstico executivo começa pelo reconhecimento dos pontos em que valor é perdido silenciosamente na operação.</p></div><div class="grid gap-5"><article class="card-premium p-7"><h3 class="text-base font-semibold">Pedido entrando por canal informal</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Distribuidores e representantes enviam pedidos por mensagem, e-mail e planilha; o back office redigita tudo no ERP.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Pós-venda técnico dependente de especialista</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Dúvidas de aplicação, garantia, peça de reposição e assistência ocupam a engenharia com demandas repetitivas.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Carteira B2B sem cadência de relacionamento</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">A recompra depende da memória do representante, sem leitura de ciclo de consumo por cliente e por SKU.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Documentação e conformidade dispersas</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Certificados, laudos, notas e ordens de compra circulam fora dos sistemas, sem estruturação nem rastreabilidade.</p></article></div></div></div></section><section id="icp" class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/67afdd97-09a8-42c5-b7ed-6a5f4a080029/vertical_conexao_limpo.webp" alt="" class="h-full w-full object-cover" style="object-position:center bottom;opacity:0.28" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-20"><div><p class="eyebrow mb-5">Perfil de cliente ideal</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-4xl">Para quem esta arquitetura foi desenhada</h2><p class="mt-6 text-base leading-relaxed text-white/70">Indústrias de bens de capital, químicos, alimentos, autopeças, materiais de construção e bens de consumo com canal indireto de distribuição.</p><p class="mt-5 text-base leading-relaxed text-white/70">Operações com carteira relevante de distribuidores, representantes ou clientes B2B recorrentes e ERP corporativo implantado.</p><p class="mt-10 text-sm font-semibold text-turquoise">Sinais de aderência ao IA Conecta+</p><ul class="mt-5 space-y-3 text-sm text-white/60"><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Pedidos recebidos por canais informais</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Back office dedicado a digitação e conferência</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Engenharia consumida por suporte de primeiro nível</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Baixa previsibilidade de recompra na carteira</li></ul></div><div><p class="eyebrow mb-5">Comitê de decisão</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-4xl">Quem participa da conversa</h2><div class="mt-10 grid gap-4"><article class="card-glass p-6"><h3 class="text-base font-semibold text-white">Diretoria Industrial / CEO</h3><p class="mt-2 text-sm leading-relaxed text-white/55">Eficiência da cadeia comercial e previsibilidade de demanda.</p></article><article class="card-glass p-6"><h3 class="text-base font-semibold text-white">Diretoria Comercial e de Canais</h3><p class="mt-2 text-sm leading-relaxed text-white/55">Desempenho de distribuidores, representantes e recompra.</p></article><article class="card-glass p-6"><h3 class="text-base font-semibold text-white">Diretoria de Supply Chain</h3><p class="mt-2 text-sm leading-relaxed text-white/55">Previsibilidade de pedido, planejamento e nível de estoque.</p></article><article class="card-glass p-6"><h3 class="text-base font-semibold text-white">TI e Processos</h3><p class="mt-2 text-sm leading-relaxed text-white/55">Integração com ERP, MES, portal do cliente e EDI.</p></article></div></div></div></div></section><section id="casos" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Casos de uso em <!-- -->Indústria</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Jornadas completas aplicadas à sua operação</h2></div><div class="mt-14 grid gap-6 lg:grid-cols-2"><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Pedido assistido e canal B2B</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Distribuidores e representantes fazem pedidos em canal digital com tabela, política comercial e disponibilidade validadas em tempo real, gravando diretamente no ERP.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Sem redigitação · Política respeitada · Pedido rastreado</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Pós-venda e suporte técnico de primeiro nível</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Agentes respondem dúvidas de aplicação, garantia e peça de reposição com base na documentação técnica, escalando à engenharia apenas os casos que exigem especialista.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Engenharia preservada · Resposta imediata · Conhecimento estruturado</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Recompra e cadência de carteira</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Ciclos de consumo por cliente e por SKU são monitorados e acionam abordagens de reposição no momento certo, com contexto de histórico e estoque.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Demanda previsível · Recompra recorrente · Representante com foco</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Back office documental</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Ordens de compra, certificados, laudos e notas são lidos por OCR, validados e integrados ao ERP, eliminando conferência manual entre áreas.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ciclo mais curto · Menos erro · Conformidade documentada</p></article></div></div></section><section id="arquitetura" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="grid items-center gap-16 lg:grid-cols-[1fr_1fr] lg:gap-20"><div><p class="eyebrow mb-5">Arquitetura</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Uma camada de orquestração sobre os sistemas que você já usa</h2><p class="mt-6 text-base leading-relaxed text-muted-foreground">O IA Conecta+ não substitui a arquitetura existente do setor de <!-- -->Indústria<!-- -->. Ele conecta canais, agentes inteligentes, sistemas corporativos e a camada analítica em um fluxo único, com governança e rastreabilidade de ponta a ponta.</p><div class="mt-10 flex flex-wrap gap-3"><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Canais</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Agentes Inteligentes</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">CRM</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">ERP</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">OCR e documentos</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Analytics executivo</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Governança e LGPD</span></div></div><img src="https://iaconecta.lovable.app/__l5e/assets-v1/58f6cbe6-7685-4670-b6f0-82b0ad50919c/capa-integracao.webp" alt="Camadas de integração entre sistemas corporativos e inteligência artificial" width="1408" height="1008" loading="lazy" class="w-full rounded-xl border border-border"></div></div></section><section id="kpis" class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/940a0a6a-c72b-4b4f-919d-67a1c24b5ace/fundo_13_laterais_c.webp" alt="" class="h-full w-full object-cover" style="object-position:center;opacity:0.22" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Indicadores de sucesso</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-4xl">Os KPIs que sustentam a decisão de investimento em <!-- -->Indústria</h2></div><div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Tempo de processamento do pedido</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Ciclo entre recebimento e liberação no ERP.</p></article><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Índice de retrabalho no back office</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Erros e correções por pedido processado.</p></article><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Taxa de recompra por distribuidor</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Recorrência da carteira dentro do ciclo esperado.</p></article><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Chamados resolvidos sem engenharia</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Demandas técnicas tratadas no primeiro nível.</p></article><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Previsibilidade de demanda</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Aderência entre pedido projetado e realizado.</p></article><article class="card-glass p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold text-white">Custo administrativo por pedido</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Esforço humano total por transação comercial.</p></article></div></div></section><section id="jornada" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Como começar</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">O percurso de implantação para o setor de <!-- -->Indústria</h2></div><div class="mt-14 grid gap-6 md:grid-cols-5"><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->1</p><h3 class="mt-5 text-base font-semibold">Diagnóstico da cadeia comercial</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Leitura de entrada de pedidos, back office, pós-venda e carteira.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->2</p><h3 class="mt-5 text-base font-semibold">Discovery com comercial e supply</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Priorização por linha de produto, canal ou região.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->3</p><h3 class="mt-5 text-base font-semibold">Arquitetura industrial</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Blueprint de integração com ERP, MES, portal do cliente e EDI.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->4</p><h3 class="mt-5 text-base font-semibold">Implantação por canal</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Piloto com um grupo de distribuidores ou uma linha, com validação no ERP.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->5</p><h3 class="mt-5 text-base font-semibold">Programa contínuo</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Expansão por canal e linha, QBR executivo e evolução de indicadores.</p></article></div></div></section><section id="faq" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p class="eyebrow mb-5">Perguntas frequentes</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Esclarecimentos específicos de <!-- -->Indústria</h2></div><div class="divide-y divide-border border-y border-border"><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Integra com nosso ERP corporativo?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Sim. A plataforma opera como camada de orquestração sobre o ERP já implantado — incluindo integrações por API, EDI ou middleware corporativo — preservando as regras comerciais existentes.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Os distribuidores precisam adotar um novo sistema?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Não. O pedido assistido acontece nos canais que o distribuidor já usa; a estruturação e a gravação no ERP ficam a cargo da camada de orquestração.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Como o conhecimento técnico é incorporado?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Catálogos, fichas técnicas, manuais e políticas comerciais são estruturados como base de conhecimento governada, com curadoria e versionamento definidos pela indústria.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">É possível iniciar apenas pelo back office?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Sim. A implantação é modular. É comum começar pelo processamento de pedidos e documentos, com expansão posterior para pós-venda técnico e cadência de recompra.</p></details></div></div></div></section><section id="contato" class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/53ea7a35-4e22-422f-a680-052a3551919a/fundo_4.webp" alt="" class="h-full w-full object-cover" style="object-position:right center;opacity:0.3" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20"><div id="diagnostico"><p class="eyebrow mb-5">Próximo passo</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-5xl">Agende um Diagnóstico de Cadeia Comercial</h2><p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">Sessão executiva com especialistas da Garde para mapear o custo administrativo do seu canal de vendas e desenhar a arquitetura de um back office e um pós-venda conectados ao ERP.</p><ul class="mt-10 space-y-4 text-sm text-white/60"><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Diagnóstico de maturidade aplicado a Indústria</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Blueprint de arquitetura com os sistemas do setor</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Projeção de impacto sobre os KPIs prioritários</li></ul></div><form class="card-glass grid gap-5 p-8 md:p-10"><label class="block text-sm"><span class="text-white/70">Nome</span><input required="" type="text" placeholder="Nome completo" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">E-mail corporativo</span><input required="" type="email" placeholder="nome@empresa.com.br" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Empresa</span><input required="" type="text" placeholder="Razão social" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Cargo</span><input required="" type="text" placeholder="Diretoria, C-Level, Gerência" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Segmento</span><select class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white focus:border-turquoise focus:outline-none"><option class="bg-navy">Educação</option><option class="bg-navy">Saúde</option><option class="bg-navy">Imobiliário</option><option class="bg-navy">Logística</option><option class="bg-navy">Franquias</option><option class="bg-navy">Varejo</option><option class="bg-navy">Financeiro</option><option class="bg-navy" selected="">Indústria</option></select></label><button type="submit" class="mt-2 rounded-md bg-turquoise px-7 py-3.5 text-sm font-semibold text-navy transition-all duration-300 hover:bg-greenx">Solicitar diagnóstico industrial</button><p class="text-xs leading-relaxed text-white/40">Os dados informados são tratados conforme a LGPD e utilizados exclusivamente para contato executivo.</p></form></div></div></section><section class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><p class="eyebrow mb-5">Outros mercados atendidos</p><div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><a href="/segmentos/educacao" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Educação</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Captação, matrícula e permanência do aluno em uma única operação.</p></a><a href="/segmentos/saude" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Saúde</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Agenda ocupada, absenteísmo sob controle e jornada assistencial integrada.</p></a><a href="/segmentos/imobiliario" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Imobiliário</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Velocidade de resposta ao lead e conversão de visita em contrato.</p></a><a href="/segmentos/logistica" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Logística</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Visibilidade de entrega, menos ocorrências e SAC operacional sob controle.</p></a><a href="/segmentos/franquias" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Franquias</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Padrão de marca na ponta e expansão com previsibilidade.</p></a><a href="/segmentos/varejo" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Varejo</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Conversão omnicanal, recompra recorrente e pós-venda sem atrito.</p></a><a href="/segmentos/financeiro" class="card-premium block p-6 transition-colors hover:border-cyan"><p class="text-base font-semibold">Financeiro</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Onboarding, crédito e cobrança com governança e rastreabilidade.</p></a></div></div></section><footer class="border-t border-border px-6 py-12 lg:px-10"><div class="mx-auto max-w-6xl"><div class="flex flex-wrap items-center justify-between gap-6"><div><img src="https://iaconecta.lovable.app/__l5e/assets-v1/c00a3854-151b-4487-b468-6feb46c821d9/logo-garde.png" alt="Garde Inteligência Empresarial" class="h-10 w-auto" width="1000" height="400"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="mt-4 h-8 w-auto" width="300" height="120"></div><p class="text-xs text-muted-foreground">© <!-- -->2026<!-- --> Garde Inteligência Empresarial. Todos os direitos reservados.</p></div><nav class="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-8 text-xs text-muted-foreground"><a href="/segmentos/educacao" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Educação</a><a href="/segmentos/saude" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Saúde</a><a href="/segmentos/imobiliario" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Imobiliário</a><a href="/segmentos/logistica" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Logística</a><a href="/segmentos/franquias" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Franquias</a><a href="/segmentos/varejo" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Varejo</a><a href="/segmentos/financeiro" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Financeiro</a><a class="transition-colors hover:text-cyan active" href="/segmentos/industria" data-status="active" aria-current="page">IA Conecta+ para <!-- -->Indústria</a></nav></div></footer></main>
+<section class="sec">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">O que trava a operação</span>
+      <h2 class="h2">Onde a operação perde valor sem perceber</h2>
+      <p class="lead" style="margin-top:20px">O diagnóstico começa pelos pontos em que cliente, tempo e receita escapam no dia a dia.</p>
+    </div>
+    <div class="pains">
+      <article class="pain" data-r style="--d:0.00s"><h3>Pedido por canal informal</h3><p>Mensagem, e-mail e planilha que o back office redigita no sistema.</p></article>
+      <article class="pain" data-r style="--d:0.07s"><h3>Engenharia no suporte básico</h3><p>Dúvidas de aplicação e garantia ocupam quem deveria estar no projeto.</p></article>
+      <article class="pain" data-r style="--d:0.14s"><h3>Recompra na memória do representante</h3><p>Sem cadência, a reposição depende de alguém lembrar.</p></article>
+      <article class="pain" data-r style="--d:0.21s"><h3>Documentos fora do sistema</h3><p>Laudos, certificados e ordens de compra sem organização.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Como a IA Conecta+ resolve</span>
+      <h2 class="h2">Jornadas completas aplicadas à sua operação</h2>
+      <p class="lead" style="margin-top:20px">Agentes de IA treinados na sua base atendem, executam e passam para o time só o que precisa de gente.</p>
+    </div>
+    <div class="uses">
+      <article class="use" data-r style="--d:0.0s"><span class="ico"><svg><use href="#i-bag"/></svg></span><h3>Pedido assistido para distribuidores</h3><p>A IA responde tabela e política comercial, monta o pedido e envia os dados ao seu sistema.</p><div class="tags"><span>Catálogo</span><span>Integração via API</span><span>Funil</span></div></article>
+      <article class="use" data-r style="--d:0.1s"><span class="ico"><svg><use href="#i-tool"/></svg></span><h3>Suporte técnico de primeiro nível</h3><p>Manual técnico na base, leitura da foto da peça e escalada para a engenharia só quando precisa.</p><div class="tags"><span>Leitura de imagem</span><span>IA HelpDesk+</span><span>Copiloto</span></div></article>
+      <article class="use" data-r style="--d:0.0s"><span class="ico"><svg><use href="#i-loop"/></svg></span><h3>Recompra com cadência</h3><p>Mensagens agendadas e campanhas para a carteira no momento de reposição.</p><div class="tags"><span>Mensagem agendada</span><span>Campanhas</span><span>Contato do Dia</span></div></article>
+      <article class="use" data-r style="--d:0.1s"><span class="ico"><svg><use href="#i-user"/></svg></span><h3>Representantes com acesso certo</h3><p>Filas e perfis de acesso: cada representante vê só a sua carteira e as suas conversas.</p><div class="tags"><span>Filas</span><span>Perfis de acesso</span><span>Ranking</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap fit">
+    <div data-r="left">
+      <span class="kicker">Para quem é</span>
+      <h2 class="h3">Feito para operações como a sua</h2>
+      <p class="lead" style="margin-top:16px;font-size:1.04rem">Indústrias de bens de capital, químicos, alimentos, autopeças, materiais de construção e bens de consumo com venda por distribuidores e representantes.</p>
+      <ul class="signals"><li>Pedidos chegando por canais informais</li><li>Back office redigitando no sistema</li><li>Engenharia no suporte de primeiro nível</li><li>Recompra pouco previsível</li></ul>
+    </div>
+    <div data-r="right">
+      <span class="kicker">Quem participa da decisão</span>
+      <h2 class="h3">Cada área enxerga o próprio ganho</h2>
+      <div class="people"><div><b>Direção industrial</b><span>Eficiência comercial e previsibilidade.</span></div><div><b>Comercial e canais</b><span>Distribuidores, representantes e recompra.</span></div><div><b>Supply chain</b><span>Previsibilidade de pedido e estoque.</span></div><div><b>TI e processos</b><span>Integração com o sistema de gestão.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Indicadores</span>
+      <h2 class="h2">O que você passa a acompanhar em números</h2>
+    </div>
+    <div class="kpi-grid"><div data-r style="--d:0.00s"><b>Tempo de processamento do pedido</b><span>Do pedido recebido ao registro no sistema.</span></div><div data-r style="--d:0.05s"><b>Pedidos sem redigitação</b><span>O que chegou pronto pela integração.</span></div><div data-r style="--d:0.10s"><b>Chamados resolvidos sem engenharia</b><span>Suporte de primeiro nível.</span></div><div data-r style="--d:0.15s"><b>Recompra por distribuidor</b><span>Recorrência da carteira.</span></div><div data-r style="--d:0.20s"><b>Tempo de resposta</b><span>Espera do cliente B2B.</span></div><div data-r style="--d:0.25s"><b>Ranking de representantes</b><span>Tempo médio de atendimento.</span></div></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div data-r style="max-width:760px">
+      <span class="kicker">Como começamos</span>
+      <h2 class="h2">Primeiro entendemos a sua operação. Depois colocamos a IA para trabalhar.</h2>
+    </div>
+    <ol class="journey" data-r>
+      <li><b>Diagnóstico</b><span>Mapeamos onde a operação perde tempo e dinheiro.</span></li>
+      <li><b>Workshop</b><span>Alinhamos com a liderança o que priorizar.</span></li>
+      <li><b>Mapa de oportunidades</b><span>Definimos jornadas, canais e indicadores.</span></li>
+      <li><b>Prova de conceito</b><span>Colocamos um escopo controlado no ar.</span></li>
+      <li><b>Implantação</b><span>Integramos sistemas e treinamos a equipe.</span></li>
+      <li><b>Evolução</b><span>Acompanhamos os números e expandimos por área.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" data-r><h2 class="h2">Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details data-r><summary>Integra com o nosso sistema de gestão?</summary><p>A plataforma trabalha como camada de orquestração sobre os seus sistemas, com conectores e API. Não pedimos para trocar nada.</p></details>
+      <details data-r><summary>A IA conhece a nossa política comercial?</summary><p>Sim, pela base de conhecimento. Tabelas, condições e manuais em PDF, Excel ou Word, atualizados na hora.</p></details>
+      <details data-r><summary>O cliente pode mandar foto da peça?</summary><p>Sim. A IA lê a imagem, entende o problema e responde pelo manual ou abre o chamado para a engenharia.</p></details>
+      <details data-r><summary>Representantes veem a carteira uns dos outros?</summary><p>Não. Filas e perfis de acesso garantem que cada um veja só o que é seu.</p></details>
+    </div>
+    <div class="center" data-r style="margin-top:72px">
+      <h3 style="font-size:1.2rem">Veja a IA Conecta+ em outros segmentos</h3>
+      <div class="others" style="justify-content:center"><a href="/segmentos/saude">Saúde</a><a href="/segmentos/franquias">Franquias</a><a href="/segmentos/varejo">Varejo</a><a href="/segmentos/imobiliario">Imobiliário</a><a href="/segmentos/educacao">Educação</a><a href="/segmentos/financeiro">Financeiro</a><a href="/segmentos/logistica">Logística</a><a href="/segmentos/industria" aria-current="page">Indústria</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="diagnostico">
+  <div class="ft-cta">
+    <div class="wrap">
+      <img class="ft-logo" src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81">
+      <h2 data-r>Nenhum cliente sem resposta. Nenhuma oportunidade parada.</h2>
+      <p data-r style="--d:.1s">Aumente a capacidade de atendimento e de vendas do seu time sem precisar aumentar o tamanho da equipe.</p>
+      <div data-r style="--d:.2s"><a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B%20para%20Ind%C3%BAstria." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a></div>
+      <small data-r style="--d:.25s">Via WhatsApp · Direto com um especialista · Sem formulário</small>
+      <div class="ft-logos" data-r="zoom">
+        <p>A inteligência por trás de operações que atendem e vendem todos os dias</p>
+        <ul class="known">
+          <li><img src="/assets/clientes/vivo.png" alt="Vivo"></li>
+          <li><img src="/assets/clientes/assai.png" alt="Assaí Atacadista"></li>
+          <li><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago"></li>
+          <li><img src="/assets/clientes/bradesco.png" alt="Bradesco"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81"></a>
+        <p>Plataforma de inteligência operacional com IA da Garde Inteligência Empresarial.</p>
+        <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
+      </div>
+      <div><h6>Plataforma</h6><ul><li><a href="/#plataforma">Visão geral</a></li><li><a href="/#multiagentes">Multiagentes</a></li><li><a href="/#instagram">Instagram</a></li><li><a href="/#helpdesk">IA HelpDesk+</a></li><li><a href="/#gestao">Indicadores</a></li></ul></div>
+      <div><h6>Segmentos</h6><ul><li><a href="/segmentos/saude">Saúde</a></li><li><a href="/segmentos/franquias">Franquias</a></li><li><a href="/segmentos/varejo">Varejo</a></li><li><a href="/segmentos/imobiliario">Imobiliário</a></li><li><a href="/segmentos">Todos</a></li></ul></div>
+      <div><h6>Garde</h6><ul><li><a href="https://www.gardesolucoes.com.br/">Site da Garde</a></li><li><a href="https://www.instagram.com/garde.solucoes/">Instagram</a></li><li><a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B%20para%20Ind%C3%BAstria." target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:lohany.souza@gardetech.com.br">E-mail</a></li></ul></div>
+    </div>
+    <div class="ft-bot"><span>© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo</a></div>
+  </div>
+</footer>
+
+<div class="wa-float" id="wafloat">
+  <div class="tip">Fale com um especialista agora mesmo<button type="button" aria-label="Fechar aviso">×</button></div>
+  <a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B%20para%20Ind%C3%BAstria." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+</div>
+
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

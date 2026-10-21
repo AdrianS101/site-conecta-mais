@@ -3,88 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Segmentos Atendidos | Inteligência Operacional por Setor · Garde</title>
-<meta name="description" content="Inteligência Operacional com IA aplicada a Educação, Saúde, Imobiliário, Logística, Franquias, Varejo, Financeiro e Indústria: dores, casos de uso, KPIs e jornada de implantação por setor.">
-<meta property="og:title" content="Segmentos Atendidos | Inteligência Operacional por Setor · Garde">
-<meta property="og:description" content="Inteligência Operacional com IA aplicada a Educação, Saúde, Imobiliário, Logística, Franquias, Varejo, Financeiro e Indústria: dores, casos de uso, KPIs e jornada de implantação por setor.">
+<title>Segmentos atendidos · IA Conecta+</title>
+<meta name="description" content="A IA Conecta+ aplicada a saúde, franquias, varejo, imobiliário, educação, financeiro, logística e indústria.">
+<meta property="og:title" content="Segmentos atendidos · IA Conecta+">
+<meta property="og:description" content="A IA Conecta+ aplicada a saúde, franquias, varejo, imobiliário, educação, financeiro, logística e indústria.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://iaconecta.lovable.app/favicon.png" type="image/png">
+<meta name="theme-color" content="#F3F7FC">
+<link rel="icon" href="/assets/marca/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        display: ['Sora','ui-sans-serif','system-ui','sans-serif'],
-        sans: ['Manrope','ui-sans-serif','system-ui','sans-serif'],
-      },
-      colors: {
-        navy: '#071B3B',
-        'navy-soft': '#0D2A55',
-        blue: '#0E4D92',
-        cyan: '#1A7FB8',
-        turquoise: '#22C7C9',
-        greenx: '#32D27C',
-        background: '#FFFFFF',
-        foreground: '#071B3B',
-        card: '#FFFFFF',
-        'card-foreground': '#071B3B',
-        primary: { DEFAULT: '#0E4D92', foreground: '#FFFFFF' },
-        secondary: { DEFAULT: '#F5F7FA', foreground: '#071B3B' },
-        muted: { DEFAULT: '#F7F9FB', foreground: '#5B6B85' },
-        accent: { DEFAULT: '#22C7C9', foreground: '#071B3B' },
-        border: '#E3E8EF',
-        input: '#E3E8EF',
-        ring: '#1A7FB8',
-      },
-      borderRadius: { xl: '0.75rem', '2xl': '1rem' },
-    }
-  }
-}
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 5rem; }
-  body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; background:#fff; color:#071B3B; -webkit-font-smoothing: antialiased; }
-  h1,h2,h3,h4 { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; letter-spacing:-0.025em; }
-  .font-display { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; }
-
-  .eyebrow { font-size:.75rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#1A7FB8; }
-
-  .surface-dark {
-    background:
-      radial-gradient(120% 100% at 80% 0%, rgba(14,77,146,.45) 0%, transparent 60%),
-      linear-gradient(180deg, #071B3B 0%, #04122A 100%);
-    color:#FAFBFD;
-  }
-
-  .card-premium {
-    background:#fff; border:1px solid #E3E8EF; border-radius:.75rem;
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease, border-color .35s ease;
-  }
-  .card-premium:hover { transform: translateY(-4px); border-color: rgba(26,127,184,.45); box-shadow: 0 24px 60px -32px rgba(7,27,59,.55); }
-
-  .card-glass {
-    background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
-    border-radius:.75rem; backdrop-filter: blur(8px);
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), border-color .35s ease;
-  }
-  .card-glass:hover { transform: translateY(-4px); border-color: rgba(34,199,201,.5); }
-
-  .rule-gradient { height:1px; background: linear-gradient(90deg, transparent, rgba(34,199,201,.7), transparent); }
-
-  .reveal { animation: reveal-up .9s cubic-bezier(.2,.7,.3,1) both; }
-  @keyframes reveal-up { from { opacity:0; transform: translateY(18px);} to { opacity:1; transform:none; } }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
+<body class="no-js" id="topo">
+<div class="progress" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6zM19 15l.9 2.6L22 18.5l-2.1.9L19 22l-.9-2.6L16 18.5l2.1-.9z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 11 16M16 7.5 13 16M8.5 6h7"/></g></symbol>
+  <symbol id="i-sell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></g></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><circle cx="12" cy="12" r="2.5"/></g></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-5-5 8-8zM3 21l5-5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5l-5.5 5.5M12 11.5l5.5 5.5"/></g></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></g></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></g></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 20V9l5 3V9l5 3V9l5 3V4h3v16z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+</svg>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="IA Conecta+, página inicial"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
+    <nav id="menu" aria-label="Principal">
+      <a href="/#plataforma">Plataforma</a>
+      <a href="/#multiagentes">Multiagentes</a>
+      <a href="/#instagram">Instagram</a>
+      <a href="/#helpdesk">HelpDesk+</a>
+      <a href="/segmentos">Segmentos</a>
+    </nav>
+    <div class="right">
+      <a class="btn-wa sm" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero seg-hero" style="padding-bottom:40px">
+  <div class="wrap" style="max-width:860px;text-align:center">
+    <nav class="crumb seq" style="--t:.02s;justify-content:center" aria-label="Você está em"><a href="/">IA Conecta+</a><span>/</span>Segmentos</nav>
+    <span class="pill seq" style="--t:.05s">Módulos por segmento</span>
+    <h1 class="seq" style="--t:.15s">Cada mercado perde valor em um ponto diferente da operação</h1>
+    <p class="lead seq" style="--t:.3s;margin:0 auto">A base é a mesma: agentes de IA, todos os canais e o mesmo histórico. O que muda são as jornadas, os sistemas e os indicadores de cada setor.</p>
+    <div class="hero-cta seq" style="--t:.45s;align-items:center">
+      <a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+      <small>Atendimento imediato via WhatsApp</small>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="uses">
+      <a class="use" href="/segmentos/saude" data-r style="--d:0.0s;text-decoration:none"><span class="ico"><svg><use href="#i-heart"/></svg></span><h3>Saúde</h3><p>Agendamento, confirmação, dúvidas e pagamento resolvidos na conversa, com a IA da sua clínica no WhatsApp, Instagram e site.</p><div class="tags"><span>Ver Saúde</span></div></a>
+      <a class="use" href="/segmentos/franquias" data-r style="--d:0.1s;text-decoration:none"><span class="ico"><svg><use href="#i-net"/></svg></span><h3>Franquias</h3><p>Captação de franqueados, distribuição de leads por região e atendimento padronizado em todas as unidades, com visão da franqueadora.</p><div class="tags"><span>Ver Franquias</span></div></a>
+      <a class="use" href="/segmentos/varejo" data-r style="--d:0.0s;text-decoration:none"><span class="ico"><svg><use href="#i-bag"/></svg></span><h3>Varejo</h3><p>Catálogo e preços para a IA, PIX e cartão no WhatsApp, Instagram que vira venda e pós-venda sem fila.</p><div class="tags"><span>Ver Varejo</span></div></a>
+      <a class="use" href="/segmentos/imobiliario" data-r style="--d:0.1s;text-decoration:none"><span class="ico"><svg><use href="#i-home"/></svg></span><h3>Imobiliário</h3><p>Lead de portal, site e Instagram atendido na hora, qualificado e entregue ao corretor certo, com a visita já agendada.</p><div class="tags"><span>Ver Imobiliário</span></div></a>
+      <a class="use" href="/segmentos/educacao" data-r style="--d:0.0s;text-decoration:none"><span class="ico"><svg><use href="#i-cap"/></svg></span><h3>Educação</h3><p>Captação, matrícula, rematrícula e secretaria atendidas na hora, com a IA da sua instituição em todos os canais.</p><div class="tags"><span>Ver Educação</span></div></a>
+      <a class="use" href="/segmentos/financeiro" data-r style="--d:0.1s;text-decoration:none"><span class="ico"><svg><use href="#i-shield"/></svg></span><h3>Financeiro</h3><p>Onboarding, coleta de documentos, cobrança e relacionamento com o cliente, com trilha de auditoria em cada interação.</p><div class="tags"><span>Ver Financeiro</span></div></a>
+      <a class="use" href="/segmentos/logistica" data-r style="--d:0.0s;text-decoration:none"><span class="ico"><svg><use href="#i-truck"/></svg></span><h3>Logística</h3><p>Status de entrega, ocorrências, agendamento de coleta e comprovantes atendidos pela IA, com chamados organizados para o seu time.</p><div class="tags"><span>Ver Logística</span></div></a>
+      <a class="use" href="/segmentos/industria" data-r style="--d:0.1s;text-decoration:none"><span class="ico"><svg><use href="#i-factory"/></svg></span><h3>Indústria</h3><p>Pedido de distribuidores, suporte técnico de primeiro nível e recompra recorrente, conectados aos sistemas que você já usa.</p><div class="tags"><span>Ver Indústria</span></div></a>
+    </div>
+    <div class="center" data-r style="margin-top:72px;max-width:700px;margin-left:auto;margin-right:auto">
+      <h2 class="h3">Não encontrou o seu setor?</h2>
+      <p class="lead" style="margin-top:14px">A arquitetura é desenhada sobre a sua operação. O diagnóstico mostra por onde começar.</p>
+    </div>
+  </div>
+</section>
+</main>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Garde Inteligência Empresarial","description":"Consultoria e plataforma de Inteligência Operacional com IA. Conectamos pessoas, processos, dados e Inteligência Artificial.","url":"/"}</script>
-</head>
-<body>
-<main><header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/80 backdrop-blur-md"><div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10"><a aria-label="Garde Inteligência Empresarial" href="/" class="flex items-center gap-3"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/eff635c1-06f0-43ac-86b1-7fb84174352a/logo-garde-white.png" alt="Garde Inteligência Empresarial" class="h-9 w-auto" width="1000" height="400"><span class="hidden h-7 w-px bg-white/20 sm:block" aria-hidden="true"></span><img src="https://iaconecta.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="hidden h-7 w-auto sm:block" width="300" height="120"></a><nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex"><a class="transition-colors hover:text-white active" href="/segmentos" data-status="active" aria-current="page">Segmentos</a></nav><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Agende com Executivo</a></div></header><section class="relative overflow-hidden surface-dark px-6 pt-36 pb-24 md:pt-44 md:pb-28 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/8a620330-5a7d-40b4-acaa-4fa85fd42065/fundo_3.webp" alt="" class="h-full w-full object-cover" style="object-position:center;opacity:0.3" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Inteligência Operacional por setor</p><h1 class="text-4xl leading-[1.08] font-semibold text-white md:text-5xl">Cada mercado perde valor em um ponto diferente da operação.</h1><p class="mt-8 text-lg leading-relaxed text-white/70">A tese de valor do IA Conecta+ é a mesma em qualquer setor: conectar pessoas, processos, dados e inteligência artificial em uma arquitetura única. O que muda são as jornadas priorizadas, os sistemas integrados, os indicadores acompanhados e o comitê de decisão envolvido.</p><div class="mt-10"><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Agende com Executivo</a></div></div></div></section><section class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="grid gap-6 md:grid-cols-2"><a href="/segmentos/educacao" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Educação</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Captação, matrícula e permanência do aluno em uma única operação.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para instituições de ensino: captação qualificada, conversão de matrícula, rematrícula orientada a risco e prevenção de evasão integradas ao ERP acadêmico.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Educação</span></a><a href="/segmentos/saude" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Saúde</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Agenda ocupada, absenteísmo sob controle e jornada assistencial integrada.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para hospitais e clínicas: agendamento e confirmação inteligentes, redução de absenteísmo, autorização documental e continuidade assistencial integradas ao HIS.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Saúde</span></a><a href="/segmentos/imobiliario" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Imobiliário</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Velocidade de resposta ao lead e conversão de visita em contrato.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para incorporadoras e imobiliárias: resposta imediata ao lead, qualificação, matching de imóvel, agendamento de visitas e documentação integrados ao CRM.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Imobiliário</span></a><a href="/segmentos/logistica" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Logística</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Visibilidade de entrega, menos ocorrências e SAC operacional sob controle.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para transportadoras e operadores logísticos: rastreamento proativo, tratamento de ocorrências, agendamento de entrega e comprovação digital integrados ao TMS.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Logística</span></a><a href="/segmentos/franquias" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Franquias</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Padrão de marca na ponta e expansão com previsibilidade.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para franqueadoras: captação de franqueados, distribuição territorial de leads, padrão único de atendimento e suporte escalável à rede.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Franquias</span></a><a href="/segmentos/varejo" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Varejo</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Conversão omnicanal, recompra recorrente e pós-venda sem atrito.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para o varejo: recuperação de carrinho, pós-venda digital, recompra orientada a ciclo e clienteling integrados ao ERP e ao e-commerce.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Varejo</span></a><a href="/segmentos/financeiro" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Financeiro</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Onboarding, crédito e cobrança com governança e rastreabilidade.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para bancos, fintechs e cooperativas: onboarding e KYC assistidos, esteira documental de crédito e cobrança com governança e trilha de auditoria.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Financeiro</span></a><a href="/segmentos/industria" class="card-premium flex flex-col p-8 transition-colors hover:border-cyan"><div class="rule-gradient mb-6 w-12"></div><h2 class="text-xl font-semibold">Indústria</h2><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Canal de vendas, pós-venda técnico e back office conectados ao ERP.</p><p class="mt-6 flex-1 text-sm leading-relaxed text-muted-foreground">Inteligência Operacional com IA para a indústria: pedido assistido de distribuidores, pós-venda técnico de primeiro nível, recompra recorrente e back office documental integrados ao ERP.</p><span class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Ver leitura executiva de <!-- -->Indústria</span></a></div></div></section><section id="contato" class="relative overflow-hidden surface-dark px-6 py-24 md:py-28 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/53ea7a35-4e22-422f-a680-052a3551919a/fundo_4.webp" alt="" class="h-full w-full object-cover" style="object-position:right center;opacity:0.3" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><h2 class="max-w-2xl text-3xl leading-tight font-semibold text-white md:text-4xl">Não encontrou o seu setor? A arquitetura é desenhada sobre a sua operação.</h2><p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">Conduzimos diagnósticos executivos em serviços, distribuição, agronegócio e operações corporativas complexas. O método é o mesmo: diagnóstico, discovery, arquitetura, implantação assistida e programa contínuo.</p><div class="mt-10"><a href="/#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Solicitar Diagnóstico de Maturidade</a></div></div></section><footer class="border-t border-border px-6 py-12 lg:px-10"><div class="mx-auto max-w-6xl"><div class="flex flex-wrap items-center justify-between gap-6"><div><img src="https://iaconecta.lovable.app/__l5e/assets-v1/c00a3854-151b-4487-b468-6feb46c821d9/logo-garde.png" alt="Garde Inteligência Empresarial" class="h-10 w-auto" width="1000" height="400"><img src="https://iaconecta.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="mt-4 h-8 w-auto" width="300" height="120"></div><p class="text-xs text-muted-foreground">© <!-- -->2026<!-- --> Garde Inteligência Empresarial. Todos os direitos reservados.</p></div><nav class="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-8 text-xs text-muted-foreground"><a href="/segmentos/educacao" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Educação</a><a href="/segmentos/saude" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Saúde</a><a href="/segmentos/imobiliario" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Imobiliário</a><a href="/segmentos/logistica" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Logística</a><a href="/segmentos/franquias" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Franquias</a><a href="/segmentos/varejo" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Varejo</a><a href="/segmentos/financeiro" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Financeiro</a><a href="/segmentos/industria" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Indústria</a></nav></div></footer></main>
+<footer id="diagnostico">
+  <div class="ft-cta">
+    <div class="wrap">
+      <img class="ft-logo" src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81">
+      <h2 data-r>Nenhum cliente sem resposta. Nenhuma oportunidade parada.</h2>
+      <p data-r style="--d:.1s">Aumente a capacidade de atendimento e de vendas do seu time sem precisar aumentar o tamanho da equipe.</p>
+      <div data-r style="--d:.2s"><a class="btn-wa" href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">Quero falar com especialista<span class="ic"><svg><use href="#i-wa"/></svg></span></a></div>
+      <small data-r style="--d:.25s">Via WhatsApp · Direto com um especialista · Sem formulário</small>
+      <div class="ft-logos" data-r="zoom">
+        <p>A inteligência por trás de operações que atendem e vendem todos os dias</p>
+        <ul class="known">
+          <li><img src="/assets/clientes/vivo.png" alt="Vivo"></li>
+          <li><img src="/assets/clientes/assai.png" alt="Assaí Atacadista"></li>
+          <li><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago"></li>
+          <li><img src="/assets/clientes/bradesco.png" alt="Bradesco"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo-w" href="/" aria-label="IA Conecta+"><img src="/assets/marca/logo-ia-conecta-branco.png" alt="IA Conecta+" width="243" height="81"></a>
+        <p>Plataforma de inteligência operacional com IA da Garde Inteligência Empresarial.</p>
+        <p class="meta"><img src="/assets/marca/meta-business-partners-white.png" alt="Meta Business Partners" width="211" height="13"></p>
+      </div>
+      <div><h6>Plataforma</h6><ul><li><a href="/#plataforma">Visão geral</a></li><li><a href="/#multiagentes">Multiagentes</a></li><li><a href="/#instagram">Instagram</a></li><li><a href="/#helpdesk">IA HelpDesk+</a></li><li><a href="/#gestao">Indicadores</a></li></ul></div>
+      <div><h6>Segmentos</h6><ul><li><a href="/segmentos/saude">Saúde</a></li><li><a href="/segmentos/franquias">Franquias</a></li><li><a href="/segmentos/varejo">Varejo</a></li><li><a href="/segmentos/imobiliario">Imobiliário</a></li><li><a href="/segmentos">Todos</a></li></ul></div>
+      <div><h6>Garde</h6><ul><li><a href="https://www.gardesolucoes.com.br/">Site da Garde</a></li><li><a href="https://www.instagram.com/garde.solucoes/">Instagram</a></li><li><a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:lohany.souza@gardetech.com.br">E-mail</a></li></ul></div>
+    </div>
+    <div class="ft-bot"><span>© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</span><a href="#topo">Voltar ao topo</a></div>
+  </div>
+</footer>
+
+<div class="wa-float" id="wafloat">
+  <div class="tip">Fale com um especialista agora mesmo<button type="button" aria-label="Fechar aviso">×</button></div>
+  <a href="https://wa.me/5511915192560?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20sobre%20a%20IA%20Conecta%2B." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+</div>
+
+<script src="/assets/js/site.js"></script>
 </body>
 </html>
