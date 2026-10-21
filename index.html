@@ -3,85 +3,801 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IA Conecta+ | Inteligência Operacional com IA · Garde</title>
-<meta name="description" content="Plataforma de Inteligência Operacional com IA da Garde: conecta pessoas, processos, dados e sistemas (CRM, ERP, canais) para transformar cada interação em valor.">
-<meta property="og:title" content="IA Conecta+ | Inteligência Operacional com IA · Garde">
-<meta property="og:description" content="Plataforma de Inteligência Operacional com IA da Garde.">
+<title>IA Conecta+ | Atendimento, vendas e suporte com IA · Garde</title>
+<meta name="description" content="Plataforma de inteligência operacional da Garde: IA treinada com os seus documentos atendendo WhatsApp, Instagram, site e e-mail, com funil de vendas, campanhas e gestão de chamados em um só sistema.">
+<meta property="og:title" content="IA Conecta+ | Atendimento, vendas e suporte com IA">
+<meta property="og:description" content="WhatsApp, Instagram, site e e-mail atendidos por uma IA treinada com os documentos da sua empresa, com funil, campanhas e chamados em um só sistema.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://iaconecta.lovable.app/favicon.png" type="image/png">
+<link rel="icon" href="/assets/marca/logo-ia-conecta.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        display: ['Sora','ui-sans-serif','system-ui','sans-serif'],
-        sans: ['Manrope','ui-sans-serif','system-ui','sans-serif'],
-      },
-      colors: {
-        navy: '#071B3B',
-        'navy-soft': '#0D2A55',
-        blue: '#0E4D92',
-        cyan: '#1A7FB8',
-        turquoise: '#22C7C9',
-        greenx: '#32D27C',
-        background: '#FFFFFF',
-        foreground: '#071B3B',
-        card: '#FFFFFF',
-        'card-foreground': '#071B3B',
-        primary: { DEFAULT: '#0E4D92', foreground: '#FFFFFF' },
-        secondary: { DEFAULT: '#F5F7FA', foreground: '#071B3B' },
-        muted: { DEFAULT: '#F7F9FB', foreground: '#5B6B85' },
-        accent: { DEFAULT: '#22C7C9', foreground: '#071B3B' },
-        border: '#E3E8EF',
-        input: '#E3E8EF',
-        ring: '#1A7FB8',
-      },
-      borderRadius: { xl: '0.75rem', '2xl': '1rem' },
-    }
-  }
-}
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
-  html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 5rem; }
-  body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; background:#fff; color:#071B3B; -webkit-font-smoothing: antialiased; }
-  h1,h2,h3,h4 { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; letter-spacing:-0.025em; }
-  .font-display { font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; }
+  :root{
+    --navy:#071B3B; --navy-2:#0D2A55; --blue:#0E4D92; --cyan:#1A7FB8; --turq:#22C7C9; --green:#32D27C;
+    --ink:#071B3B; --ink-2:#3E4E68; --ink-3:#6B7A92;
+    --page:#F5F8FC; --paper:#FFFFFF; --mist:#EAF2FA; --line:#DCE5EF;
+    --wa:#25D366; --wa-bg:#EFEAE2; --wa-out:#D9FDD3;
+    --r-sm:8px; --r:14px; --r-lg:22px;
+    --shadow:0 1px 2px rgba(7,27,59,.06), 0 12px 32px -12px rgba(7,27,59,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--page);color:var(--ink);font:400 17px/1.6 'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;letter-spacing:-.02em;margin:0;color:var(--ink)}
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--turq);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .lead{font-size:1.15rem;color:var(--ink-2);max-width:60ch}
+  .kicker{font-weight:600;color:var(--cyan);font-size:.95rem;margin-bottom:12px}
+  section{padding:104px 0}
+  @media (max-width:760px){section{padding:72px 0}}
 
-  .eyebrow { font-size:.75rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#1A7FB8; }
+  /* botões */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--navy)}
+  .btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+  .btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--cyan)}
+  .btn svg{width:18px;height:18px}
 
-  .surface-dark {
-    background:
-      radial-gradient(120% 100% at 80% 0%, rgba(14,77,146,.45) 0%, transparent 60%),
-      linear-gradient(180deg, #071B3B 0%, #04122A 100%);
-    color:#FAFBFD;
+  /* selo Meta */
+  .meta-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font-size:.85rem;font-weight:600;color:var(--ink-2);white-space:nowrap}
+  .meta-badge .dot{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#0668E1,#0081FB);color:#fff}
+  .meta-badge .dot svg{width:13px;height:13px}
+  .meta-badge strong{color:var(--ink)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+  header.scrolled{border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;gap:28px;height:76px}
+  .nav .logo img{height:38px;width:auto}
+  .nav nav{display:flex;gap:26px;margin-left:12px}
+  .nav nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-2)}
+  .nav nav a:hover{color:var(--blue)}
+  .nav .right{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .nav .btn{padding:11px 20px}
+  .menu-btn{display:none;background:none;border:0;padding:8px;color:var(--ink);cursor:pointer}
+  @media (max-width:1020px){.nav nav{display:none}.nav .meta-badge{display:none}}
+  @media (max-width:640px){.nav .btn{display:none}.menu-btn{display:block}
+    .nav nav.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);margin:0;padding:8px 24px 20px}
+    .nav nav.open a{padding:12px 0;border-bottom:1px solid var(--line)}}
+
+  /* hero */
+  .hero{padding:56px 0 96px;overflow:hidden;position:relative}
+  .hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(34,199,201,.16),rgba(14,77,146,.06) 45%,transparent 70%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;position:relative}
+  .hero h1{font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.05;font-weight:700;margin:22px 0 22px}
+  .hero .lead{font-size:1.2rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .channels{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;padding:0;list-style:none}
+  .channels li{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--ink-2);padding:7px 12px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)}
+  .channels svg{width:16px;height:16px}
+  @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:32px}}
+
+  /* palco do hero: celular + cards da plataforma */
+  .stage{position:relative;height:600px}
+  .phone{position:absolute;left:8%;top:0;width:300px;height:600px;border-radius:44px;background:#0B1424;padding:11px;box-shadow:0 40px 80px -30px rgba(7,27,59,.55)}
+  .screen{width:100%;height:100%;border-radius:34px;overflow:hidden;background:var(--wa-bg);display:flex;flex-direction:column}
+  .wa-top{background:#075E54;color:#fff;display:flex;align-items:center;gap:10px;padding:34px 14px 12px}
+  .wa-top .av{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
+  .wa-top .av img{width:30px}
+  .wa-top b{display:block;font-size:.92rem;font-family:'Manrope'}
+  .wa-top small{font-size:.74rem;opacity:.85}
+  .wa-top .ok{width:14px;height:14px;vertical-align:-2px;margin-left:4px}
+  .chat{flex:1;padding:14px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;font-size:.84rem;line-height:1.4}
+  .msg{max-width:84%;padding:7px 10px 16px;border-radius:9px;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+  .msg time{position:absolute;right:8px;bottom:3px;font-size:.64rem;color:#667781}
+  .msg.in{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+  .msg.out{align-self:flex-end;background:var(--wa-out);border-top-right-radius:2px}
+  .msg.audio{display:flex;align-items:center;gap:8px;padding-bottom:16px;min-width:170px}
+  .msg.audio .play{width:22px;height:22px;border-radius:50%;background:#54656F;display:grid;place-items:center}
+  .msg.audio .wave{flex:1;height:18px;background:repeating-linear-gradient(90deg,#8696A0 0 2px,transparent 2px 5px);mask:linear-gradient(90deg,#000 60%,rgba(0,0,0,.35) 60%);-webkit-mask:linear-gradient(90deg,#000 60%,rgba(0,0,0,.35) 60%)}
+  .msg .tr{display:block;font-size:.72rem;color:#667781;margin-top:4px;font-style:italic}
+  .typing{align-self:flex-end;background:var(--wa-out);border-radius:9px;padding:9px 12px;display:flex;gap:4px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:#7C8B95;animation:blink 1s infinite}
+  .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+  @keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+  .wa-input{display:flex;gap:6px;padding:8px;background:#F0F2F5}
+  .wa-input span{flex:1;height:34px;border-radius:20px;background:#fff}
+  .wa-input b{width:34px;height:34px;border-radius:50%;background:#00A884}
+
+  .float{position:absolute;background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:14px 16px;font-size:.84rem}
+  .float h4{margin:0 0 8px;font:700 .8rem 'Sora',system-ui,sans-serif;color:var(--ink-3);letter-spacing:0}
+  .lead-card{right:0;top:56px;width:232px}
+  .lead-card .row{display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--line);color:var(--ink-2)}
+  .lead-card .row:first-of-type{border-top:0}
+  .lead-card .row b{color:var(--ink)}
+  .tag{display:inline-block;padding:3px 9px;border-radius:999px;font-weight:700;font-size:.74rem}
+  .tag.hot{background:#E3F9EC;color:#167A45}
+  .tag.ai{background:#E2F4FB;color:#0E5F8C}
+  .tag.esc{background:#FFF1DA;color:#9A5B00}
+  .tag.hum{background:#ECE9FB;color:#4B3BA6}
+  .owner-card{right:-8px;top:262px;width:232px}
+  .owner-card .st{display:flex;gap:6px;flex-wrap:wrap}
+  .owner-card p{color:var(--ink-2);margin-top:8px;font-size:.8rem}
+  .ig-card{right:12px;bottom:40px;width:244px;display:flex;gap:10px;align-items:flex-start}
+  .ig-card .ig{width:30px;height:30px;flex:none;border-radius:9px;background:radial-gradient(circle at 30% 110%,#FDD56E,#F6763A 30%,#D6249F 60%,#6C3FD1);display:grid;place-items:center}
+  .ig-card .ig svg{width:16px;height:16px;color:#fff}
+  .ig-card p{color:var(--ink-2);font-size:.8rem}
+  .ig-card p b{color:var(--ink)}
+  /* sequência de entrada do hero (único momento animado da página) */
+  .seq{opacity:0;transform:translateY(8px);animation:pop .45s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes pop{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.seq{animation:none;opacity:1;transform:none}.typing{display:none}}
+  @media (max-width:960px){.stage{height:620px;max-width:520px;margin:0 auto;width:100%}}
+  @media (max-width:520px){
+    .stage{height:auto;display:flex;flex-direction:column;gap:14px}
+    .phone{position:relative;left:auto;transform:none;margin:0 auto;width:286px;height:570px}
+    .float{position:relative;inset:auto;width:auto}
   }
 
-  .card-premium {
-    background:#fff; border:1px solid #E3E8EF; border-radius:.75rem;
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease, border-color .35s ease;
-  }
-  .card-premium:hover { transform: translateY(-4px); border-color: rgba(26,127,184,.45); box-shadow: 0 24px 60px -32px rgba(7,27,59,.55); }
+  /* clientes */
+  .clients{padding:44px 0 56px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .clients p{text-align:center;color:var(--ink-3);font-weight:600;font-size:.95rem}
+  .logos{display:grid;grid-template-columns:repeat(7,1fr);gap:28px 36px;align-items:center;margin-top:30px}
+  .logos li{list-style:none;min-width:0;display:flex;justify-content:center;align-items:center;height:56px}
+  .logos img{max-height:44px;max-width:min(120px,100%);width:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .2s,opacity .2s}
+  .logos li:hover img{filter:none;opacity:1}
+  .logos .tall img{max-height:54px}
+  .logos .dark{background:var(--navy);border-radius:var(--r-sm);padding:0 14px}
+  .logos .dark img{filter:none;opacity:1;max-height:26px}
+  .logos ul{display:contents}
+  @media (max-width:960px){.logos{grid-template-columns:repeat(4,1fr)}}
+  @media (max-width:560px){.logos{grid-template-columns:repeat(3,1fr);gap:22px}}
 
-  .card-glass {
-    background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
-    border-radius:.75rem; backdrop-filter: blur(8px);
-    transition: transform .35s cubic-bezier(.2,.7,.3,1), border-color .35s ease;
-  }
-  .card-glass:hover { transform: translateY(-4px); border-color: rgba(34,199,201,.5); }
+  /* blocos de recurso: texto + visual alternados */
+  .sec-head{max-width:720px;margin-bottom:64px}
+  .sec-head h2{font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;font-weight:700;margin-bottom:18px}
+  .sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
+  .sec-head.center .lead{margin:0 auto}
+  .feature{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+  .feature:first-of-type{border-top:0;padding-top:0}
+  .feature.flip .f-text{order:2}
+  .feature h3{font-size:clamp(1.55rem,2.4vw,2rem);line-height:1.15;margin-bottom:16px}
+  .feature .lead{font-size:1.05rem}
+  .checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+  .checks li{display:grid;grid-template-columns:22px 1fr;gap:12px;color:var(--ink-2);font-size:.98rem}
+  .checks li::before{content:"";width:22px;height:22px;border-radius:50%;margin-top:1px;background:var(--mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E4D92' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+  .checks b{color:var(--ink)}
+  @media (max-width:900px){.feature{grid-template-columns:1fr;gap:36px}.feature.flip .f-text{order:0}}
 
-  .rule-gradient { height:1px; background: linear-gradient(90deg, transparent, rgba(34,199,201,.7), transparent); }
+  /* painéis de produto desenhados em HTML */
+  .panel{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;position:relative}
+  .panel-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;font:600 .95rem 'Sora',system-ui,sans-serif}
+  .panel-title small{font:500 .8rem 'Manrope',system-ui,sans-serif;color:var(--ink-3)}
+  .docs{display:grid;gap:10px}
+  .doc{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r);background:var(--page);font-size:.92rem}
+  .doc .ext{width:38px;height:44px;border-radius:7px;display:grid;place-items:center;font:700 .66rem 'Sora',system-ui,sans-serif;color:#fff}
+  .doc .ext.pdf{background:#D9473B}.doc .ext.xls{background:#1E7B45}.doc .ext.doc2{background:#2B5DB9}.doc .ext.txt{background:#5B6B85}
+  .doc span:not(.ext){flex:1;color:var(--ink-2)}
+  .doc .ext{flex:none}
+  .doc em{font-style:normal;font-size:.78rem;color:#167A45;font-weight:700}
+  .answer{margin-top:16px;padding:14px 16px;border-radius:var(--r);background:var(--mist);font-size:.9rem;color:var(--ink-2)}
+  .answer b{color:var(--ink)}
 
-  .reveal { animation: reveal-up .9s cubic-bezier(.2,.7,.3,1) both; }
-  @keyframes reveal-up { from { opacity:0; transform: translateY(18px);} to { opacity:1; transform:none; } }
+  .camp-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+  .camp-stats div{padding:12px 8px;border-radius:var(--r-sm);background:var(--page);text-align:center}
+  .camp-stats b{display:block;font:700 1.25rem 'Sora',system-ui,sans-serif;color:var(--ink)}
+  .camp-stats span{font-size:.74rem;color:var(--ink-3);font-weight:600}
+  .camp-stats .bad b{color:#C2410C}
+  .bar{height:10px;border-radius:99px;background:var(--page);overflow:hidden;margin:20px 0 8px;display:flex}
+  .bar i{display:block;height:100%}
+  .camp-list{margin-top:14px;display:grid;gap:8px;font-size:.86rem}
+  .camp-list div{display:flex;justify-content:space-between;padding:10px 12px;border-radius:var(--r-sm);border:1px solid var(--line);color:var(--ink-2)}
+  .camp-list .note{font-size:.78rem;color:var(--ink-3);border:0;padding:4px 0 0}
+  @media (max-width:520px){.camp-stats{grid-template-columns:repeat(3,1fr)}}
+
+  .ig-post{display:grid;grid-template-columns:120px 1fr;gap:16px}
+  .ig-thumb{border-radius:var(--r);aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy),var(--blue) 55%,var(--turq));display:grid;place-items:center;color:#fff;font:700 .95rem/1.2 'Sora',system-ui,sans-serif;text-align:center;padding:10px}
+  .cmt{font-size:.86rem;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+  .cmt b{color:var(--ink)}
+  .cmt.reply{padding-left:18px;border-left:2px solid var(--turq);margin-left:4px;border-bottom:0}
+  .dm{margin-top:12px;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:var(--mist);font-size:.84rem;color:var(--ink-2)}
+  .sched{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .sched div{border:1px dashed var(--line);border-radius:var(--r-sm);padding:10px;font-size:.78rem;color:var(--ink-3)}
+  .sched b{display:block;color:var(--ink);font-size:.85rem}
+  @media (max-width:520px){.ig-post{grid-template-columns:1fr}.ig-thumb{aspect-ratio:16/9}}
+
+  .kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .col{background:var(--page);border-radius:var(--r);padding:12px;min-height:250px}
+  .col h5{margin:0 0 10px;font:700 .8rem 'Sora',system-ui,sans-serif;color:var(--ink-2);display:flex;justify-content:space-between}
+  .card{background:var(--paper);border-radius:var(--r-sm);padding:10px;font-size:.8rem;margin-bottom:8px;box-shadow:0 1px 2px rgba(7,27,59,.08)}
+  .card b{display:block;color:var(--ink);font-size:.85rem}
+  .card span{color:var(--ink-3)}
+  .card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+  .card .nobody{color:#C2410C;font-weight:700}
+  .tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+  .tabs button{font:600 .8rem 'Manrope',system-ui,sans-serif;padding:6px 12px;border-radius:999px;border:0;background:var(--page);color:var(--ink-2);cursor:pointer}
+  .tabs button[aria-selected=true]{background:var(--navy);color:#fff}
+  @media (max-width:520px){.kanban{grid-template-columns:1fr}.col{min-height:0}}
+
+  /* conversas: IA -> escalada -> humano (sequência real) */
+  .handoff{display:grid;grid-template-columns:1fr;gap:14px;counter-reset:s;max-width:440px}
+  .step{padding:20px 24px 20px 40px;border-left:3px solid var(--line);position:relative;background:var(--paper);border-radius:0 var(--r) var(--r) 0}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:20px;left:-17px;width:30px;height:30px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 2px currentColor;display:grid;place-items:center;font:700 .85rem 'Sora',system-ui,sans-serif}
+  .step.s1{border-color:var(--cyan);color:var(--cyan)}.step.s2{border-color:#E8A23A;color:#B87410}.step.s3{border-color:#6B5BD2;color:#4B3BA6}
+  .step h4{margin:8px 0 8px;font:700 1.15rem 'Sora',system-ui,sans-serif;color:var(--ink)}
+  .step p{color:var(--ink-2);font-size:.95rem}
+  
+
+  /* plataforma em números de recurso */
+  .grid-ai{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
+  .grid-ai div{background:var(--paper);padding:28px 24px}
+  .grid-ai h4{margin:0 0 8px;font:700 1.02rem 'Sora',system-ui,sans-serif}
+  .grid-ai p{color:var(--ink-2);font-size:.92rem}
+  @media (max-width:960px){.grid-ai{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid-ai{grid-template-columns:1fr}}
+
+  /* HelpDesk+: faixa escura */
+  .helpdesk{background:var(--navy);color:#E6EEF8;position:relative;overflow:hidden}
+  .helpdesk::after{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(34,199,201,.22),transparent 65%);pointer-events:none}
+  .helpdesk h2,.helpdesk h3{color:#fff}
+  .helpdesk .lead{color:#B8C7DC}
+  .helpdesk .kicker{color:var(--turq)}
+  .hd-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;position:relative;z-index:1}
+  .hd-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:18px}
+  .hd-list li{padding-left:18px;border-left:2px solid rgba(34,199,201,.5)}
+  .hd-list b{display:block;color:#fff;font-family:'Sora';font-weight:600}
+  .hd-list span{color:#B8C7DC;font-size:.95rem}
+  .mgr{background:#0D2A55;border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:24px}
+  .mgr .panel-title{color:#fff}
+  .mgr .panel-title small{color:#8FA3C0}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .kpis div{background:rgba(255,255,255,.05);border-radius:var(--r);padding:14px}
+  .kpis span{display:block;font-size:.76rem;color:#8FA3C0;font-weight:600}
+  .kpis b{font:700 1.6rem 'Sora',system-ui,sans-serif;color:#fff}
+  .kpis .warn b{color:#F5B451}.kpis .ok b{color:var(--green)}
+  .copilot{margin-top:16px;border-radius:var(--r);background:rgba(34,199,201,.1);border:1px solid rgba(34,199,201,.3);padding:14px 16px;font-size:.88rem;color:#CFE0F2}
+  .copilot b{color:var(--turq);display:block;margin-bottom:4px;font-family:'Sora';font-size:.82rem}
+  .tickets{margin-top:14px;display:grid;gap:8px;font-size:.84rem}
+  .tickets div{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);background:rgba(255,255,255,.04);color:#CFE0F2}
+  .tickets code{font:600 .78rem 'Manrope',system-ui,sans-serif;color:#8FA3C0}
+  .pri{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:99px}
+  .pri.a{background:rgba(245,180,81,.16);color:#F5B451}.pri.m{background:rgba(26,127,184,.2);color:#7CC4EE}
+  @media (max-width:960px){.hd-grid{grid-template-columns:1fr}}
+  @media (max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}}
+
+  /* gestão */
+  .mgmt{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .mgmt article{background:var(--paper);border-radius:var(--r-lg);padding:30px;border:1px solid var(--line)}
+  .mgmt article.wide{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .mgmt h3{font-size:1.25rem;margin-bottom:10px}
+  .mgmt p{color:var(--ink-2);font-size:.96rem}
+  .split{display:flex;height:14px;border-radius:99px;overflow:hidden;margin:18px 0 10px}
+  .legend{display:flex;gap:16px;font-size:.82rem;color:var(--ink-3);flex-wrap:wrap}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:0}
+  .roi{font:700 2.2rem 'Sora',system-ui,sans-serif;color:var(--ink);letter-spacing:-.02em}
+  .roi small{display:block;font:500 .84rem 'Manrope',system-ui,sans-serif;color:var(--ink-3);letter-spacing:0}
+  .demand{display:grid;gap:8px;margin-top:16px}
+  .demand div{display:grid;grid-template-columns:1fr auto;font-size:.86rem;color:var(--ink-2);gap:8px;align-items:center}
+  .demand div::after{content:"";grid-column:1/-1;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--cyan) var(--w),var(--page) var(--w))}
+  @media (max-width:960px){.mgmt{grid-template-columns:1fr}.mgmt article.wide{grid-column:auto;grid-template-columns:1fr}}
+
+  /* segmentos */
+  .segs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .segs a{display:block;text-decoration:none;padding:22px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);transition:border-color .2s}
+  .segs a:hover{border-color:var(--cyan)}
+  .segs b{display:block;font:700 1.05rem 'Sora',system-ui,sans-serif;margin-bottom:6px}
+  .segs span{font-size:.88rem;color:var(--ink-2);line-height:1.5}
+  @media (max-width:960px){.segs{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.segs{grid-template-columns:1fr}}
+
+  /* segurança + integrações */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .chips span{padding:9px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:.9rem;font-weight:600;color:var(--ink-2)}
+  .chips span.meta{border-color:#9CC3F5;color:#0B4FB3;background:#F1F7FF}
+  @media (max-width:900px){.two{grid-template-columns:1fr;gap:56px}}
+
+  /* jornada de implantação (sequência real) */
+  .journey{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:j}
+  .journey li{padding:0 18px 0 0;position:relative}
+  .journey li::before{counter-increment:j;content:counter(j);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--cyan);color:var(--blue);font:700 1rem 'Sora',system-ui,sans-serif;margin-bottom:16px;position:relative;z-index:1}
+  .journey li::after{content:"";position:absolute;top:20px;left:40px;right:0;height:2px;background:var(--line)}
+  .journey li:last-child::after{display:none}
+  .journey b{display:block;font:700 1rem 'Sora',system-ui,sans-serif;margin-bottom:6px}
+  .journey span{font-size:.88rem;color:var(--ink-2);display:block;padding-right:8px}
+  @media (max-width:960px){.journey{grid-template-columns:1fr 1fr;gap:28px}.journey li::after{display:none}}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{border-bottom:1px solid var(--line);padding:4px 0}
+  .faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font:600 1.1rem 'Sora',system-ui,sans-serif;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+  .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+  .faq details p{color:var(--ink-2);padding:0 0 22px;max-width:70ch}
+
+  /* CTA final */
+  .final{padding:0 0 104px}
+  .final .box{background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 70%,var(--cyan) 100%);border-radius:28px;padding:64px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;color:#fff;position:relative;overflow:hidden}
+  .final h2{color:#fff;font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.12}
+  .final p{color:#D2E2F3;margin-top:16px;font-size:1.08rem}
+  .final .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .final .btn-primary{background:#fff;color:var(--navy)}
+  .final .btn-primary:hover{background:var(--mist)}
+  .final .meta-badge{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);color:#D2E2F3}
+  .final .meta-badge strong{color:#fff}
+  @media (max-width:860px){.final .box{grid-template-columns:1fr;padding:40px 28px}}
+
+  footer{border-top:1px solid var(--line);background:var(--paper);padding:48px 0 40px;font-size:.9rem;color:var(--ink-3)}
+  .foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+  .foot img{height:34px;width:auto}
+  .foot nav{display:flex;gap:22px;flex-wrap:wrap}
+  .foot nav a{text-decoration:none;color:var(--ink-2);font-weight:600}
+  .foot nav a:hover{color:var(--blue)}
+  .copy{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IA Conecta+","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Garde Inteligência Empresarial"}}</script>
 </head>
 <body>
-<main><header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/80 backdrop-blur-md"><div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10"><a aria-label="Garde Inteligência Empresarial" class="flex items-center gap-3 active" href="/" aria-current="page"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/eff635c1-06f0-43ac-86b1-7fb84174352a/logo-garde-white.png" alt="Garde Inteligência Empresarial" class="h-9 w-auto" width="1000" height="400"><span class="hidden h-7 w-px bg-white/20 sm:block" aria-hidden="true"></span><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="hidden h-7 w-auto sm:block" width="300" height="120"></a><nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex"><a class="transition-colors hover:text-white" href="#categoria">Categoria</a><a class="transition-colors hover:text-white" href="#arquitetura">Arquitetura</a><a class="transition-colors hover:text-white" href="#diferenciais">Diferenciais</a><a class="transition-colors hover:text-white" href="#casos">Casos de uso</a><a class="transition-colors hover:text-white" href="#jornada">Como começar</a><a href="/segmentos" class="transition-colors hover:text-white">Segmentos</a></nav><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Agende com Executivo</a></div></header><section class="surface-dark relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/8d472039-6ec5-44a0-b22c-72b39725af1d/hero-garde.png" alt="Arquitetura digital conectando dados, sistemas e inteligência artificial" width="1600" height="1200" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"><div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-transparent"></div><div class="relative mx-auto max-w-6xl px-6 lg:px-10"><div class="max-w-3xl reveal"><p class="eyebrow mb-5">Plataforma de Inteligência Operacional com IA</p><h1 class="text-4xl leading-[1.08] font-semibold text-white md:text-6xl">Sua empresa não precisa de mais canais.<span class="block text-turquoise">Precisa de uma operação inteligente.</span></h1><p class="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">O IA Conecta+ conecta pessoas, processos, dados e Inteligência Artificial em uma única arquitetura operacional — transformando cada interação em decisão, execução e valor para o negócio.</p><div class="mt-10 flex flex-wrap gap-4"><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Agende com Executivo</a><a href="#diagnostico" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 border border-current/25 text-current hover:border-turquoise hover:text-turquoise">Solicite um Diagnóstico de Maturidade</a></div><div class="mt-16 grid max-w-2xl grid-cols-2 gap-8 border-t border-white/10 pt-8 md:grid-cols-4"><div><p class="font-display text-2xl font-semibold text-white">+97%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Taxa de entrega em canais orquestrados</p></div><div><p class="font-display text-2xl font-semibold text-white">59,6%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Leitura em base considerada inativa</p></div><div><p class="font-display text-2xl font-semibold text-white">5.778</p><p class="mt-2 text-xs leading-relaxed text-white/50">Interações processadas em 30 dias</p></div><div><p class="font-display text-2xl font-semibold text-white">100%</p><p class="mt-2 text-xs leading-relaxed text-white/50">Contatos classificados por critério de negócio</p></div></div></div></div></section><section id="problema" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-24"><div><p class="eyebrow mb-5">O cenário atual</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">As empresas multiplicaram canais. E continuaram operando de forma fragmentada.</h2><p class="mt-6 text-lg leading-relaxed text-muted-foreground">Cada nova ferramenta resolveu um pedaço do problema e criou outro: informação dispersa, processos manuais entre sistemas e decisões tomadas sem contexto completo. O custo não aparece na fatura do software — aparece na operação.</p><div class="mt-10 flex flex-wrap gap-3"><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">CRM</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">ERP</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">WhatsApp</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">E-mail</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Telefone</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Planilhas</span><span class="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-muted-foreground">Pessoas</span></div></div><div class="grid gap-5"><article class="card-premium p-7"><h3 class="text-base font-semibold">Receita que não se converte</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Oportunidades perdidas por tempo de resposta, follow-up inconsistente e base comercial sem qualificação.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Custo operacional crescente</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Estrutura que cresce na mesma proporção do volume, com retrabalho entre sistemas e times.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Decisão sem base analítica</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Indicadores fragmentados entre plataformas impedem leitura única do desempenho da operação.</p></article><article class="card-premium p-7"><h3 class="text-base font-semibold">Risco e falta de governança</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Processos executados fora de padrão, sem rastreabilidade nem controle sobre o dado corporativo.</p></article></div></div></div></section><section id="categoria" class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/67afdd97-09a8-42c5-b7ed-6a5f4a080029/vertical_conexao_limpo.webp" alt="" class="h-full w-full object-cover" style="object-position:center bottom;opacity:0.28" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Uma nova categoria</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-5xl">Conheça a Inteligência Operacional</h2><p class="mt-6 text-lg leading-relaxed text-white/70">IA conversacional resolve o diálogo. Não resolve o processo. Enquanto a conversa termina em uma resposta, a operação continua dependendo de pessoas movendo informação entre sistemas. Inteligência Operacional é a camada que assume esse trabalho: interpreta, decide, executa, integra e mede.</p></div><div class="mt-16 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-5"><div class="bg-navy p-7 "><span class="font-display text-xs text-turquoise">0<!-- -->1</span><h3 class="mt-4 text-base font-semibold text-white">Telefone</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Canal único, atendimento humano e capacidade limitada.</p></div><div class="bg-navy p-7 "><span class="font-display text-xs text-turquoise">0<!-- -->2</span><h3 class="mt-4 text-base font-semibold text-white">Digital</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Multiplicação de canais sem integração entre eles.</p></div><div class="bg-navy p-7 "><span class="font-display text-xs text-turquoise">0<!-- -->3</span><h3 class="mt-4 text-base font-semibold text-white">Chatbots</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Respostas por regra, sem contexto e sem processo.</p></div><div class="bg-navy p-7 "><span class="font-display text-xs text-turquoise">0<!-- -->4</span><h3 class="mt-4 text-base font-semibold text-white">IA Conversacional</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Linguagem natural, mas a operação segue manual.</p></div><div class="bg-navy p-7 bg-blue/25"><span class="font-display text-xs text-turquoise">0<!-- -->5</span><h3 class="mt-4 text-base font-semibold text-turquoise">Inteligência Operacional</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Agentes que executam processos, integram sistemas e geram decisão.</p></div></div></div></section><section id="arquitetura" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="grid items-start gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20"><div class="lg:sticky lg:top-28"><p class="eyebrow mb-5">Como funciona</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Uma arquitetura única, do primeiro contato ao resultado</h2><p class="mt-6 text-base leading-relaxed text-muted-foreground">O IA Conecta+ não substitui a arquitetura existente. Ele a conecta. Cada camada da operação passa a compartilhar contexto, regras e dados — com governança e rastreabilidade em todo o percurso.</p><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/58f6cbe6-7685-4670-b6f0-82b0ad50919c/capa-integracao.webp" alt="Camadas de integração entre sistemas corporativos e inteligência artificial" width="1408" height="1008" loading="lazy" class="mt-10 w-full rounded-xl border border-border"></div><ol class="relative border-l border-border pl-8"><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->1</p><h3 class="mt-1 text-lg font-semibold">Marketing</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Demanda qualificada na origem</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->2</p><h3 class="mt-1 text-lg font-semibold">Atendimento</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Interação orquestrada em todos os canais</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->3</p><h3 class="mt-1 text-lg font-semibold">Inteligência Artificial</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Agentes que interpretam, decidem e executam</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->4</p><h3 class="mt-1 text-lg font-semibold">CRM</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Registro e enriquecimento do relacionamento</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->5</p><h3 class="mt-1 text-lg font-semibold">ERP</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Execução conectada ao processo de negócio</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->6</p><h3 class="mt-1 text-lg font-semibold">Financeiro</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Ciclo de cobrança e conciliação integrado</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->7</p><h3 class="mt-1 text-lg font-semibold">Analytics</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Indicadores unificados de ponta a ponta</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->8</p><h3 class="mt-1 text-lg font-semibold">Gestão</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Leitura executiva e priorização</p></li><li class="relative pb-9 last:pb-0"><span class="absolute -left-[38px] mt-1.5 flex h-3 w-3 items-center justify-center rounded-full bg-cyan ring-4 ring-secondary"></span><p class="font-display text-xs text-muted-foreground">Camada <!-- -->9</p><h3 class="mt-1 text-lg font-semibold">Resultado</h3><p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Eficiência, escala e crescimento</p></li></ol></div></div></section><section id="diferenciais" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Diferenciais Garde</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Não entregamos um software. Assumimos uma parceria estratégica.</h2><p class="mt-6 text-lg leading-relaxed text-muted-foreground">A tecnologia é condição necessária, não suficiente. O valor nasce do método consultivo que traduz a estratégia da companhia em arquitetura operacional.</p></div><div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Implantação consultiva</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Especialistas de negócio conduzindo diagnóstico, desenho e adoção.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Arquitetura sob medida</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Nenhuma operação é padrão. A solução é desenhada sobre a sua.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Agentes Inteligentes</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Execução autônoma de processos com regras, contexto e supervisão.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Integração empresarial</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Conexão nativa com CRM, ERP, canais e sistemas proprietários.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">OCR e documentos</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Leitura e estruturação de documentos dentro do fluxo operacional.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Analytics executivo</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Indicadores unificados de operação, relacionamento e conversão.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">ABM e inteligência comercial</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Priorização de contas e contatos por critério de negócio.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Governança e LGPD</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Rastreabilidade, controle de acesso e trilhas de auditoria.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Escalabilidade</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Crescimento de volume sem crescimento proporcional de estrutura.</p></article><article class="card-premium p-7"><div class="rule-gradient mb-6 w-12"></div><h3 class="text-base font-semibold">Programa contínuo</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Evolução planejada por ciclos, com QBR e metas de maturidade.</p></article></div></div></section><section class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/940a0a6a-c72b-4b4f-919d-67a1c24b5ace/fundo_13_laterais_c.webp" alt="" class="h-full w-full object-cover" style="object-position:center;opacity:0.22" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Impacto no negócio</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-4xl">Resultados que aparecem na operação e no resultado financeiro</h2></div><div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Redução de custos</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Menos esforço manual por interação e menor custo por atendimento.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Escala operacional</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Capacidade de absorver volume sem ampliar a estrutura.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Padronização</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Processos executados sempre no mesmo padrão de qualidade.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Produtividade</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Times dedicados a decisões, não a tarefas repetitivas.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Experiência superior</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Respostas consistentes, contextualizadas e no tempo do cliente.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Mais inteligência</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Dado estruturado alimentando CRM, analytics e gestão.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Mais conversão</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Oportunidades identificadas e trabalhadas por prioridade real.</p></article><article class="card-glass p-7"><h3 class="text-base font-semibold text-white">Decisão baseada em dados</h3><p class="mt-3 text-sm leading-relaxed text-white/55">Visão única de operação, funil e desempenho.</p></article></div></div></section><section id="casos" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Casos de uso</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Jornadas completas, não funcionalidades isoladas</h2></div><div class="mt-14 grid gap-6 lg:grid-cols-2"><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Reativação inteligente de base comercial</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">A base é processada e classificada por critério de negócio; os contatos com potencial real são qualificados por agentes, registrados no CRM e entregues ao time comercial com contexto. O gestor acompanha funil e desempenho por campanha.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Base segmentada · CRM enriquecido · Foco comercial em oportunidades reais</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Jornada de relacionamento ponta a ponta</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Do primeiro contato à pós-venda: agentes conduzem qualificação, agendamento, confirmação e retomada, integrando ERP e CRM e escalando para o time humano apenas quando há valor na intervenção.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Menor tempo de resposta · Maior resolutividade · Padrão em todos os canais</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Operação documental e back office</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Documentos recebidos nos canais são lidos por OCR, validados por regra, estruturados e enviados aos sistemas corporativos, eliminando digitação e retrabalho entre áreas.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Menos erro manual · Ciclo mais curto · Rastreabilidade completa</p></article><article class="card-premium flex flex-col p-8"><h3 class="text-xl font-semibold">Inteligência de gestão contínua</h3><p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">Cada interação alimenta a camada analítica: volume, conversão, gargalos e desempenho por time e canal em leitura executiva única para decisão de alocação e prioridade.</p><p class="mt-6 border-t border-border pt-5 text-xs tracking-wide text-cyan">Visão única · Previsibilidade · Decisão com dado</p></article></div></div></section><section class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Inteligência aplicada por setor</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Cada mercado tem uma operação — e uma tese de valor — diferente</h2><p class="mt-6 text-base leading-relaxed text-muted-foreground">As jornadas, os indicadores e os decisores mudam conforme o setor. Selecione o seu para ver a leitura executiva do IA Conecta+ aplicada ao seu contexto.</p></div><div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><a href="/segmentos/educacao" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Educação</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Captação, matrícula e permanência do aluno em uma única operação.</p></a><a href="/segmentos/saude" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Saúde</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Agenda ocupada, absenteísmo sob controle e jornada assistencial integrada.</p></a><a href="/segmentos/imobiliario" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Imobiliário</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Velocidade de resposta ao lead e conversão de visita em contrato.</p></a><a href="/segmentos/logistica" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Logística</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Visibilidade de entrega, menos ocorrências e SAC operacional sob controle.</p></a><a href="/segmentos/franquias" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Franquias</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Padrão de marca na ponta e expansão com previsibilidade.</p></a><a href="/segmentos/varejo" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Varejo</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Conversão omnicanal, recompra recorrente e pós-venda sem atrito.</p></a><a href="/segmentos/financeiro" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Financeiro</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Onboarding, crédito e cobrança com governança e rastreabilidade.</p></a><a href="/segmentos/industria" class="card-premium block p-6 transition-colors hover:border-cyan "><p class="text-base font-semibold">Indústria</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Canal de vendas, pós-venda técnico e back office conectados ao ERP.</p></a></div></div></section><section id="jornada" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="max-w-3xl"><p class="eyebrow mb-5">Como começar</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Um percurso estruturado, conduzido por especialistas</h2></div><div class="mt-14 grid gap-6 md:grid-cols-5"><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->1</p><h3 class="mt-5 text-base font-semibold">Diagnóstico</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Leitura de maturidade digital, canais, sistemas e processos críticos.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->2</p><h3 class="mt-5 text-base font-semibold">Discovery</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Sessões executivas para priorizar jornadas de maior impacto financeiro.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->3</p><h3 class="mt-5 text-base font-semibold">Arquitetura</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Blueprint da operação inteligente, integrações e modelo de governança.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->4</p><h3 class="mt-5 text-base font-semibold">Implantação</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Construção assistida, testes controlados e adoção com os times.</p></article><article class="card-premium p-7"><p class="font-display text-3xl font-semibold text-cyan/35">0<!-- -->5</p><h3 class="mt-5 text-base font-semibold">Programa contínuo</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">Ciclos de evolução, QBR executivo e expansão por maturidade.</p></article></div></div></section><section id="prova" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-20"><div><p class="eyebrow mb-5">Prova e benchmark</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Indicadores de uma operação orquestrada</h2><p class="mt-6 text-base leading-relaxed text-muted-foreground">Recorte consolidado de 30 dias em uma operação de reativação e qualificação de base comercial conduzida com o IA Conecta+.</p><div class="mt-10 grid grid-cols-2 gap-8"><div class="border-l-2 border-turquoise pl-5"><p class="font-display text-3xl font-semibold">5.778</p><p class="mt-1 text-sm text-muted-foreground">Interações processadas</p></div><div class="border-l-2 border-turquoise pl-5"><p class="font-display text-3xl font-semibold">97,7%</p><p class="mt-1 text-sm text-muted-foreground">Taxa de entrega</p></div><div class="border-l-2 border-turquoise pl-5"><p class="font-display text-3xl font-semibold">59,6%</p><p class="mt-1 text-sm text-muted-foreground">Taxa de leitura</p></div><div class="border-l-2 border-turquoise pl-5"><p class="font-display text-3xl font-semibold">727</p><p class="mt-1 text-sm text-muted-foreground">Respostas qualificadas</p></div></div></div><div class="grid gap-6"><blockquote class="card-premium p-8"><p class="text-lg leading-relaxed">“A dor real não era enviar mensagens. Era não saber para quem vender. A base passou a ser classificada por critério de negócio e o time comercial voltou a trabalhar com foco.”</p><footer class="mt-6 text-sm text-muted-foreground">Liderança comercial · Operação atendida pela Garde</footer></blockquote><div class="card-premium p-8"><p class="text-sm font-semibold">Segmentos atendidos</p><div class="mt-5 flex flex-wrap gap-2.5"><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Saúde</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Educação</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Imobiliário</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Logística</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Franquias</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Varejo</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Financeiro</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Indústria</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Serviços</span><span class="rounded-md border border-border px-3.5 py-1.5 text-xs text-muted-foreground">Distribuição</span></div></div></div></div></div></section><section id="guia" class="px-6 py-24 md:py-32 lg:px-10 "><div class="mx-auto max-w-6xl"><div class="card-premium grid gap-10 overflow-hidden p-10 md:grid-cols-[1.2fr_0.8fr] md:p-14"><div><p class="eyebrow mb-5">Guia Executivo</p><h2 class="text-2xl leading-tight font-semibold md:text-4xl">Como construir uma Operação Inteligente com IA</h2><p class="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">Framework executivo com os estágios de maturidade, o modelo de arquitetura por camadas, os critérios de priorização de jornadas e os indicadores para sustentar a decisão de investimento.</p></div><div class="flex flex-col justify-center gap-4 border-border md:border-l md:pl-10"><ul class="space-y-3 text-sm text-muted-foreground"><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Modelo de maturidade em 5 estágios</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Blueprint de arquitetura operacional</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Matriz de priorização de jornadas</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>KPIs e cálculo de retorno</li></ul><div class="mt-4"><a href="#contato" class="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-primary text-primary-foreground hover:bg-cyan hover:shadow-[0_18px_40px_-18px_var(--color-cyan)]">Baixar gratuitamente</a></div></div></div></div></section><section id="faq" class="px-6 py-24 md:py-32 lg:px-10 bg-secondary"><div class="mx-auto max-w-6xl"><div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><div><p class="eyebrow mb-5">Perguntas frequentes</p><h2 class="text-3xl leading-tight font-semibold md:text-4xl">Esclarecimentos para o comitê de decisão</h2></div><div class="divide-y divide-border border-y border-border"><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Inteligência Operacional é o mesmo que IA conversacional?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Não. IA conversacional responde perguntas. Inteligência Operacional orquestra o processo inteiro: qualifica, decide, integra ao CRM e ao ERP, aciona pessoas e devolve indicadores para a gestão.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">A plataforma substitui nosso CRM ou ERP?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Não. O IA Conecta+ opera como camada de orquestração sobre a arquitetura existente, integrando os sistemas já adotados e preservando os investimentos da companhia.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Como é conduzida a implantação?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Por meio de um processo consultivo: diagnóstico de maturidade, discovery executivo, desenho de arquitetura sob medida, implantação assistida e programa contínuo de evolução.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Qual é o perfil de empresa atendido?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Organizações de médio e grande porte, com operação multicanal, volume relevante de interações e sistemas corporativos em uso, buscando escala sem ampliar proporcionalmente a estrutura.</p></details><details class="group py-6"><summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold transition-colors hover:text-cyan">Como a governança e a LGPD são tratadas?<span class="mt-1 text-cyan transition-transform duration-300 group-open:rotate-45">+</span></summary><p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Com controles de acesso, rastreabilidade das decisões dos agentes, trilhas de auditoria e políticas de dados alinhadas à LGPD e às diretrizes de segurança do cliente.</p></details></div></div></div></section><section id="contato" class="relative overflow-hidden surface-dark px-6 py-24 md:py-32 lg:px-10"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/53ea7a35-4e22-422f-a680-052a3551919a/fundo_4.webp" alt="" class="h-full w-full object-cover" style="object-position:right center;opacity:0.3" loading="lazy"><div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/70 to-navy"></div></div><div class="relative mx-auto max-w-6xl"><div class="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20"><div id="diagnostico"><p class="eyebrow mb-5">Próximo passo</p><h2 class="text-3xl leading-tight font-semibold text-white md:text-5xl">Agende com Executivo</h2><p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">Uma sessão executiva conduzida por especialistas da Garde para mapear a maturidade da sua operação e apresentar o blueprint de uma arquitetura inteligente aplicada ao seu contexto.</p><ul class="mt-10 space-y-4 text-sm text-white/60"><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Diagnóstico de maturidade operacional</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Blueprint personalizado de arquitetura</li><li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise"></span>Projeção de impacto e indicadores</li></ul></div><form class="card-glass grid gap-5 p-8 md:p-10"><label class="block text-sm"><span class="text-white/70">Nome</span><input required="" type="text" placeholder="Nome completo" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">E-mail corporativo</span><input required="" type="email" placeholder="nome@empresa.com.br" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Empresa</span><input required="" type="text" placeholder="Razão social" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Cargo</span><input required="" type="text" placeholder="Diretoria, C-Level, Gerência" class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-turquoise focus:outline-none"></label><label class="block text-sm"><span class="text-white/70">Segmento</span><select class="mt-2 w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-white focus:border-turquoise focus:outline-none"><option class="bg-navy">Selecione</option><option class="bg-navy">Educação</option><option class="bg-navy">Saúde</option><option class="bg-navy">Imobiliário</option><option class="bg-navy">Logística</option><option class="bg-navy">Franquias</option><option class="bg-navy">Varejo</option><option class="bg-navy">Financeiro</option><option class="bg-navy">Indústria</option></select></label><button type="submit" class="mt-2 rounded-md bg-turquoise px-7 py-3.5 text-sm font-semibold text-navy transition-all duration-300 hover:bg-greenx">Agende com Executivo</button><p class="text-xs leading-relaxed text-white/40">Os dados informados são tratados conforme a LGPD e utilizados exclusivamente para contato executivo.</p></form></div></div></section><footer class="border-t border-border px-6 py-12 lg:px-10"><div class="mx-auto max-w-6xl"><div class="flex flex-wrap items-center justify-between gap-6"><div><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/c00a3854-151b-4487-b468-6feb46c821d9/logo-garde.png" alt="Garde Inteligência Empresarial" class="h-10 w-auto" width="1000" height="400"><img src="https://id-preview--28b95a6c-2dd2-4884-bcbc-4d37332ecb78.lovable.app/__l5e/assets-v1/88321641-d261-43c5-bc6b-3ba504f4e401/logo-ia-conecta.png" alt="IA Conecta+" class="mt-4 h-8 w-auto" width="300" height="120"></div><p class="text-xs text-muted-foreground">© <!-- -->2026<!-- --> Garde Inteligência Empresarial. Todos os direitos reservados.</p></div><nav class="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-8 text-xs text-muted-foreground"><a href="/segmentos/educacao" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Educação</a><a href="/segmentos/saude" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Saúde</a><a href="/segmentos/imobiliario" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Imobiliário</a><a href="/segmentos/logistica" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Logística</a><a href="/segmentos/franquias" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Franquias</a><a href="/segmentos/varejo" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Varejo</a><a href="/segmentos/financeiro" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Financeiro</a><a href="/segmentos/industria" class="transition-colors hover:text-cyan">IA Conecta+ para <!-- -->Indústria</a></nav></div></footer></main>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+  <symbol id="i-meta" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6.5 10 16.5 4.5 11l1.4-1.4 4.1 4.1 8.6-8.6z"/></symbol>
+</svg>
+
+<header id="topo">
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="IA Conecta+, página inicial"><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"></a>
+    <nav id="menu" aria-label="Principal">
+      <a href="#plataforma">Plataforma</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#helpdesk">HelpDesk+</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="right">
+      <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong></span>
+      <a class="btn btn-primary" href="#contato">Falar com especialista</a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong> · API oficial do WhatsApp</span>
+        <h1>Atendimento, vendas e suporte em uma só operação com IA.</h1>
+        <p class="lead">A IA Conecta+ atende WhatsApp, Instagram, site e e-mail com uma inteligência artificial treinada nos documentos da sua empresa. E organiza cada conversa em funil, campanha ou chamado.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contato"><svg><use href="#i-wa"/></svg>Falar com especialista</a>
+          <a class="btn btn-ghost" href="#plataforma">Ver a plataforma</a>
+        </div>
+        <ul class="channels" aria-label="Canais atendidos">
+          <li><svg style="color:#25D366"><use href="#i-wa"/></svg>WhatsApp</li>
+          <li><svg style="color:#D6249F"><use href="#i-ig"/></svg>Instagram</li>
+          <li><svg style="color:var(--cyan)"><use href="#i-web"/></svg>Chat no site</li>
+          <li><svg style="color:var(--blue)"><use href="#i-mail"/></svg>E-mail</li>
+        </ul>
+      </div>
+
+      <div class="stage" aria-label="Exemplo de atendimento pela IA no WhatsApp">
+        <div class="phone">
+          <div class="screen">
+            <div class="wa-top">
+              <div class="av"><img src="/assets/marca/logo-ia-conecta.png" alt=""></div>
+              <div><b>Clínica Viva <svg class="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#25D366"/><path d="m7.5 12.5 3 3 6-6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></b><small>conta comercial</small></div>
+            </div>
+            <div class="chat" id="chat">
+              <div class="msg in seq" style="animation-delay:.3s">Oi! Vocês atendem pelo convênio? Queria marcar com dermatologista.<time>09:41</time></div>
+              <div class="msg out seq" style="animation-delay:1.3s">Oi, Ana! Atendemos sim, pelos convênios da nossa lista. Para dermatologia, tenho quinta às 14h ou sexta às 9h30. Qual prefere?<time>09:41</time></div>
+              <div class="msg in audio seq" style="animation-delay:2.4s"><span class="play"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="#fff"/></svg></span><span class="wave"></span><time>09:42</time></div>
+              <div class="msg in seq" style="animation-delay:2.6s;padding-top:4px;padding-bottom:6px;background:transparent;box-shadow:none"><span class="tr">Transcrição: "sexta de manhã fica ótimo"</span></div>
+              <div class="msg out seq" style="animation-delay:3.6s">Pronto! Sexta, 9h30, com a Dra. Paula. Enviei o lembrete na sua agenda.<time>09:42</time></div>
+              <div class="typing seq" style="animation-delay:4.4s" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="wa-input" aria-hidden="true"><span></span><b></b></div>
+          </div>
+        </div>
+
+        <div class="float lead-card seq" style="animation-delay:2s">
+          <h4>Card no funil</h4>
+          <div class="row"><span>Contato</span><b>Ana Souza</b></div>
+          <div class="row"><span>Interesse</span><b>Dermatologia</b></div>
+          <div class="row"><span>Classificação</span><span class="tag hot">Agendado</span></div>
+          <div class="row"><span>Responsável</span><b>Recepção</b></div>
+        </div>
+        <div class="float owner-card seq" style="animation-delay:4.2s">
+          <h4>Quem conduz a conversa</h4>
+          <div class="st"><span class="tag ai">IA</span><span class="tag esc">Escalada</span><span class="tag hum">Humano</span></div>
+          <p>Se a resposta não está na base, a IA passa para a equipe com o resumo.</p>
+        </div>
+        <div class="float ig-card seq" style="animation-delay:5s">
+          <span class="ig"><svg><use href="#i-ig"/></svg></span>
+          <p><b>Novo comentário no Reel</b><br>Resposta pública enviada e conversa aberta no Direct.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section class="clients" aria-label="Clientes">
+    <div class="wrap">
+      <p>Empresas que operam com a IA Conecta+</p>
+      <ul class="logos">
+        <li><img src="/assets/clientes/bradesco.png" alt="Bradesco" loading="lazy"></li>
+        <li><img src="/assets/clientes/vivo.png" alt="Vivo" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/assai.png" alt="Assaí Atacadista" loading="lazy"></li>
+        <li><img src="/assets/clientes/mercado-pago.png" alt="Mercado Pago" loading="lazy"></li>
+        <li><img src="/assets/clientes/enviai.png" alt="Enviaí" loading="lazy"></li>
+        <li><img src="/assets/clientes/alya.png" alt="Alya" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/grupo-monitor.png" alt="Grupo Monitor" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/cobtec.png" alt="Cobtec" loading="lazy"></li>
+        <li><img src="/assets/clientes/dealers-club.png" alt="Dealers Club" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/davinci.png" alt="daVinci" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/lui-home.png" alt="Lui Home" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/true-wellness.png" alt="True Wellness" loading="lazy"></li>
+        <li class="tall"><img src="/assets/clientes/weramp.png" alt="We Ramp" loading="lazy"></li>
+        <li class="dark"><img src="/assets/clientes/vuelo.png" alt="Vuelo" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PLATAFORMA -->
+  <section id="plataforma">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Uma plataforma, toda a operação</p>
+        <h2>Não é só automação de WhatsApp. É a operação inteira conectada.</h2>
+        <p class="lead">Prospecção, atendimento, relacionamento no Instagram, funil de vendas e chamados compartilham a mesma IA e o mesmo histórico. Você liga os módulos que fazem sentido para o seu negócio.</p>
+      </div>
+
+      <div class="feature">
+        <div class="f-text">
+          <p class="kicker">IA exclusiva da sua empresa</p>
+          <h3>Responde pelo que está nos seus documentos. E só por isso.</h3>
+          <p class="lead">Cada cliente tem uma IA própria, alimentada por PDF, Excel, Word e texto. Atualizou o documento, a resposta muda na hora, sem retreino.</p>
+          <ul class="checks">
+            <li><span><b>Não inventa resposta.</b> Quando a informação não está na base, reconhece o limite e passa para uma pessoa.</span></li>
+            <li><span><b>Vários agentes por empresa</b>, cada um com personalidade, base e nível de acesso próprios.</span></li>
+            <li><span><b>Entende foto e áudio:</b> lê a imagem do erro e transcreve a mensagem de voz.</span></li>
+            <li><span><b>Responde no idioma de quem escreveu</b> e troca de provedor de IA sozinha se um deles falhar.</span></li>
+          </ul>
+        </div>
+        <div class="panel" aria-hidden="true">
+          <div class="panel-title">Base de conhecimento <small>Agente: Atendimento</small></div>
+          <div class="docs">
+            <div class="doc"><span class="ext pdf">PDF</span><span>Tabela de convênios 2026</span><em>Atualizado agora</em></div>
+            <div class="doc"><span class="ext xls">XLS</span><span>Agenda do corpo clínico</span><em>Ativo</em></div>
+            <div class="doc"><span class="ext doc2">DOC</span><span>Política de cancelamento</span><em>Ativo</em></div>
+            <div class="doc"><span class="ext txt">TXT</span><span>Perguntas frequentes da recepção</span><em>Ativo</em></div>
+          </div>
+          <div class="answer"><b>Pergunta fora da base:</b> "Vocês fazem procedimento estético a laser?" A IA não encontrou na base e transferiu para a recepção, com o resumo da conversa.</div>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="f-text">
+          <p class="kicker">Prospecção ativa pelo WhatsApp</p>
+          <h3>Campanhas em escala pela API oficial, com a base limpa antes do envio.</h3>
+          <p class="lead">Conta verificada e modelos aprovados pela Meta, sem os riscos do WhatsApp comum. A IA conduz a conversa, qualifica o lead e coloca no funil.</p>
+          <ul class="checks">
+            <li><span><b>Base higienizada:</b> duplicados removidos, telefones validados e enriquecimento por DDD, estado e perfil.</span></li>
+            <li><span><b>Números sem WhatsApp descartados antes do envio</b>, preservando a reputação da conta.</span></li>
+            <li><span><b>Envio agendado em blocos</b>, com limite diário por canal e follow-up automático de quem não respondeu.</span></li>
+            <li><span><b>Quem pediu para sair, sai de vez:</b> o descadastro vale para todas as campanhas futuras.</span></li>
+          </ul>
+        </div>
+        <div class="panel" aria-hidden="true">
+          <div class="panel-title">Campanha: Reativação de clientes <small>WhatsApp · em andamento</small></div>
+          <div class="camp-stats">
+            <div><b>2.400</b><span>Enviadas</span></div>
+            <div><b>2.310</b><span>Entregues</span></div>
+            <div><b>1.720</b><span>Lidas</span></div>
+            <div><b>486</b><span>Respostas</span></div>
+            <div class="bad"><b>90</b><span>Falhas</span></div>
+          </div>
+          <div class="bar"><i style="width:20%;background:var(--green)"></i><i style="width:52%;background:var(--cyan)"></i><i style="width:24%;background:#BFD6EA"></i><i style="width:4%;background:#F2A97C"></i></div>
+          <div class="camp-list">
+            <div><span>Bloco 3 de 5</span><b>Hoje, 14:00</b></div>
+            <div><span>Follow-up de quem não respondeu</span><b>Em 2 dias</b></div>
+            <div class="note">Números ilustrativos.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature" id="funil">
+        <div class="f-text">
+          <p class="kicker">Funil e CRM</p>
+          <h3>Um funil que segue o processo da sua área, não o contrário.</h3>
+          <p class="lead">As colunas se organizam pela classificação que a própria IA faz durante a conversa. Serve para vendas, atendimento, RH ou qualquer fluxo por etapas.</p>
+          <ul class="checks">
+            <li><span><b>Histórico da conversa dentro do card</b>, com data de retorno, responsável e valor mencionado pelo lead.</span></li>
+            <li><span><b>Contato do Dia:</b> quem precisa ser chamado hoje, os atrasados e os próximos.</span></li>
+            <li><span><b>Distribuição automática entre vendedores</b>, com reatribuição por tempo de espera e alerta de lead sem dono.</span></li>
+            <li><span><b>Mensagem agendada:</b> o compromisso combinado com o lead dispara sozinho na hora certa.</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="tabs" role="tablist" aria-label="Exemplos de funil">
+            <button role="tab" aria-selected="true" data-f="com">Comercial</button>
+            <button role="tab" aria-selected="false" data-f="at">Atendimento</button>
+            <button role="tab" aria-selected="false" data-f="rh">RH</button>
+          </div>
+          <div class="kanban" id="kanban" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="f-text">
+          <p class="kicker">Central de conversas</p>
+          <h3>A IA e a equipe trabalham juntas, sem perder o contexto.</h3>
+          <p class="lead">Todos os canais em uma tela, e cada conversa mostra quem está conduzindo. Quando a equipe assume, a IA continua apoiando o atendente com sugestões de resposta.</p>
+          <ul class="checks">
+            <li><span><b>Respostas rápidas</b> sugeridas logo na abertura da conversa.</span></li>
+            <li><span><b>A IA reconhece quem está falando</b> pelo telefone e usa os dados cadastrais do contato.</span></li>
+            <li><span><b>Widget para o seu site</b> instalado com uma linha de código e com a identidade da sua marca.</span></li>
+            <li><span><b>Construtor de fluxo em tela</b> para montar o roteiro de atendimento sem programação.</span></li>
+          </ul>
+        </div>
+        <div class="handoff">
+          <div class="step s1"><h4>IA</h4><p>A inteligência artificial conduz a conversa com a base da sua empresa.</p></div>
+          <div class="step s2"><h4>Escalada</h4><p>A IA identifica que o caso precisa de uma pessoa e avisa o time.</p></div>
+          <div class="step s3"><h4>Humano</h4><p>Alguém da equipe assume, já com o resumo e todo o histórico.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="instagram" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="feature" style="padding:0;border:0">
+        <div class="f-text">
+          <p class="kicker">Instagram dentro da plataforma</p>
+          <h3>Do comentário para a conversa. Da conversa para a oportunidade.</h3>
+          <p class="lead">Comentários, Direct e publicações do Instagram no mesmo painel do WhatsApp e do site, com a mesma IA respondendo.</p>
+          <ul class="checks">
+            <li><span><b>Comentários em posts e Reels</b> respondidos pela IA, em público, no Direct ou nos dois.</span></li>
+            <li><span><b>Resposta pública com trava:</b> nada de preço, link ou dado pessoal embaixo do post.</span></li>
+            <li><span><b>Direct após o comentário</b> e respostas a Stories entrando direto no atendimento.</span></li>
+            <li><span><b>Publicações agendadas</b> pelo próprio painel.</span></li>
+          </ul>
+        </div>
+        <div class="panel" aria-hidden="true">
+          <div class="panel-title">Comentários <small>Reel publicado ontem</small></div>
+          <div class="ig-post">
+            <div class="ig-thumb">Nova unidade em Moema</div>
+            <div>
+              <div class="cmt"><b>@marina.rp</b> Qual o valor da consulta?</div>
+              <div class="cmt reply"><b>Resposta da IA</b> Oi, Marina! Te chamei no Direct com os detalhes.</div>
+              <div class="dm"><svg width="18" height="18" style="color:#D6249F"><use href="#i-ig"/></svg>Conversa aberta no Direct, com a IA</div>
+            </div>
+          </div>
+          <div class="sched">
+            <div><b>Qui, 10h</b>Carrossel</div>
+            <div><b>Sáb, 18h</b>Reel</div>
+            <div><b>Seg, 9h</b>Post</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPDESK -->
+  <section id="helpdesk" class="helpdesk">
+    <div class="wrap hd-grid">
+      <div>
+        <p class="kicker">IA HelpDesk+</p>
+        <h2 style="font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.1">O chamado que chega ao time humano, sob controle.</h2>
+        <p class="lead" style="margin-top:18px">Funciona junto com a IA Conecta+ ou sozinho. Organiza o que precisa de acompanhamento e mostra ao gestor onde o atendimento está travando, e com quem.</p>
+        <ul class="hd-list">
+          <li><b>Prazo por prioridade</b><span>Status, prioridade, responsável e numeração curta em cada chamado.</span></li>
+          <li><b>Copiloto para o atendente</b><span>Sugere a resposta, melhora o rascunho, aponta chamados parecidos e resume o que o cliente precisa.</span></li>
+          <li><b>Anexos lidos automaticamente</b><span>Imagem convertida em texto e áudio transcrito.</span></li>
+        </ul>
+      </div>
+      <div class="mgr" aria-hidden="true">
+        <div class="panel-title">Painel do gestor <small>Hoje</small></div>
+        <div class="kpis">
+          <div><span>Abertos</span><b>38</b></div>
+          <div class="warn"><span>Vencidos</span><b>4</b></div>
+          <div class="ok"><span>Resolvidos</span><b>126</b></div>
+          <div class="warn"><span>Sem responsável</span><b>2</b></div>
+        </div>
+        <div class="tickets">
+          <div><code>#4821</code><span>Erro ao emitir boleto (foto anexada)</span><span class="pri a">Alta</span></div>
+          <div><code>#4819</code><span>Troca de endereço de entrega</span><span class="pri m">Média</span></div>
+        </div>
+        <div class="copilot"><b>Copiloto</b>O cliente enviou print do erro 402. Há 3 chamados parecidos resolvidos com a reemissão pelo financeiro. Sugestão de resposta pronta para revisar.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GESTÃO -->
+  <section id="gestao">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Gestão e indicadores</p>
+        <h2>O que antes dependia de percepção passa a ser acompanhado por dados.</h2>
+      </div>
+      <div class="mgmt">
+        <article class="wide">
+          <div>
+            <h3>Quanto a IA resolveu sozinha</h3>
+            <p>O painel separa o volume resolvido pela IA do que foi para o time, e apura o retorno em reais com base no que a IA atendeu.</p>
+          </div>
+          <div aria-hidden="true">
+            <div class="split"><i style="width:68%;background:var(--cyan)"></i><i style="width:32%;background:#BFD6EA"></i></div>
+            <div class="legend"><span><i style="background:var(--cyan)"></i>Resolvido pela IA</span><span><i style="background:#BFD6EA"></i>Encaminhado ao time</span></div>
+            <p class="roi" style="margin-top:18px">R$ 18.450<small>retorno apurado no mês (exemplo ilustrativo)</small></p>
+          </div>
+        </article>
+        <article>
+          <h3>O que mais se repete</h3>
+          <p>Pedidos parecidos agrupados e contados, para você saber onde agir primeiro.</p>
+          <div class="demand" aria-hidden="true">
+            <div style="--w:82%"><span>Segunda via de boleto</span></div>
+            <div style="--w:61%"><span>Prazo de entrega</span></div>
+            <div style="--w:38%"><span>Troca e devolução</span></div>
+          </div>
+        </article>
+        <article>
+          <h3>Painel ao vivo na TV</h3>
+          <p>Uma visão da operação para deixar aberta no televisor da equipe.</p>
+        </article>
+        <article>
+          <h3>Alerta de insatisfação</h3>
+          <p>Central de reclamações e aviso quando uma conversa mostra cliente insatisfeito.</p>
+        </article>
+        <article>
+          <h3>Saúde do WhatsApp</h3>
+          <p>Qualidade do número, limite de envio e situação dos modelos de mensagem em um só lugar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTOS -->
+  <section id="segmentos" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Módulos por segmento</p>
+        <h2>A plataforma se adapta ao seu negócio.</h2>
+        <p class="lead">Os módulos de cada setor são habilitados conforme a sua operação. Veja como funciona no seu mercado.</p>
+      </div>
+      <div class="segs">
+        <a href="/segmentos/saude"><b>Saúde</b><span>Especialidades, corpo clínico, agenda, pagamento e página de agendamento com a marca da clínica.</span></a>
+        <a href="/segmentos/franquias"><b>Franquias</b><span>Catálogo de marcas, cobertura por estado e lead qualificado entregue ao franqueado certo.</span></a>
+        <a href="/segmentos/varejo"><b>Varejo</b><span>Catálogo e preços para a IA, cobrança por PIX e cartão na conversa e pós-venda.</span></a>
+        <a href="/segmentos/imobiliario"><b>Imobiliário</b><span>Resposta imediata ao lead, qualificação e agendamento de visitas.</span></a>
+        <a href="/segmentos/educacao"><b>Educação</b><span>Captação, matrícula e rematrícula com atendimento contínuo.</span></a>
+        <a href="/segmentos/financeiro"><b>Financeiro</b><span>Onboarding, crédito e cobrança com trilha de auditoria.</span></a>
+        <a href="/segmentos/logistica"><b>Logística</b><span>Rastreamento proativo, ocorrências e agendamento de entrega.</span></a>
+        <a href="/segmentos/industria"><b>Indústria</b><span>Pedido de distribuidores, pós-venda técnico e recompra recorrente.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURANÇA + INTEGRAÇÕES -->
+  <section>
+    <div class="wrap two">
+      <div>
+        <p class="kicker">Segurança e LGPD</p>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.15;margin-bottom:16px">Os dados de cada empresa ficam isolados e criptografados.</h2>
+        <ul class="checks">
+          <li><span><b>Isolamento total entre clientes:</b> nenhum dado ou configuração atravessa de uma empresa para outra.</span></li>
+          <li><span><b>Criptografia</b> de conversas, documentos e dados pessoais, com chave própria por cliente.</span></li>
+          <li><span><b>Perfis e filas de acesso:</b> cada pessoa vê só os módulos e as conversas liberadas para ela.</span></li>
+          <li><span><b>LGPD:</b> exportação e exclusão de dados por titular, com trilha de auditoria.</span></li>
+          <li><span><b>Proteção contra manipulação da IA</b> para obter informação indevida.</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker">Integrações</p>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.15;margin-bottom:16px">Conecta com o que a sua empresa já usa.</h2>
+        <p class="lead" style="font-size:1.02rem">E envia os dados para o CRM que você já utiliza, quando for o caso.</p>
+        <div class="chips">
+          <span class="meta">WhatsApp Cloud API oficial da Meta</span>
+          <span class="meta">Instagram</span>
+          <span>Widget para qualquer site</span>
+          <span>E-mail</span>
+          <span>Mercado Pago</span>
+          <span>Assinatura eletrônica</span>
+          <span>Google Calendar e Meet</span>
+          <span>Microsoft 365</span>
+          <span>Login integrado ao seu sistema</span>
+          <span>Conectores para CRM</span>
+          <span>API para abertura de chamados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JORNADA -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Implantação assistida</p>
+        <h2>A gente começa pelo seu processo, não pela ferramenta.</h2>
+      </div>
+      <ol class="journey">
+        <li><b>Diagnóstico</b><span>Entendemos a operação e onde ela perde tempo.</span></li>
+        <li><b>Workshop</b><span>Alinhamos com a liderança o que priorizar.</span></li>
+        <li><b>Mapa</b><span>Definimos jornadas, canais e indicadores.</span></li>
+        <li><b>Prova de conceito</b><span>Colocamos um escopo controlado no ar.</span></li>
+        <li><b>Implantação</b><span>Integramos sistemas e treinamos a equipe.</span></li>
+        <li><b>Evolução</b><span>Acompanhamos os números e expandimos por área.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--paper);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head center"><h2>Dúvidas frequentes</h2></div>
+      <div class="faq">
+        <details><summary>Já temos um robô de atendimento. A IA Conecta+ substitui?</summary><p>Não precisa substituir. A IA Conecta+ amplia o que já existe com contexto, integração com seus sistemas, qualificação de leads e evolução contínua.</p></details>
+        <details><summary>E se a IA responder algo errado?</summary><p>Ela só responde pelo que está nos documentos da sua empresa. Quando a informação não está na base, reconhece o limite e transfere para uma pessoa da equipe, com o histórico e o resumo da conversa.</p></details>
+        <details><summary>Corro risco de bloqueio no WhatsApp?</summary><p>Os envios usam a API oficial da Meta, com conta verificada e modelos de mensagem aprovados. A base é higienizada antes, números sem WhatsApp são descartados e o envio respeita limite diário, o que protege a reputação do número.</p></details>
+        <details><summary>Preciso contratar tudo?</summary><p>Não. Os módulos são habilitados conforme a sua operação. Você pode contratar a IA Conecta+, o IA HelpDesk+ ou os dois, e começar por um escopo controlado.</p></details>
+        <details><summary>Meus dados ficam seguros?</summary><p>Cada empresa tem os dados isolados e criptografados com chave própria, perfis de acesso configuráveis e conformidade com a LGPD, incluindo exportação e exclusão por titular.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato" class="final" style="background:var(--paper);padding-top:40px">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2>Descubra o que a sua equipe não precisa mais fazer manualmente.</h2>
+          <p>Fale com um especialista e receba um diagnóstico da sua operação.</p>
+        </div>
+        <div class="acts">
+          <!-- PENDENTE: definir o link de contato (WhatsApp comercial ou formulário) -->
+          <a class="btn btn-primary" href="#contato" data-pendente="link-contato"><svg><use href="#i-wa"/></svg>Falar com especialista</a>
+          <span class="meta-badge"><span class="dot"><svg><use href="#i-meta"/></svg></span>Parceiro oficial <strong>Meta</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="/assets/marca/logo-ia-conecta.png" alt="IA Conecta+" width="249" height="84"><p style="margin-top:12px;max-width:34ch">Um produto da Garde Inteligência Empresarial.</p></div>
+      <nav aria-label="Rodapé">
+        <a href="#plataforma">Plataforma</a><a href="#instagram">Instagram</a><a href="#helpdesk">HelpDesk+</a><a href="/segmentos">Segmentos</a><a href="#faq">Dúvidas</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 Garde Inteligência Empresarial. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // header com borda ao rolar
+  const hd=document.querySelector('header');
+  addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>8),{passive:true});
+  // menu mobile
+  const mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
+  mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+  // exemplos de funil
+  const F={
+    com:[['Oportunidade',[['Carlos M.','Plano empresarial','R$ 4.800','Marina'],['Loja Bela','Orçamento 40 un.','R$ 12.000','']]],['Negociação',[['Ana Souza','Renovação anual','R$ 9.600','Diego']]],['Fechamento',[['Grupo Luz','Contrato assinado','R$ 22.000','Marina']]]],
+    at:[['Novo atendimento',[['Pedido #3391','Atraso na entrega','','Fila SAC'],['João P.','Segunda via','','']]],['Em análise',[['Pedido #3375','Produto com defeito','','Rafa']]],['Resolvido',[['Bia N.','Troca concluída','','Rafa']]]],
+    rh:[['Candidato',[['Lucas T.','Vendedor interno','','Recrutamento']]],['Entrevista',[['Paula R.','Analista financeiro','','Gestora'],['Igor S.','Atendente','','']]],['Contratação',[['Vera M.','Recepcionista','','RH']]]]
+  };
+  const kb=document.getElementById('kanban');
+  function draw(k){kb.innerHTML=F[k].map(([t,cs])=>`<div class="col"><h5>${t}<span>${cs.length}</span></h5>${cs.map(([n,d,v,o])=>`<div class="card"><b>${n}</b><span>${d}</span><div class="foot"><span>${v}</span>${o?`<span>${o}</span>`:'<span class="nobody">Sem dono</span>'}</div></div>`).join('')}</div>`).join('')}
+  draw('com');
+  document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));draw(b.dataset.f)}));
+</script>
 </body>
 </html>
