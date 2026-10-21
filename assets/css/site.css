@@ -201,17 +201,6 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
 /* selo acima da janela, foto e ajustes do palco */
 .meta-top{position:absolute;right:0;top:-6px;z-index:4}
 .meta-top img{height:15px}
-.photo{display:none}
-.stage.has-photo .photo{display:block;position:absolute;left:70px;top:44px;width:250px;height:340px;border-radius:24px;background:var(--mist) url(/assets/hero/pessoa.jpg) center 18%/cover;box-shadow:var(--sh-3);z-index:2}
-.stage.has-photo .chatcard{left:-46px;top:150px;width:270px;z-index:3}
-.stage.has-photo .chatcard .phone{background:none;box-shadow:none;border-radius:0;overflow:visible}
-.stage.has-photo .chatcard .ph-h{display:none}
-.stage.has-photo .chatcard .ph-b{background:none;padding:0;min-height:0;gap:10px}
-.stage.has-photo .chatcard .w{border-radius:14px;box-shadow:var(--sh-2);padding:10px 14px 18px;max-width:230px}
-.stage.has-photo .chatcard .w.in{border-top-left-radius:14px}
-.stage.has-photo .chatcard .w.out{align-self:flex-start;margin-left:70px;background:#E6F7F1;border:1px solid #BFE9DA;border-top-right-radius:14px}
-.stage.has-photo .bubble.b1{display:none}
-.stage.has-photo .bubble.b2{left:250px;bottom:20px}
 .winwrap{display:contents}
 
 /* logos do rodapé em cores */
@@ -227,10 +216,7 @@ header.solid{background:rgba(243,247,252,.88);backdrop-filter:blur(14px);-webkit
   .meta-top{position:static;order:-1}
   .winwrap{display:block;position:relative;width:100%;max-width:640px;height:calc(500px * var(--s,.5));order:2}
   .winwrap .window{position:absolute;left:0;top:0;right:auto;width:640px;border-radius:16px;transform:none;scale:var(--s,.5);transform-origin:0 0;transition:none}
-  .chatcard,.stage.has-photo .chatcard{position:relative;left:auto;top:auto;width:100%;max-width:360px;order:1}
-  .stage.has-photo .photo{position:relative;left:auto;top:auto;width:100%;max-width:360px;height:320px;order:0;background-position:center 12%}
-  .stage.has-photo .chatcard{margin-top:-120px;padding:0 12px}
-  .stage.has-photo .chatcard .w.out{margin-left:40px}
+  .chatcard{position:relative;left:auto;top:auto;width:100%;max-width:360px;order:1}
   .bubble{display:none}
   .chatcard .ph-b{min-height:0}
   .ft-logos .known li{width:calc(50% - 8px);height:72px}
@@ -587,3 +573,6 @@ html{overflow-x:clip}
 .others a{text-decoration:none;font-weight:700;font-size:.92rem;padding:12px 18px;border-radius:999px;background:var(--paper);box-shadow:var(--sh-1);transition:transform .25s var(--ease),box-shadow .25s}
 .others a:hover{transform:translateY(-2px);box-shadow:var(--sh-2);color:var(--blue)}
 .others a[aria-current]{background:var(--navy);color:#fff}
+
+.chatcard .ph-h .av.photo-av{overflow:hidden;padding:0;width:36px;height:36px}
+.chatcard .ph-h .av.photo-av img{width:100%;height:100%;object-fit:cover}

@@ -95,10 +95,9 @@
         </div>
       </div></div>
 
-      <div class="photo seq" style="--t:.55s"></div>
       <div class="chatcard seq" style="--t:.6s">
         <div class="phone">
-          <div class="ph-h"><span class="av"><img src="/assets/marca/g-conecta.png" alt=""></span><div><b>Clínica Viva</b><small>conta comercial verificada</small></div></div>
+          <div class="ph-h"><span class="av photo-av"><img src="/assets/hero/pessoa-avatar.jpg" alt=""></span><div><b>Clínica Viva</b><small>conta comercial verificada</small></div></div>
           <div class="ph-b">
             <div class="w in seq" style="--t:1s">Oi, preciso de ajuda<time>09:41</time></div>
             <div class="w in seq" style="--t:1.5s">Quero remarcar minha consulta de amanhã<time>09:41</time></div>
@@ -582,7 +581,6 @@
 const ww=document.querySelector('.winwrap'),stg=document.querySelector('.stage');
 function fit(){if(innerWidth<=980){stg.style.setProperty('--s',ww.clientWidth/640)}}
 addEventListener('resize',fit);fit();
-const ph=new Image();ph.onload=()=>stg.classList.add('has-photo');ph.src='/assets/hero/pessoa.jpg';
 // multiagentes: etapa ativa conforme a rolagem
 const steps=[...document.querySelectorAll('.ag-step')],nodes=[...document.querySelectorAll('.node')],links=[...document.querySelectorAll('.links path')],msg=document.getElementById('agmsg');
 function setStep(i){
